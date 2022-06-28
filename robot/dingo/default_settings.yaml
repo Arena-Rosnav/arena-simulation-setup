@@ -1,5 +1,5 @@
 robot:
-  radius: 1. # check again
+  radius: 0.378
   holonomic: False
   discrete_actions:
     - name: move_forward
