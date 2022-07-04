@@ -1,4 +1,3 @@
-#local_costmap
 local_costmap:
   global_frame: odom
   robot_base_frame: base_footprint
@@ -10,5 +9,33 @@ local_costmap:
   width: 4.0
   height: 4.0
   resolution: 0.05
-  inflation_layer:
-    inflation_radius: 0.4 # 0.0 Localdeki alanlar
+
+  obstacle_range: 2.5 #default = 2.5
+  raytrace_range: 3.0 #default = 3.0
+  # footprint: [[0.185, 0.185], [0.185, -0.185], [-0.185, -0.185], [-0.185, 0.185]]
+  footprint:
+    [
+      [0.4, 0.0],
+      [0.35, 0.35],
+      [-0.2, 0.4],
+      [-0.45, 0.0],
+      [-0.2, -0.4],
+      [0.35, -0.35],
+    ]
+  footprint_padding: 0.1
+
+  inflation_radius: 0.2
+
+  observation_sources: laser
+
+  laser:
+    {
+      topic: scan,
+      sensor_frame: base_link,
+      data_type: LaserScan,
+      clearing: true,
+      marking: true,
+      inf_is_valid: true,
+      max_obstacle_height: 2.0,
+      min_obstacle_height: 0.0,
+    }

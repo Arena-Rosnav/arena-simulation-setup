@@ -13,18 +13,17 @@ TebLocalPlannerROS:
   min_turning_radius: 0.0 # diff-drive robot (can turn on place!)
 
   footprint_model:
-    type: "polygon"
-    vertices: [[0.2755, -0.2585], [0.2755, 0.2585], [-0.2755, 0.2585], [-0.2755, -0.2585]]
-    # RADIUS: 0.378 from (0.2755**2 + 0.2585**2)**(1/2)
+    type: "point"
 
   # GoalTolerance
 
-  xy_goal_tolerance: 0.25
-  yaw_goal_tolerance: 0.17
+  xy_goal_tolerance: 0.2
+  yaw_goal_tolerance: 0.1
   free_goal_vel: False
-  complete_global_plan: True
+  complete_global_plan:
+    True
 
-   # Obstacles
+    # Obstacles
 
   # min_obstacle_dist: 0.25 # This value must also include our robot radius, since footprint_model is set to "point".
   inflation_dist: 0.6

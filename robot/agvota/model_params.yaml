@@ -1,7 +1,8 @@
-robot:
-  radius: 0.629
-  holonomic: False
-  discrete_actions:
+robot_model: agvota
+robot_radius: 0.629
+is_holonomic: False
+actions:
+  discrete:
     - name: move_forward
       linear: 0.5
       angular: 0.0
@@ -23,6 +24,14 @@ robot:
     - name: stop
       linear: 0.0
       angular: 0.0
-  continuous_actions:
+  continuous:
     linear_range: [-0.5, 0.5] # Maximum translational velocity in m/s
     angular_range: [-0.4, 0.4] # Maximum rotational velocity in rad/s - TODO: from, pos wrong  max_vel_theta: 0.4
+laser:
+  angle:
+    min: -1.5707963267948966
+    max: 1.5707963267948966
+    increment: 0.00436332312
+  num_beams: 720
+  range: 30.0
+  update_rate: 10

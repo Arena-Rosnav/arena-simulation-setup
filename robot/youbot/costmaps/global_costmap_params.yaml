@@ -4,7 +4,25 @@ global_costmap:
 
   update_frequency: 10.0
   publish_frequency: 10.0
-  transform_tolerance: 0.5
 
   static_map: true
- 
+
+  map_type: costmap
+  transform_tolerance: 0.2
+  obstacle_range: 2.5
+  raytrace_range: 3.0
+  inflation_radius: 2.
+
+  observation_sources: base_scan
+
+  footprint:
+    [[-0.285, 0.285], [-0.285, -0.285], [0.285, -0.285], [0.285, 0.285]]
+
+  base_scan:
+    {
+      sensor_frame: laser_link,
+      data_type: LaserScan,
+      topic: scan,
+      marking: true,
+      clearing: true,
+    }

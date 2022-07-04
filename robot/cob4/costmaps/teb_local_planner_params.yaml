@@ -1,5 +1,4 @@
 TebLocalPlannerROS:
-
   odom_topic: odom
 
   # Trajectory
