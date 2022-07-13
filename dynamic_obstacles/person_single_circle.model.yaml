@@ -1,5 +1,5 @@
 # Person
-bodies:  # List of named bodies
+bodies: # List of named bodies
   - name: base
     pose: [0, 0, 0]
     type: dynamic
@@ -14,7 +14,7 @@ bodies:  # List of named bodies
 
   - name: left_leg
     pose: [0, 0, 0]
-    type: dynamic  
+    type: dynamic
     color: [0.66, 0.3, 0, 0.75]
     footprints:
       - type: circle
@@ -25,8 +25,8 @@ bodies:  # List of named bodies
         collision: false
 
   - name: right_leg
-    pose: [0, 0, 0] 
-    type: dynamic  
+    pose: [0, 0, 0]
+    type: dynamic
     color: [0.66, 0.3, 0, 0.75]
     footprints:
       - type: circle
@@ -67,11 +67,10 @@ plugins:
     enabled: true
     safety_dist: 0.7
 
-  - type: PosePub 
+  - type: PosePub
     name: publish_human_pose
     body: base
     odom_frame_id: odom
-    odom_pub: odom  # topic odom is published on
+    odom_pub: odom # topic odom is published on
     ground_truth_pub: dynamic_human
     pub_rate: 10
-
