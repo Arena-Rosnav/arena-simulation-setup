@@ -1,6 +1,6 @@
 local_costmap:
   global_frame: map
-  robot_base_frame: base_footprint
+  robot_base_frame: base_link
 
   publish_frequency: 5.0
   update_frequency: 5.0
@@ -29,7 +29,7 @@ local_costmap:
   observation_sources: scan
   scan:
     {
-      sensor_frame: laser_link,
+      sensor_frame: front_laser,
       data_type: LaserScan,
       topic: scan,
       marking: true,
