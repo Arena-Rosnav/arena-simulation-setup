@@ -28,7 +28,7 @@ plugins:
     topic: scan
     body: base_footprint
     broadcast_tf: true
-    origin: [0.0, 0.0, 0.0] # from: https://github.com/ignc-research/arena-rosnav-3D/blob/main/simulator_setup/robot/rto/urdf/rto.urdf.xacro
+    origin: [0.0, 0.0, 0.0] # from: https://github.com/ignc-research/arena-rosnav-3D/blob/main/arena-simulation-setup/robot/rto/urdf/rto.urdf.xacro
     range: 29.5
     angle: {
         min: -3.141505479812622,
