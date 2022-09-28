@@ -832,5 +832,5 @@
             <cast_shadows>0</cast_shadows>
             <direction>0 0 -1</direction>
         </light>
-                    </world>
+    </world>
 </sdf>
