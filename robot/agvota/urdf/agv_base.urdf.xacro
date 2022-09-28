@@ -9,14 +9,14 @@
       <visual>
         <origin xyz="0 0 -0.1625" rpy=" 0 0 0"/>
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/agv-ota/meshes/OTAv07_meshes/OTA-v0.7.stl" scale="0.001 0.001 0.001"/>
+          <mesh filename="package://arena-simulation-setup/robot/agvota/meshes/OTAv07_meshes/OTA-v0.7.stl" scale="0.001 0.001 0.001"/>
         </geometry>
       </visual>    
       
       <collision>
         <origin xyz="0 0 -0.075" rpy=" 0 0 0"/>
         <geometry>
-          <!--<mesh filename="package://arena-simulation-setup/robot/agv-ota/meshes/OTAv07_meshes/OTA-v0.7.stl" scale="0.001 0.001 0.001"/> -->
+          <!--<mesh filename="package://arena-simulation-setup/robot/agvota/meshes/OTAv07_meshes/OTA-v0.7.stl" scale="0.001 0.001 0.001"/> -->
           <box size="1.02 0.72 0.14"/>
         </geometry>
       </collision>    
@@ -34,14 +34,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="1.570796 0 -1.570796"/>
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/agv-ota/meshes/OTAv07_meshes/S30B-XXXXXX.stl" scale="0.001 0.001 0.001"/>
+          <mesh filename="package://arena-simulation-setup/robot/agvota/meshes/OTAv07_meshes/S30B-XXXXXX.stl" scale="0.001 0.001 0.001"/>
         </geometry>
       </visual>		
 
       <!--<collision>
         <origin xyz="0 0 0.0" rpy="1.570796 0 -1.570796"/>
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/agv-ota/meshes/OTAv07_meshes/S30B-XXXXXX.stl" scale="0.001 0.001 0.001"/> 
+          <mesh filename="package://arena-simulation-setup/robot/agvota/meshes/OTAv07_meshes/S30B-XXXXXX.stl" scale="0.001 0.001 0.001"/> 
         </geometry>
       </collision>  -->
       
@@ -98,7 +98,7 @@
       <visual>
           <origin xyz="0 0 0" rpy="0 0 0"/>
           <geometry>
-            <mesh filename="package://arena-simulation-setup/robot/agv-ota/meshes/OTAv07_meshes/zed.stl" />
+            <mesh filename="package://arena-simulation-setup/robot/agvota/meshes/OTAv07_meshes/zed.stl" />
           </geometry>
           <material name="black">
             <color rgba="1 1 1 1"/>
@@ -108,7 +108,7 @@
      <!-- <collision>
           <origin xyz="0 0 0" rpy="0 0 0"/>
           <geometry>
-            <mesh filename="package://arena-simulation-setup/robot/agv-ota/meshes/OTAv07_meshes/ZED.stl" />
+            <mesh filename="package://arena-simulation-setup/robot/agvota/meshes/OTAv07_meshes/ZED.stl" />
           </geometry>
           <material name="light_grey">
             <color rgba="0.8 0.8 0.8 0.8"/>

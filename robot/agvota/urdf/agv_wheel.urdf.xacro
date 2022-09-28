@@ -6,7 +6,7 @@
       <visual>
         <origin xyz="0 0 0" rpy=" 0 0 1.570796"/>
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/agv-ota/meshes/OTAv07_meshes/AnaTeker.stl" scale="0.001 0.001 0.001"/>
+          <mesh filename="package://arena-simulation-setup/robot/agvota/meshes/OTAv07_meshes/AnaTeker.stl" scale="0.001 0.001 0.001"/>
         </geometry>
       </visual>	 
       
