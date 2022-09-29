@@ -40,3 +40,11 @@ twist_controller:
       steer_neutral_position: -180.0
     - steer: fr_caster_rotation_joint
       drive: fr_caster_r_wheel_joint
+  # odometry_controller:
+  #   type: cob_omni_drive_controller/OdometryController
+  #   publish_rate: 50
+  #   frame_id: "/odom"
+  #   child_frame_id: "/base_footprint"
+  #   cov_pose: 0.1
+  #   cov_twist: 0.1
+  #   wheels: *wheels
