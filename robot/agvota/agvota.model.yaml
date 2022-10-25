@@ -21,11 +21,12 @@ plugins:
     body: base_footprint
     odom_frame_id: odom
     odom_pub: odom # topic odom is published on
+    twist_sub: cmd_vel
     pub_rate: 10
 
   - type: Laser
     name: static_laser
-    frame: scan_link
+    frame: laser_link
     topic: scan
     body: base_footprint
     broadcast_tf: true

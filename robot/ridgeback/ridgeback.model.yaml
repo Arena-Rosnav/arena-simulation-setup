@@ -19,6 +19,7 @@ plugins:
     body: base_footprint
     odom_frame_id: odom
     odom_pub: odom # topic odom is published on
+    twist_sub: cmd_vel
     pub_rate: 10
 
   - type: Laser
