@@ -60,12 +60,12 @@
 
   <gazebo>
     <plugin name="turtlebot3_waffle_pi_controller" filename="libgazebo_ros_diff_drive.so">
-      <commandTopic>cmd_vel</commandTopic>
-      <odometryTopic>odom</odometryTopic>
-      <odometryFrame>odom</odometryFrame>
+      <commandTopic>${robot_namespace}/cmd_vel</commandTopic>
+      <odometryTopic>${robot_namespace}/odom</odometryTopic>
+      <odometryFrame>${robot_namespace}_odom</odometryFrame>
       <odometrySource>world</odometrySource>
       <publishOdomTF>true</publishOdomTF>
-      <robotBaseFrame>base_footprint</robotBaseFrame>
+      <robotBaseFrame>${robot_namespace}_base_footprint</robotBaseFrame>
       <publishWheelTF>false</publishWheelTF>
       <publishTf>true</publishTf>
       <publishWheelJointState>true</publishWheelJointState>
@@ -137,8 +137,10 @@
         </noise>
       </ray>
       <plugin name="gazebo_ros_lds_lfcd_controller" filename="libgazebo_ros_laser.so">
-        <topicName>scan</topicName>
-        <frameName>base_scan</frameName>
+        <topicName>${robot_namespace}/scan</topicName>
+        <frameName>${robot_namespace}_base_footprint</frameName>
+        <tf_prefix>${robot_namespace}</tf_prefix>
+        <robotNamespace>${robot_namespace}</robotNamespace>
       </plugin>
     </sensor>
   </gazebo>

@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <robot name="ridgeback" xmlns:xacro="http://ros.org/wiki/xacro">
+  
+  <xacro:arg name="robot_namespace" default="$(optenv ROBOT_NAMESPACE /)" />
+  <xacro:property name="robot_namespace" value="$(arg robot_namespace)" />
+  
   <xacro:property name="PI" value="3.1415926535897931" />
 
   <xacro:property name="wheel_radius" value="0.0759" />

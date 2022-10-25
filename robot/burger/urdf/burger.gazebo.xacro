@@ -4,7 +4,7 @@
   <xacro:arg name="laser_visual" default="false"/>
   <xacro:arg name="imu_visual" default="false"/>
 
-  <gazebo reference="base_link">
+  <gazebo reference="base_footprint">
     <material>Gazebo/DarkGrey</material>
   </gazebo>
 
@@ -50,12 +50,12 @@
 
   <gazebo>
     <plugin name="turtlebot3_burger_controller" filename="libgazebo_ros_diff_drive.so">
-      <commandTopic>cmd_vel</commandTopic>
-      <odometryTopic>odom</odometryTopic>
-      <odometryFrame>odom</odometryFrame>
+      <commandTopic>${robot_namespace}/cmd_vel</commandTopic>
+      <odometryTopic>${robot_namespace}/odom</odometryTopic>
+      <odometryFrame>${robot_namespace}_odom</odometryFrame>
       <odometrySource>world</odometrySource>
       <publishOdomTF>true</publishOdomTF>
-      <robotBaseFrame>base_footprint</robotBaseFrame>
+      <robotBaseFrame>${robot_namespace}_base_footprint</robotBaseFrame>
       <publishWheelTF>false</publishWheelTF>
       <publishTf>true</publishTf>
       <publishWheelJointState>true</publishWheelJointState>
@@ -100,7 +100,7 @@
     </plugin>
   </gazebo>
 
-  <gazebo reference="base_scan">
+  <gazebo reference="laser_link">
     <material>Gazebo/FlatBlack</material>
     <sensor type="ray" name="lds_lfcd_sensor">
       <pose>0 0 0 0 0 0</pose>
@@ -128,7 +128,7 @@
       </ray>
       <plugin name="gazebo_ros_lds_lfcd_controller" filename="libgazebo_ros_laser.so">
         <topicName>scan</topicName>
-        <frameName>base_scan</frameName>
+        <frameName>${robot_namespace}_base_footprint</frameName>
       </plugin>
     </sensor>
   </gazebo>

@@ -21,7 +21,7 @@
     - ust10            :: Hokuyo UST10
   -->
   <xacro:if value="$(optenv DINGO_LASER 1)">
-    <xacro:property name="lidar_model" value="$(optenv DINGO_LASER_MODEL lms1xx)" />
+    <xacro:property name="lidar_model" value="$(optenv DINGO_LASER_MODEL ust10)" />
 
     <!-- <xacro:if value="${lidar_model == 'lms1xx'}">
       <xacro:sick_lms1xx_mount prefix="$(optenv DINGO_LASER_MOUNT front)"

@@ -27,11 +27,11 @@
         <wheelDiameter>0.20</wheelDiameter>
         <wheelTorque>20</wheelTorque>
         <wheelAcceleration>1.8</wheelAcceleration>
-        <commandTopic>cmd_vel</commandTopic>
-        <odometryTopic>odom</odometryTopic>
-        <odometryFrame>odom</odometryFrame>
+        <commandTopic>${robot_namespace}/cmd_vel</commandTopic>
+        <odometryTopic>${robot_namespace}/odom</odometryTopic>
+        <odometryFrame>${robot_namespace}_odom</odometryFrame>
         <odometrySource>world</odometrySource>
-        <robotBaseFrame>base_link</robotBaseFrame>
+        <robotBaseFrame>${robot_namespace}_base_footprint</robotBaseFrame>
 	      <legacyMode>true</legacyMode>
 	      <publishTf>true</publishTf>
         <updateRate>50.0</updateRate>

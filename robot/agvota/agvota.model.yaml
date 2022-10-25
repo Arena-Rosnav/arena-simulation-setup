@@ -1,5 +1,5 @@
 bodies: # List of named bodies
-  - name: base_link
+  - name: base_footprint
     pose: [0, 0, 0]
     type: dynamic
     color: [1.0, 0.64, 0.0, 1.0] # Orange hopefully
@@ -18,16 +18,17 @@ bodies: # List of named bodies
 plugins:
   - type: DiffDrive
     name: diff_drive
-    body: base_link
+    body: base_footprint
     odom_frame_id: odom
     odom_pub: odom # topic odom is published on
+    twist_sub: cmd_vel
     pub_rate: 10
 
   - type: Laser
     name: static_laser
-    frame: scan_link
+    frame: laser_link
     topic: scan
-    body: base_link
+    body: base_footprint
     broadcast_tf: true
     origin: [0.0, 0.0, 0.0]
 

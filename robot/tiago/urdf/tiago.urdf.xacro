@@ -15,6 +15,9 @@
 
 <robot  xmlns:xacro="http://ros.org/wiki/xacro"
         name="tiago" >
+    <xacro:arg name="robot_namespace" default="$(optenv ROBOT_NAMESPACE /)" />
+	  <xacro:property name="robot_namespace" value="$(arg robot_namespace)" />
+  
     <xacro:arg name="arm" default="false"/> <!-- true, false -->
     <xacro:arg name="wrist_model" default="wrist-2010"/>
     <xacro:arg name="end_effector" default="false"/> <!-- false, pal-gripper, pal-hey5, schunk-wsg-->

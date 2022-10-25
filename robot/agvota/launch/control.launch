@@ -1,0 +1,6 @@
+<launch>
+  	<arg name="robot_namespace" />
+
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+	<!-- <node name="emergency_brake" pkg="gazebo_utils" type="emergency_brake_node.py"/> -->
+</launch>
