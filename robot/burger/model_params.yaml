@@ -1,5 +1,6 @@
 robot_model: burger
 robot_radius: 0.113
+base_frame: base_footprint
 is_holonomic: False
 actions:
   discrete:
