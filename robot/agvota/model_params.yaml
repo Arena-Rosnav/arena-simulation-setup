@@ -1,5 +1,7 @@
 robot_model: agvota
 robot_radius: 0.629
+robot_base_frame: base_link
+robot_sensor_frame: scan_link
 is_holonomic: False
 actions:
   discrete:

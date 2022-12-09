@@ -1,5 +1,7 @@
 robot_model: rto_lab
 robot_radius: 0.225
+robot_base_frame: base_footprint
+robot_sensor_frame: laser_link
 is_holonomic: True
 actions:
   discrete:

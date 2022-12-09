@@ -13,12 +13,12 @@ global_costmap:
   raytrace_range: 3.0
   inflation_radius: 2.
 
-  observation_sources: base_scan
+  observation_sources: scan
 
   footprint:
     [[-0.285, 0.285], [-0.285, -0.285], [0.285, -0.285], [0.285, 0.285]]
 
-  base_scan:
+  scan:
     {
       sensor_frame: base_laser_front_link,
       data_type: LaserScan,

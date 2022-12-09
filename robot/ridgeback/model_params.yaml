@@ -1,5 +1,7 @@
 robot_model: ridgeback
 robot_radius: 0.625
+robot_base_frame: base_link
+robot_sensor_frame: front_laser
 is_holonomic: True
 actions:
   discrete:

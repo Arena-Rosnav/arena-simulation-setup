@@ -19,7 +19,7 @@
   <arg name="extra_gazebo_args" default=""/>
   <arg name="use_moveit_camera" default="false"/>
   <arg name="use_dynamic_footprint" default="false"/>
-  <arg name="base_type" default="omni_base"/>
+  <arg name="base_type" default="pmb2"/>
   <arg name="file_suffix" value="$(eval (('no-arm' if not arm else (end_effector if end_effector else 'no-ee') + ('_' +  ft_sensor if ft_sensor else ''))))"/>  
   <arg name="ee_suffix" value="$(eval (end_effector if end_effector else 'no-ee'))"/>
 
@@ -58,23 +58,22 @@
  
    <rosparam command="load" file="$(find tiago_controller_configuration_gazebo)/config/hardware_gazebo/tiago_pal_hardware_gazebo_$(arg file_suffix).yaml"/>
 
-  <node name="odom_pub" pkg="gazebo_utils" type="odom.py">
-    <param name="base_frame" value="base_footprint"/>
-  </node>
+   <node 
+   name="odom_pub" 
+   pkg="gazebo_utils" 
+   type="odom.py" 
+   args="$(arg robot_namespace)" 
+    />
+  <node name="cmd_vel_relay" pkg="topic_tools" type="relay" args="$(arg robot_namespace)/cmd_vel $(arg robot_namespace)/mobile_base_controller/cmd_vel" />
 
+    <!-- run scan unifier -->
+    <!-- Only needed if you are running tiago with omni_base variant -->
+    <!-- <arg name="input_scans" value="['$(arg robot_namespace)/scan_front_raw', '$(arg robot_namespace)/scan_rear_raw']"/>
+	<node pkg="cob_scan_unifier" type="scan_unifier_node" name="scanunifier" output="screen">
+		<remap from="scan_unified" to="scan"/>
+        <rosparam subst_value="True" param="input_scans">$(arg input_scans)</rosparam> 
+        <param name="frame" value="$(arg robot_namespace)/virtual_base_laser_link"/>
+	</node> -->
 
-  <node pkg="ira_laser_tools" name="laserscan_multi_merger" type="laserscan_multi_merger">
-  <param name="destination_frame" value="virtual_base_laser_link"/>
-  <param name="cloud_destination_topic" value="/merged_cloud"/>
-  <param name="scan_destination_topic" value="/scan"/>
-  <param name="laserscan_topics" value ="/scan_front_raw /scan_rear_raw" /> 
-  <param name="time_increment" value ="0.0" /> 
-  <param name="scan_time" value ="0.0" /> 
-  <param name="range_min" value ="0.05" /> 
-  <param name="range_max" value ="25.0" /> 
-  <param name="angle_min" value ="-3.1459" /> 
-  <param name="angle_max" value ="3.1459" /> 
-  <param name="angle_increment" value ="0.005769" /> 
-</node>
 
 </launch>
