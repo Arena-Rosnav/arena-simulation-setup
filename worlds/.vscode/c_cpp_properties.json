@@ -1,0 +1,49 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/jacek/catkin_ws/devel/include/**",
+        "/home/jacek/catkin_ws/src/planners/all_in_one/all_in_one_global_planner_interface/include/**",
+        "/home/jacek/catkin_ws/src/planners/all_in_one/all_in_one_local_planner_interface/include/**",
+        "/home/jacek/catkin_ws/src/utils/flatland/arena_plugins/include/**",
+        "/home/jacek/catkin_ws/src/planners/dragon/include/**",
+        "/home/jacek/catkin_ws/src/utils/flatland/flatland_plugins/include/**",
+        "/home/jacek/catkin_ws/src/utils/flatland/flatland_server/include/**",
+        "/home/jacek/catkin_ws/src/utils/flatland/flatland_viz/include/**",
+        "/home/jacek/catkin_ws/src/utils/navigation/msgs/ford/include/**",
+        "/home/jacek/catkin_ws/src/utils/waypoint-generators/intermediate_planner/include/**",
+        "/home/jacek/catkin_ws/src/planners/all_in_one/all_in_one_3rd_party/light_scan_sim/include/**",
+        "/home/jacek/catkin_ws/src/utils/arena-utils/mapping/include/**",
+        "/home/jacek/catkin_ws/src/planners/mpc/mpc_local_planner/include/**",
+        "/home/jacek/catkin_ws/src/utils/arena-utils/path_search/include/**",
+        "/home/jacek/catkin_ws/src/utils/pedsim_ros/3rdparty/libpedsim/include/**",
+        "/home/jacek/catkin_ws/src/utils/pedsim_ros/pedsim_sensors/include/**",
+        "/home/jacek/catkin_ws/src/utils/pedsim_ros/pedsim_simulator/include/**",
+        "/home/jacek/catkin_ws/src/utils/pedsim_ros/pedsim_utils/include/**",
+        "/home/jacek/catkin_ws/src/utils/pedsim_ros/pedsim_visualizer/include/**",
+        "/home/jacek/catkin_ws/src/utils/arena-utils/plan_manager/include/**",
+        "/home/jacek/catkin_ws/src/utils/arena-utils/plan_visualization/include/**",
+        "/home/jacek/catkin_ws/src/rqt_estop/include/**",
+        "/home/jacek/catkin_ws/src/rto_core/rto_local_move/include/**",
+        "/home/jacek/catkin_ws/src/rto_core/rto_local_planner/include/**",
+        "/home/jacek/catkin_ws/src/rto_core/rto_node/include/**",
+        "/home/jacek/catkin_ws/src/rto_core/rto_safety/include/**",
+        "/home/jacek/catkin_ws/src/rto_core/rto_teleop/include/**",
+        "/home/jacek/catkin_ws/src/utils/waypoint-generators/spacial_horizon/include/**",
+        "/home/jacek/catkin_ws/src/utils/arena-utils/traj_planner/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

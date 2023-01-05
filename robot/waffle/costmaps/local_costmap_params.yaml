@@ -27,7 +27,7 @@ local_costmap:
   observation_sources: scan
   scan:
     {
-      sensor_frame: laser_link,
+      sensor_frame: base_scan,
       data_type: LaserScan,
       topic: scan,
       marking: true,

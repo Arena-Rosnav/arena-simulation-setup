@@ -1,5 +1,7 @@
 robot_model: rto
 robot_radius: 0.225
+robot_base_frame: base_link
+robot_sensor_frame: hokuyo_link
 is_holonomic: True
 actions:
   discrete:

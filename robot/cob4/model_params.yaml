@@ -1,5 +1,7 @@
 robot_model: cob4
 robot_radius: 0.36
+robot_base_frame: base_footprint
+robot_sensor_frame: base_link
 is_holonomic: True
 actions:
   discrete:

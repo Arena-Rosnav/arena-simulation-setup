@@ -21,9 +21,9 @@ global_costmap:
 
   inflation_radius: 0.2
 
-  observation_sources: laser
+  observation_sources: scan
 
-  laser:
+  scan:
     {
       topic: scan,
       sensor_frame: base_link,

@@ -1,6 +1,6 @@
 global_costmap:
   global_frame: map
-  robot_base_frame: base_footprint
+  robot_base_frame: base_link
   static_map: true
   width: 25.0
   height: 25.0
@@ -14,9 +14,9 @@ global_costmap:
 
   inflation_radius: 0.2
 
-  observation_sources: laser
+  observation_sources: scan
 
-  laser:
+  scan:
     {
       topic: scan,
       sensor_frame: scan_link,
