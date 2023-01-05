@@ -69,10 +69,8 @@
           </noise>
         </ray>
         <plugin name="gazebo_ros_${name}_controller" filename="libgazebo_ros_laser.so">
-            <topicName>${robot_namespace}/scan</topicName>
-            <frameName>${robot_namespace}_base_footprint</frameName>
-            <tf_prefix>${robot_namespace}</tf_prefix>
-            <robotNamespace>${robot_namespace}</robotNamespace>
+          <topicName>${ros_topic}</topicName>
+          <frameName>${name}_link</frameName>
         </plugin>
       </sensor>
     </gazebo>

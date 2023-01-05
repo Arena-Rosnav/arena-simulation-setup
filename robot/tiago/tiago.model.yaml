@@ -1,5 +1,5 @@
 bodies: # List of named bodies
-  - name: base_footprint
+  - name: base_link
     pose: [0, 0, 0]
     type: dynamic
     color: [0.2, 0.8, 0.2, 1.0]
@@ -17,7 +17,7 @@ bodies: # List of named bodies
 plugins:
   - type: DiffDrive
     name: diff_drive
-    body: base_footprint
+    body: base_link
     odom_frame_id: odom
     odom_pub: odom # topic odom is published on
     twist_sub: cmd_vel
@@ -25,9 +25,9 @@ plugins:
 
   - type: Laser
     name: static_laser
-    frame: laser_link
+    frame: base_laser_link
     topic: scan
-    body: base_footprint
+    body: base_link
     broadcast_tf: true
     origin: [0.202, 0.0, 0.2015] # from https://github.com/ignc-research/arena-rosnav-3D/blob/main/simulator_setup/robot/tiago/pmb2_description/urdf/base/base_sensors.urdf.xacro
     range: 25.0 # from:

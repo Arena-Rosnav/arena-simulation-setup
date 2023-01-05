@@ -1,10 +1,6 @@
 <?xml version="1.0"?>
 <robot name="agvota" xmlns:xacro="http://ros.org/wiki/xacro">
 
-	<xacro:arg name="robot_namespace" default="$(optenv ROBOT_NAMESPACE /)" />
-	<xacro:property name="robot_namespace" value="$(arg robot_namespace)" />
-
-
 	<xacro:include filename="$(find arena-simulation-setup)/robot/agvota/urdf/agv_base.urdf.xacro"/>
 	<xacro:include filename="$(find arena-simulation-setup)/robot/agvota/urdf/inertia_tensors.urdf.xacro"/>	
 	<xacro:include filename="$(find arena-simulation-setup)/robot/agvota/urdf/agv_wheel.urdf.xacro"/>

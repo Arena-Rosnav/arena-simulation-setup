@@ -9,7 +9,7 @@
     dingo_gazebo/launch/dingo_world.launch
     dingo_base/launch/base.launch
   -->
-
+  <xacro:arg name="robot_namespace" default="" />
   <xacro:include filename="$(find arena-simulation-setup)/robot/dingo/urdf/accessories/sick_lms1xx_mount.urdf.xacro" />
   <xacro:include filename="$(find arena-simulation-setup)/robot/dingo/urdf/accessories/hokuyo_ust10.urdf.xacro" />
   <xacro:include filename="$(find arena-simulation-setup)/robot/dingo/urdf/accessories/vlp16_mount.urdf.xacro" />
@@ -27,8 +27,8 @@
       <xacro:sick_lms1xx_mount prefix="$(optenv DINGO_LASER_MOUNT front)"
                          topic="$(optenv DINGO_LASER_TOPIC scan)"/> -->
     <xacro:if value="${lidar_model == 'lms1xx'}">
-    <xacro:sick_lms1xx_mount prefix="front"
-                        topic="scan"/>
+    <xacro:sick_lms1xx_mount prefix="$(arg robot_namespace)/front"
+                        topic="$(arg robot_namespace)/scan"/>
 
       <joint name="$(optenv DINGO_LASER_MOUNT front)_laser_mount_joint" type="fixed">
         <origin xyz="$(optenv DINGO_LASER_OFFSET 0 0 0)"

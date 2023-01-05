@@ -1,5 +1,7 @@
 robot_model: waffle
 robot_radius: 0.208
+robot_base_frame: base_footprint
+robot_sensor_frame: laser_link
 is_holonomic: False
 actions:
   discrete:

@@ -56,11 +56,11 @@
         <!-- gazebo control -->
         <gazebo>
             <plugin name="object_controller" filename="libgazebo_ros_planar_move.so">
-                <commandTopic>${robot_namespace}/cmd_vel</commandTopic>
-                <odometryTopic>${robot_namespace}/odom</odometryTopic>
-                <odometryFrame>${robot_namespace}_odom</odometryFrame>
+                <commandTopic>cmd_vel</commandTopic>
+                <odometryTopic>odom</odometryTopic>
+                <odometryFrame>odom</odometryFrame>
                 <odometryRate>20</odometryRate>
-                <robotBaseFrame>${robot_namespace}_base_footprint</robotBaseFrame>
+                <robotBaseFrame>base_link</robotBaseFrame>
                 <publishTF>true</publishTF>
             </plugin>
             <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"/>

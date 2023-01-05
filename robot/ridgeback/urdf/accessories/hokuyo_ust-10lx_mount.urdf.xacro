@@ -61,10 +61,9 @@
           </noise>
         </ray>
         <plugin name="gazebo_ros_laser" filename="libgazebo_ros_laser.so">
-            <topicName>${topic}</topicName>
-            <frameName>${robot_namespace}_base_footprint</frameName>
-            <tf_prefix>${robot_namespace}</tf_prefix>
-            <robotNamespace>${robot_namespace}</robotNamespace>
+          <topicName>${topic}</topicName>
+          <frameName>${prefix}_laser</frameName>
+          <hokuyoMinIntensity>101</hokuyoMinIntensity>
         </plugin>
       </sensor>
       <material>Gazebo/DarkGrey</material>

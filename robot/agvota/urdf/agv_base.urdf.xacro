@@ -85,8 +85,8 @@
         
         <plugin name="laser_scan_plugin" filename="libgazebo_ros_laser.so">
             <topicName>scan</topicName>
-            <frameName>${robot_namespace}_base_footprint</frameName>
-            <!-- <tf_prefix>${robot_namespace}</tf_prefix> -->
+            <frameName>scan_link</frameName>
+            <tf_prefix>/</tf_prefix>
         </plugin>
       </sensor>
     </gazebo>  

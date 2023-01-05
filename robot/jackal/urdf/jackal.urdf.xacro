@@ -2,8 +2,6 @@
 <robot name="jackal" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:property name="PI" value="3.1415926535897931" />
 
-  <xacro:arg name="robot_namespace" default="$(optenv ROBOT_NAMESPACE /)" />
-
   <xacro:property name="wheelbase" value="0.262" />
   <xacro:property name="track" value="0.37559" />
   <xacro:property name="wheel_vertical_offset" value="0.0345" />
@@ -19,8 +17,6 @@
   <xacro:property name="dummy_inertia" value="1e-09"/>
 
   <xacro:property name="mount_spacing" value="0.120" />
-
-  <xacro:property name="robot_namespace" value="$(arg robot_namespace)" />
 
   <material name="dark_grey"><color rgba="0.2 0.2 0.2 1.0" /></material>
   <material name="light_grey"><color rgba="0.4 0.4 0.4 1.0" /></material>
@@ -96,11 +92,11 @@
     <origin xyz="${-wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
   </xacro:wheel>
 
-  <link name="base_footprint"></link>
+  <link name="base_link"></link>
 
-  <joint name="base_footprint_joint" type="fixed">
+  <joint name="base_link_joint" type="fixed">
     <origin xyz="0 0 0" rpy="0 0 0" />
-    <parent link="base_footprint"/>
+    <parent link="base_link"/>
     <child link="chassis_link" />
   </joint>
 
@@ -253,50 +249,13 @@
     <origin xyz="${mount_spacing} 0 0" />
   </joint>
 
-  <gazebo>
-    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>${robot_namespace}</robotNamespace>
-    </plugin>
-  </gazebo>
-
-  <gazebo>
-    <plugin name="imu_controller" filename="libhector_gazebo_ros_imu.so">
-      <robotNamespace>${robot_namespace}</robotNamespace>
-      <updateRate>50.0</updateRate>
-      <bodyName>imu_link</bodyName>
-      <topicName>imu/data</topicName>
-      <accelDrift>0.005 0.005 0.005</accelDrift>
-      <accelGaussianNoise>0.005 0.005 0.005</accelGaussianNoise>
-      <rateDrift>0.005 0.005 0.005 </rateDrift>
-      <rateGaussianNoise>0.005 0.005 0.005 </rateGaussianNoise>
-      <headingDrift>0.005</headingDrift>
-      <headingGaussianNoise>0.005</headingGaussianNoise>
-    </plugin>
-  </gazebo>
-
-  <gazebo>
-    <plugin name="gps_controller" filename="libhector_gazebo_ros_gps.so">
-      <updateRate>40</updateRate>
-      <robotNamespace>${robot_namespace}</robotNamespace>
-      <bodyName>navsat_link</bodyName>
-      <frameId>${robot_namespace}_base_footprint</frameId>
-      <topicName>/navsat/fix</topicName>
-      <velocityTopicName>/navsat/vel</velocityTopicName>
-      <referenceLatitude>49.9</referenceLatitude>
-      <referenceLongitude>8.9</referenceLongitude>
-      <referenceHeading>0</referenceHeading>
-      <referenceAltitude>0</referenceAltitude>
-      <drift>0.0001 0.0001 0.0001</drift>
-    </plugin>
-  </gazebo>
-
   <!-- Bring in simulation data for Gazebo. -->
   <xacro:include filename="$(find arena-simulation-setup)/robot/jackal/urdf/jackal.gazebo" />
 
   <!-- Optional standard accessories, including their simulation data. The rendering
        of these into the final description is controlled by optenv variables, which
        default each one to off.-->
-  <xacro:include filename="$(find arena-simulation-setup)/robot/jackal/urdf/accessories.urdf.xacro"  />
+  <xacro:include filename="$(find arena-simulation-setup)/robot/jackal/urdf/accessories.urdf.xacro" />
 
   <!-- Optional custom includes. -->
   <xacro:include filename="$(optenv JACKAL_URDF_EXTRAS empty.urdf)" />

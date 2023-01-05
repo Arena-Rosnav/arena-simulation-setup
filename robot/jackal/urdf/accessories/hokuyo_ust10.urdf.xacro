@@ -40,14 +40,13 @@
           <plugin name="gazebo_ros_laser" filename="libgazebo_ros_laser.so">
             <topicName>${topic}</topicName>
             <frameName>${frame}</frameName>
-            <tf_prefix>${robot_namespace}</tf_prefix>
-            <robotNamespace>${robot_namespace}</robotNamespace>
+            <!-- <robotNamespace>${robot_namespace}</robotNamespace> -->
           </plugin>
         </sensor>
       </gazebo>
     </xacro:macro>
 
-    <xacro:hokuyo_ust10 frame="${robot_namespace}_base_footprint" topic="${robot_namespace}/${topic}" robot_namespace="${robot_namespace}" />
+    <xacro:hokuyo_ust10 frame="${prefix}_laser" topic="${topic}"/>
 
     <joint name="${prefix}_laser_mount_joint" type="fixed">
       <xacro:insert_block name="origin" />
@@ -70,7 +69,7 @@
       <!-- This offset is from the base of the bracket to the LIDAR's focal point. -->
       <origin xyz="0 0 0.0474" rpy="0 0 0" />
       <parent link="${prefix}_laser_mount" />
-      <child link="${robot_namespace}_base_footprint" />
+      <child link="${prefix}_laser" />
     </joint>
 
     <gazebo reference="${prefix}_laser_mount">

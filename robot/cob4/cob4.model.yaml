@@ -25,7 +25,7 @@ plugins:
 
   - type: Laser
     name: static_laser
-    frame: laser_link
+    frame: base_link
     topic: scan
     body: base_footprint
     broadcast_tf: true
