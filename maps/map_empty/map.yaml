@@ -3,8 +3,8 @@ image: map.png
 negate: 0
 occupied_thresh: 0.65
 origin:
-  - 1.0
-  - 1.0
+  - 0.0
+  - 0.0
   - 0.0
 resolution: 0.05
 type: indoor
