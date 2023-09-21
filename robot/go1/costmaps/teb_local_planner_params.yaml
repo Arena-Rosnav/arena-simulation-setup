@@ -1,7 +1,6 @@
 TebLocalPlannerROS:
 
- odom_topic: odom
- map_frame: /odom
+ odom_topic: go1_0_0/odom
     
  # Trajectory
   

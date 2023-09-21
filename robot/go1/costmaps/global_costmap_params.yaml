@@ -1,6 +1,6 @@
 global_costmap:
   global_frame: map
-  robot_base_frame: base
+  robot_base_frame: go1_0_0/base
   update_frequency: 1.0 
   publish_frequency: 0.5 
   static_map: true
