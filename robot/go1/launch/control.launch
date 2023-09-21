@@ -12,10 +12,10 @@
   </include>
   -->
 
-  <!--
+  
   
   <node pkg="controller_manager" type="spawner" name="controller_spawner" respawn="false"
-        output="screen" ns="$(arg robot_namespace)_gazebo" args="
+        output="screen" ns="gazebo" args="
           joint_state_controller
           FR_hip_controller FR_thigh_controller FR_calf_controller 
           FL_hip_controller FL_thigh_controller FL_calf_controller 
@@ -23,6 +23,7 @@
           RL_hip_controller RL_thigh_controller RL_calf_controller"
           />
 
+  <!--
   <include file="$(find unitree_controller)/launch/set_ctrl.launch">
       <arg name="rname" value="$(arg rname)"/>
   </include>
