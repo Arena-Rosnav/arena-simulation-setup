@@ -34,8 +34,6 @@
   <!-- ros_control plugin -->
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
-      <robotNamespace>go1_gazebo_test</robotNamespace>
-      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
     </plugin>
   </gazebo>
   <!-- Show the trajectory of trunk center. -->
@@ -176,11 +174,11 @@
         <alwaysOn>true</alwaysOn>
         <updateRate>1.0</updateRate>
         <cameraName>camera_link_ir</cameraName>
-        <imageTopicName>/camera_link/color/image_raw</imageTopicName>
-        <cameraInfoTopicName>/camera_link/color/camera_info</cameraInfoTopicName>
-        <depthImageTopicName>/camera_link/depth/image_raw</depthImageTopicName>
-        <depthImageInfoTopicName>/camera_link/depth/camera_info</depthImageInfoTopicName>
-        <pointCloudTopicName>/camera_link/depth/points</pointCloudTopicName>
+        <imageTopicName>camera_link/color/image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_link/color/camera_info</cameraInfoTopicName>
+        <depthImageTopicName>camera_link/depth/image_raw</depthImageTopicName>
+        <depthImageInfoTopicName>camera_link/depth/camera_info</depthImageInfoTopicName>
+        <pointCloudTopicName>camera_link/depth/points</pointCloudTopicName>
         <frameName>depthCamera_link_left</frameName>
         <pointCloudCutoff>0.5</pointCloudCutoff>
         <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
@@ -1356,12 +1354,12 @@
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
         <cameraName>camera_face_ir</cameraName>
-        <imageTopicName>/camera_face/color/image_raw</imageTopicName>
-        <cameraInfoTopicName>/camera_face/color/camera_info</cameraInfoTopicName>
-        <depthImageTopicName>/camera_face/depth/image_raw</depthImageTopicName>
-        <depthImageInfoTopicName>/camera_face/depth/camera_info</depthImageInfoTopicName>
-        <!-- <pointCloudTopicName>/camera_${name}/depth/points</pointCloudTopicName> -->
-        <pointCloudTopicName>/cam1/point_cloud_face</pointCloudTopicName>
+        <imageTopicName>camera_face/color/image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_face/color/camera_info</cameraInfoTopicName>
+        <depthImageTopicName>camera_face/depth/image_raw</depthImageTopicName>
+        <depthImageInfoTopicName>camera_face/depth/camera_info</depthImageInfoTopicName>
+        <!-- <pointCloudTopicName>/amera_${name}/depth/points</pointCloudTopicName> -->
+        <pointCloudTopicName>cam1/point_cloud_face</pointCloudTopicName>
         <frameName>camera_optical_face</frameName>
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
@@ -1430,12 +1428,12 @@
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
         <cameraName>camera_chin_ir</cameraName>
-        <imageTopicName>/camera_chin/color/image_raw</imageTopicName>
-        <cameraInfoTopicName>/camera_chin/color/camera_info</cameraInfoTopicName>
-        <depthImageTopicName>/camera_chin/depth/image_raw</depthImageTopicName>
-        <depthImageInfoTopicName>/camera_chin/depth/camera_info</depthImageInfoTopicName>
+        <imageTopicName>camera_chin/color/image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_chin/color/camera_info</cameraInfoTopicName>
+        <depthImageTopicName>camera_chin/depth/image_raw</depthImageTopicName>
+        <depthImageInfoTopicName>camera_chin/depth/camera_info</depthImageInfoTopicName>
         <!-- <pointCloudTopicName>/camera_${name}/depth/points</pointCloudTopicName> -->
-        <pointCloudTopicName>/cam2/point_cloud_chin</pointCloudTopicName>
+        <pointCloudTopicName>cam2/point_cloud_chin</pointCloudTopicName>
         <frameName>camera_optical_chin</frameName>
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
@@ -1504,12 +1502,12 @@
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
         <cameraName>camera_left_ir</cameraName>
-        <imageTopicName>/camera_left/color/image_raw</imageTopicName>
-        <cameraInfoTopicName>/camera_left/color/camera_info</cameraInfoTopicName>
-        <depthImageTopicName>/camera_left/depth/image_raw</depthImageTopicName>
-        <depthImageInfoTopicName>/camera_left/depth/camera_info</depthImageInfoTopicName>
+        <imageTopicName>camera_left/color/image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_left/color/camera_info</cameraInfoTopicName>
+        <depthImageTopicName>camera_left/depth/image_raw</depthImageTopicName>
+        <depthImageInfoTopicName>camera_left/depth/camera_info</depthImageInfoTopicName>
         <!-- <pointCloudTopicName>/camera_${name}/depth/points</pointCloudTopicName> -->
-        <pointCloudTopicName>/cam3/point_cloud_left</pointCloudTopicName>
+        <pointCloudTopicName>cam3/point_cloud_left</pointCloudTopicName>
         <frameName>camera_optical_left</frameName>
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
@@ -1578,12 +1576,12 @@
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
         <cameraName>camera_right_ir</cameraName>
-        <imageTopicName>/camera_right/color/image_raw</imageTopicName>
-        <cameraInfoTopicName>/camera_right/color/camera_info</cameraInfoTopicName>
-        <depthImageTopicName>/camera_right/depth/image_raw</depthImageTopicName>
-        <depthImageInfoTopicName>/camera_right/depth/camera_info</depthImageInfoTopicName>
+        <imageTopicName>camera_right/color/image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_right/color/camera_info</cameraInfoTopicName>
+        <depthImageTopicName>camera_right/depth/image_raw</depthImageTopicName>
+        <depthImageInfoTopicName>camera_right/depth/camera_info</depthImageInfoTopicName>
         <!-- <pointCloudTopicName>/camera_${name}/depth/points</pointCloudTopicName> -->
-        <pointCloudTopicName>/cam4/point_cloud_right</pointCloudTopicName>
+        <pointCloudTopicName>cam4/point_cloud_right</pointCloudTopicName>
         <frameName>camera_optical_right</frameName>
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
@@ -1652,12 +1650,12 @@
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
         <cameraName>camera_rearDown_ir</cameraName>
-        <imageTopicName>/camera_rearDown/color/image_raw</imageTopicName>
-        <cameraInfoTopicName>/camera_rearDown/color/camera_info</cameraInfoTopicName>
-        <depthImageTopicName>/camera_rearDown/depth/image_raw</depthImageTopicName>
-        <depthImageInfoTopicName>/camera_rearDown/depth/camera_info</depthImageInfoTopicName>
-        <!-- <pointCloudTopicName>/camera_${name}/depth/points</pointCloudTopicName> -->
-        <pointCloudTopicName>/cam5/point_cloud_rearDown</pointCloudTopicName>
+        <imageTopicName>camera_rearDown/color/image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_rearDown/color/camera_info</cameraInfoTopicName>
+        <depthImageTopicName>camera_rearDown/depth/image_raw</depthImageTopicName>
+        <depthImageInfoTopicName>camera_rearDown/depth/camera_info</depthImageInfoTopicName>
+        <!-- <pointCloudTopicName>camera_${name}/depth/points</pointCloudTopicName> -->
+        <pointCloudTopicName>cam5/point_cloud_rearDown</pointCloudTopicName>
         <frameName>camera_optical_rearDown</frameName>
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
@@ -1816,7 +1814,6 @@
         </noise>
       </ray>
       <plugin filename="libgazebo_ros_laser.so" name="laser_controller">
-        <robotNamespace/>
         <topicName>scan</topicName>
         <frameName>laser_link</frameName>
       </plugin>

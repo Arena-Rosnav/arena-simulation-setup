@@ -29,7 +29,7 @@ namespace gazebo
             this->contact_namespace = "contact/";
             this->rosnode = new ros::NodeHandle(this->contact_namespace);
             // add "visual" is for the same name of draw node
-            this->force_pub = this->rosnode->advertise<geometry_msgs::WrenchStamped>("/visual/"+_sensor->Name()+"/the_force", 100);
+            this->force_pub = this->rosnode->advertise<geometry_msgs::WrenchStamped>("visual/"+_sensor->Name()+"/the_force", 100);
             // Connect to the sensor update event.
             this->update_connection = this->parentSensor->ConnectUpdated(std::bind(&UnitreeFootContactPlugin::OnUpdate, this));
             this->parentSensor->SetActive(true); // Make sure the parent sensor is active.

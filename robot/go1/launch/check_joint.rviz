@@ -318,8 +318,7 @@ Visualization Manager:
       Show Arrows: true
       Show Axes: true
       Show Names: true
-      Tree:
-        {}
+      Tree: {}
       Update Interval: 0
       Value: false
     - Alpha: 1
@@ -464,7 +463,7 @@ Visualization Manager:
       Value: false
     - Class: rviz/Image
       Enabled: true
-      Image Topic: /camera_face/color/image_raw
+      Image Topic: camera_face/color/image_raw
       Max Value: 1
       Median window: 5
       Min Value: 0

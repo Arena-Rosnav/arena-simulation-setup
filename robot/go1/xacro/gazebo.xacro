@@ -151,11 +151,11 @@
         <alwaysOn>true</alwaysOn>
         <updateRate>1.0</updateRate>
         <cameraName>camera_link_ir</cameraName>
-        <imageTopicName>/camera_link/color/image_raw</imageTopicName>
-        <cameraInfoTopicName>/camera_link/color/camera_info</cameraInfoTopicName>
-        <depthImageTopicName>/camera_link/depth/image_raw</depthImageTopicName>
-        <depthImageInfoTopicName>/camera_link/depth/camera_info</depthImageInfoTopicName>
-        <pointCloudTopicName>/camera_link/depth/points</pointCloudTopicName>
+        <imageTopicName>camera_link/color/image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_link/color/camera_info</cameraInfoTopicName>
+        <depthImageTopicName>camera_link/depth/image_raw</depthImageTopicName>
+        <depthImageInfoTopicName>camera_link/depth/camera_info</depthImageInfoTopicName>
+        <pointCloudTopicName>camera_link/depth/points</pointCloudTopicName>
         <frameName>depthCamera_link_left</frameName>
         <pointCloudCutoff>0.5</pointCloudCutoff>
         <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
