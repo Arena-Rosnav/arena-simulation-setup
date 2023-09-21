@@ -2,7 +2,7 @@
 
     <arg name="user_debug" default="false"/>
     
-    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find go1_description)/xacro/robot.xacro'
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find arena-simulation-setup)/robot/go1/xacro/robot.xacro'
             DEBUG:=$(arg user_debug)"/>
 
     <!-- for higher robot_state_publisher average rate-->
@@ -18,6 +18,6 @@
     </node>
 
     <node pkg="rviz" type="rviz" name="rviz" respawn="false" output="screen"
-        args="-d $(find go1_description)/launch/check_joint.rviz"/>
+        args="-d $(find arena-simulation-setup)/robot/go1/launch/check_joint.rviz"/>
 
 </launch>

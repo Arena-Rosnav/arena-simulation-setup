@@ -34,7 +34,7 @@
   <!-- ros_control plugin -->
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
-      <robotNamespace>go1_gazebo</robotNamespace>
+      <robotNamespace>go1_gazebo_test</robotNamespace>
       <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
     </plugin>
   </gazebo>
@@ -411,7 +411,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/trunk.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/trunk.dae" scale="1 1 1"/>
       </geometry>
       <!-- <material name="orange"/> -->
     </visual>
@@ -469,7 +469,7 @@
     <visual>
       <origin rpy="3.141592653589793 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/hip.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/hip.dae" scale="1 1 1"/>
       </geometry>
       <!-- <material name="orange"/> -->
     </visual>
@@ -522,7 +522,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/thigh_mirror.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/thigh_mirror.dae" scale="1 1 1"/>
       </geometry>
       <!-- <material name="orange"/> -->
     </visual>
@@ -575,7 +575,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/calf.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/calf.dae" scale="1 1 1"/>
       </geometry>
       <!-- <material name="orange"/> -->
     </visual>
@@ -682,7 +682,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/hip.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/hip.dae" scale="1 1 1"/>
       </geometry>
       <!-- <material name="orange"/> -->
     </visual>
@@ -735,7 +735,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/thigh.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/thigh.dae" scale="1 1 1"/>
       </geometry>
       <!-- <material name="orange"/> -->
     </visual>
@@ -788,7 +788,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/calf.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/calf.dae" scale="1 1 1"/>
       </geometry>
       <!-- <material name="orange"/> -->
     </visual>
@@ -895,7 +895,7 @@
     <visual>
       <origin rpy="3.141592653589793 3.141592653589793 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/hip.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/hip.dae" scale="1 1 1"/>
       </geometry>
       <!-- <material name="orange"/> -->
     </visual>
@@ -948,7 +948,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/thigh_mirror.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/thigh_mirror.dae" scale="1 1 1"/>
       </geometry>
       <!-- <material name="orange"/> -->
     </visual>
@@ -1001,7 +1001,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/calf.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/calf.dae" scale="1 1 1"/>
       </geometry>
       <!-- <material name="orange"/> -->
     </visual>
@@ -1108,7 +1108,7 @@
     <visual>
       <origin rpy="0 3.141592653589793 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/hip.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/hip.dae" scale="1 1 1"/>
       </geometry>
       <!-- <material name="orange"/> -->
     </visual>
@@ -1161,7 +1161,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/thigh.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/thigh.dae" scale="1 1 1"/>
       </geometry>
       <!-- <material name="orange"/> -->
     </visual>
@@ -1214,7 +1214,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/calf.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/calf.dae" scale="1 1 1"/>
       </geometry>
       <!-- <material name="orange"/> -->
     </visual>
@@ -1319,7 +1319,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/depthCamera.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/depthCamera.dae" scale="1 1 1"/>
       </geometry>
     </visual>
     <inertial>
@@ -1393,7 +1393,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/depthCamera.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/depthCamera.dae" scale="1 1 1"/>
       </geometry>
     </visual>
     <inertial>
@@ -1467,7 +1467,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/depthCamera.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/depthCamera.dae" scale="1 1 1"/>
       </geometry>
     </visual>
     <inertial>
@@ -1541,7 +1541,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/depthCamera.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/depthCamera.dae" scale="1 1 1"/>
       </geometry>
     </visual>
     <inertial>
@@ -1615,7 +1615,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/depthCamera.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/depthCamera.dae" scale="1 1 1"/>
       </geometry>
     </visual>
     <inertial>
@@ -1703,7 +1703,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/ultraSound.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/ultraSound.dae" scale="1 1 1"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -1728,7 +1728,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/ultraSound.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/ultraSound.dae" scale="1 1 1"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -1753,7 +1753,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://go1_description/meshes/ultraSound.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/go1/meshes/ultraSound.dae" scale="1 1 1"/>
       </geometry>
       <material name="black"/>
     </visual>
