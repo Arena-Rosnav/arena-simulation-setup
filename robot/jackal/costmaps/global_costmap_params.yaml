@@ -1,6 +1,6 @@
 global_costmap:
   global_frame: map
-  robot_base_frame: base_link
+  robot_base_frame: jackal_0_0/base_link
 
   update_frequency: 5
   publish_frequency: 5 # changed from 5 since this works better with mpc-planer
