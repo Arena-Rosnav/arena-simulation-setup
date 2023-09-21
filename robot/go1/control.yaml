@@ -1,4 +1,4 @@
-go1_gazebo:
+# go1_gazebo: ### no sub-namespace, otherwise launching the controllers from the robot itself becomes difficult
     # Publish all joint states -----------------------------------
     joint_state_controller:
         type: joint_state_controller/JointStateController

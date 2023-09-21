@@ -20,7 +20,7 @@ global_costmap:
 
   scan:
     {
-      sensor_frame: base_laser_front_link,
+      sensor_frame: laser_link,
       data_type: LaserScan,
       topic: scan,
       marking: true,

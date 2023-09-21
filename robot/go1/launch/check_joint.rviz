@@ -505,7 +505,7 @@ Visualization Manager:
   Global Options:
     Background Color: 238; 238; 238
     Default Light: true
-    Fixed Frame: base
+    Fixed Frame: trunk
     Frame Rate: 30
   Name: root
   Tools:

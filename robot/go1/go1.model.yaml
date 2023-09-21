@@ -1,6 +1,6 @@
 # information is based on http://www.youbot-store.com/wiki/index.php/YouBot_Detailed_Specifications
 bodies: # List of named bodies
-  - name: base_link
+  - name: trunk
     pose: [0, 0, 0]
     type: dynamic
     color: [0.2, 0.8, 0.2, 1.0]
