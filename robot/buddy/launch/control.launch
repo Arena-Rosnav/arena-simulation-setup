@@ -1,0 +1,43 @@
+<launch>
+
+    <arg name="robot_namespace" default=""/>
+    <arg name="x" default="0.0"/>
+    <arg name="y" default="0.0"/>
+    <arg name="z" default="0.1"/>
+    <arg name="yaw" default="0.0"/>
+
+    <!-- Load controller config  -->
+    <rosparam file="$(find arena-simulation-setup)/robot/buddy/control.yaml" command="load"/>
+    <param name="diff_drive_controller/base_frame_id" value="$(arg robot_namespace)/base_link" />
+    <param name="diff_drive_controller/odom_frame_id" value="$(arg robot_namespace)/odom" />
+
+    <!-- Create robot spawner -->
+    <!-- already done by robot.launch
+    <node name="buddy_urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+        args="-x $(arg x)
+              -y $(arg y)
+              -z $(arg z)
+              -Y $(arg yaw)
+              -unpause 
+              -urdf 
+              -model $(arg robot_namespace) 
+              -param /$(arg robot_namespace)/robot_description" 
+        respawn="false" 
+        output="screen" />
+    -->
+    <!-- Note there is a intentional / for the robot description -->
+    
+
+    <!-- load the controllers -->
+    <node name="cmd_vel_relay" pkg="topic_tools" type="relay" args="cmd_vel diff_drive_controller/cmd_vel" cwd="node" respawn="true" output="screen"/>
+    <node name="odom_relay" pkg="topic_tools" type="relay" args="odom diff_drive_controller/odom" cwd="node" respawn="true" output="screen"/>
+    <node name="buddy_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="joint_state_controller diff_drive_controller" />
+
+    <!-- already done globally
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+        <remap from="/robot_description" to="$(arg robot_namespace)/robot_description" />
+    </node>
+    -->
+    
+
+</launch>
