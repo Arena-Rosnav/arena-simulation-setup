@@ -36,13 +36,13 @@
     </link>
         
     <joint name="inertial_joint" type="fixed">
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-            <parent link="base_link"/>
-            <child link="inertial_link"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="inertial_link"/>
     </joint>
 
     <link name="inertial_link">
-     <inertial>
+        <inertial>
             <origin rpy="0 0 0" xyz="${chassis_com_x} ${chassis_com_y} ${chassis_com_z}"/>
             <mass value="${chassis_mass}"/>
             <inertia

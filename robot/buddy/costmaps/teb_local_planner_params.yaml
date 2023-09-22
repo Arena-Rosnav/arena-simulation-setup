@@ -1,6 +1,6 @@
 TebLocalPlannerROS:
 
- odom_topic: buddy_0_0/odom
+ odom_topic: odom
     
  # Trajectory
   
@@ -82,7 +82,7 @@ TebLocalPlannerROS:
 
 MpcLocalPlannerROS:
 
-  odom_topic: buddy_0_0/odom
+  odom_topic: odom
     
    ## Robot settings
   robot:

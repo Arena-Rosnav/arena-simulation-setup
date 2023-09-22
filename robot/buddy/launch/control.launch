@@ -30,7 +30,7 @@
 
     <!-- load the controllers -->
     <node name="cmd_vel_relay" pkg="topic_tools" type="relay" args="cmd_vel diff_drive_controller/cmd_vel" cwd="node" respawn="true" output="screen"/>
-    <node name="odom_relay" pkg="topic_tools" type="relay" args="odom diff_drive_controller/odom" cwd="node" respawn="true" output="screen"/>
+    <node name="odom_relay" pkg="topic_tools" type="relay" args="diff_drive_controller/odom odom" cwd="node" respawn="true" output="screen"/>
     <node name="buddy_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="joint_state_controller diff_drive_controller" />
 
     <!-- already done globally
