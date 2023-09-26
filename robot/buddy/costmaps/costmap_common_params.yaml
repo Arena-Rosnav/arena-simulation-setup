@@ -6,8 +6,8 @@ transform_tolerance: 0.5
 resolution: 0.05 
 
 static_map_layer:
-    map_topic: map
-    subscribe_to_updates: true
+  map_topic: map
+  subscribe_to_updates: true
 
 2d_obstacles_layer:
   observation_sources: helios
