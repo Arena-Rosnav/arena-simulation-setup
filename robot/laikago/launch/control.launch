@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <arg name="robot_namespace" />
+
+  <!-- launch joint state controller -->
+      <!-- load the parameter unitree_controller 
+    <include file="$(find unitree_controller)/launch/set_ctrl.launch">
+        <arg name="rname" value="$(arg rname)"/>
+    </include>
+-->
+  <!-- launch base controller -->
+  <!-- <include file="$(find youbot_gazebo_control)/launch/base_controller.launch" /> -->
+
+  <!-- launch arm controller -->
+  <!-- <include file="$(find youbot_gazebo_control)/launch/arm_controller.launch" /> -->
+  
+  <!-- launch gripper controller -->
+  <!-- <include file="$(find youbot_gazebo_control)/launch/gripper_controller.launch" /> -->
+<!-- upload base controller parameters -->
+<!-- <rosparam file="$(find youbot_gazebo_control)/config/base_controller.yaml" command="load" />  -->
+ 
+<!-- spawn base controller -->
+  <node 
+   name="odom_pub" 
+   pkg="gazebo_utils" 
+   type="odom.py" 
+   args="$(arg robot_namespace)" 
+    />
+</launch>   
