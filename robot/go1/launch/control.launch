@@ -12,6 +12,10 @@
     </include>
     -->
 
+    <rosparam file="$(find arena-simulation-setup)/robot/go1/costmaps/costmap_common_params.yaml" command="load" ns="move_base/global_costmap" />
+    <rosparam file="$(find arena-simulation-setup)/robot/go1/costmaps/costmap_common_params.yaml" command="load" ns="move_base/local_costmap" />
+    
+
     <!-- Load joint controller configurations from YAML file to parameter server -->
     <rosparam command="load" file="$(find arena-simulation-setup)/robot/go1/control.yaml" /> 
     <param name="/robot_description" command="$(find xacro)/xacro '$(find arena-simulation-setup)/robot/go1/xacro/robot.xacro'"/>
