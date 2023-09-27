@@ -1,5 +1,5 @@
-obstacle_range: 2.5
-raytrace_range: 3.0
+obstacle_range: 3.5
+raytrace_range: 5.0
 footprint: [[-0.25, -0.145], [-0.25, 0.145], [0.25, 0.145], [0.25, -0.145]]
 
 transform_tolerance: 0.25
@@ -22,12 +22,13 @@ static_map_layer:
     }
 
 3d_obstacles_layer: 
-  observation_sources: helios front_rgbd rear_rgbd rear_left_rgbd rear_right_rgbd
+  # observation_sources: helios_lidar front_rgbd rear_rgbd rear_left_rgbd rear_right_rgbd
+  observation_sources: front_rgbd rear_rgbd rear_left_rgbd rear_right_rgbd
 
-  helios:
+  helios_lidar:
     {
       sensor_frame: helios_lidar,
-      data_type: LaserScan,
+      data_type: PointCloud2,
       topic: helios_points,
       marking: true,
       clearing: true
