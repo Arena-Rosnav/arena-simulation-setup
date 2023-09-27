@@ -6,6 +6,10 @@
     <arg name="z" default="0.1"/>
     <arg name="yaw" default="0.0"/>
 
+    <!-- move_base common params -->
+    <rosparam file="$(find arena-simulation-setup)/robot/buddy/costmaps/costmap_common_params.yaml" command="load" ns="move_base/global_costmap" />
+    <rosparam file="$(find arena-simulation-setup)/robot/buddy/costmaps/costmap_common_params.yaml" command="load" ns="move_base/local_costmap" />
+    
     <!-- Load controller config  -->
     <rosparam file="$(find arena-simulation-setup)/robot/buddy/control.yaml" command="load"/>
     <param name="diff_drive_controller/base_frame_id" value="$(arg robot_namespace)/base_link" />
