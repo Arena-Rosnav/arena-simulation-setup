@@ -3,7 +3,6 @@
 
 
 <actor name="actor2">
-	<pose>0 0 0.75 0 0 0</pose>
 	<skin>
 		<filename>walk.dae</filename>
 		<scale>1.0</scale>
@@ -27,10 +26,8 @@
 		<group_rep_weight>1.0</group_rep_weight>
 		<trajectory>
 			<cyclic>true</cyclic>
-			__waypoints__
 		</trajectory>
 	</plugin>
-</actor>
 
 	<plugin name="actor_collisions_plugin" filename="libActorCollisionsPlugin.so">
         <scaling collision="LHipJoint_LeftUpLeg_collision" scale="           0.01           0.001           0.001       "/><scaling 
@@ -54,5 +51,6 @@
         <scaling collision="RightForeArm_RightHand_collision" scale="           5.0           5.0           1.0       "/>
         <scaling collision="RightFingerBase_RightHandIndex1_collision" scale="           4.0           4.0           3.0       "/>
     </plugin>
+</actor>
 
 </sdf>
