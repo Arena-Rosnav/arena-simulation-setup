@@ -3,6 +3,7 @@
 
 
 <actor name="actor2">
+	<static>false</static>
 	<skin>
 		<filename>walk.dae</filename>
 		<scale>1.0</scale>
@@ -12,6 +13,7 @@
 		<scale>1.000000</scale>
 		<interpolate_x>true</interpolate_x>
 	</animation>
+	
 	<!-- plugin definition -->
 	<plugin name="actor1_plugin" filename="libPedestrianSFMPlugin.so">
 		<velocity>0.9</velocity>
