@@ -17,8 +17,6 @@
       <interpolate_x>true</interpolate_x>
     </animation>
 
-    <!-- <plugin name="actor1_plugin" filename="libActorPlugin.so"/> -->
-
     <plugin name="actor_collisions_plugin" filename="libActorCollisionsPlugin.so">
         <scaling collision="LHipJoint_LeftUpLeg_collision" scale="           0.01           0.001           0.001       "/><scaling 
         collision="LeftUpLeg_LeftLeg_collision" scale="           8.0           8.0           1.0       "/>

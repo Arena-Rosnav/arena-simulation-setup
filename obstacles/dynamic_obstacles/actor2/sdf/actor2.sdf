@@ -14,21 +14,11 @@
 		<interpolate_x>true</interpolate_x>
 	</animation>
 	<!-- plugin definition -->
-	<plugin name="actor1_plugin" filename="libPedestrianSFMPlugin.so">
-		<velocity>0.9</velocity>
-		<radius>0.4</radius>
+	
+	<plugin name="pedsim_name" filename="libPedsimGazeboActorPlugin.so">
 		<animation_factor>5.1</animation_factor>
-		<people_distance>6.0</people_distance>
-		<goal_weight>2.0</goal_weight>
-		<obstacle_weight>80.0</obstacle_weight>
-		<social_weight>15</social_weight>
-		<group_gaze_weight>3.0</group_gaze_weight>
-		<group_coh_weight>2.0</group_coh_weight>
-		<group_rep_weight>1.0</group_rep_weight>
-		<trajectory>
-			<cyclic>true</cyclic>
-		</trajectory>
-	</plugin>
+		<model_height>2.1</model_height>
+	  </plugin>
 
 	<plugin name="actor_collisions_plugin" filename="libActorCollisionsPlugin.so">
         <scaling collision="LHipJoint_LeftUpLeg_collision" scale="           0.01           0.001           0.001       "/><scaling 
