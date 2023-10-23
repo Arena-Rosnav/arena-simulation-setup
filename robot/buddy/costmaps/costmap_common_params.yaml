@@ -1,9 +1,18 @@
-obstacle_range: 3.5
-raytrace_range: 5.0
-footprint: [[-0.25, -0.145], [-0.25, 0.145], [0.25, 0.145], [0.25, -0.145]]
+robot_base_frame: base_link
+
+update_frequency: 5.0 
+publish_frequency: 5.0 
+
+obstacle_range: 10.0
+raytrace_range: 15.0
 
 transform_tolerance: 0.25
 resolution: 0.05 
+
+footprint: [[-0.25, -0.145], [-0.25, 0.145], [0.25, 0.145], [0.25, -0.145]]
+robot_radius: 0.5
+
+map_type: costmap
 
 static_map_layer:
   map_topic: map
@@ -36,7 +45,7 @@ static_map_layer:
 
   front_rgbd:
     {
-      sensor_frame: gazebo_camera_rgb_optical_frame,
+      sensor_frame: front_rgbd_reference_frame,
       data_type: PointCloud2,
       topic: front_rgbd/front_rgbd/depth/points,
       marking: true,
@@ -45,7 +54,7 @@ static_map_layer:
 
   rear_rgbd:
     {
-      sensor_frame: gazebo_camera_rgb_optical_frame_2,
+      sensor_frame: rear_rgbd_reference_frame,
       data_type: PointCloud2,
       topic: rear_rgbd/rear_rgbd/depth/points,
       marking: true,
@@ -54,7 +63,7 @@ static_map_layer:
 
   rear_left_rgbd:
     {
-      sensor_frame: gazebo_camera_rgb_optical_frame_3,
+      sensor_frame: rear_left_rgbd_reference_frame,
       data_type: PointCloud2,
       topic: rear_left_rgbd/rear_left_rgbd/depth/points,
       marking: true,
@@ -63,7 +72,7 @@ static_map_layer:
 
   rear_right_rgbd:
     {
-      sensor_frame: gazebo_camera_rgb_optical_frame_4,
+      sensor_frame: rear_right_rgbd_reference_frame,
       data_type: PointCloud2,
       topic: rear_right_rgbd/rear_right_rgbd/depth/points,
       marking: true,

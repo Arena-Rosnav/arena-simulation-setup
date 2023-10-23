@@ -2,8 +2,8 @@
 
 <robot name="buddy" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <xacro:arg name="helios_5515_enabled" default="true" />
-    <xacro:arg name="helios_1_enabled" default="false" />
+    <xacro:arg name="helios_5515_enabled" default="false" />
+    <xacro:arg name="helios_1_enabled" default="true" />
     <xacro:arg name="rgbd_enabled" default="true" />
     <xacro:arg name="ip_cameras_enabled" default="true" />
 
