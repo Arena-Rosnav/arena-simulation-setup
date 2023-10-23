@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-    <name>go1_description</name>
+    <name>arena-simulation-setup/robot/go1</name>
     <version>0.0.0</version>
-    <description>The go1_description package</description>
+    <description>The arena-simulation-setup/robot/go1 package</description>
 
     <maintainer email="laikago@unitree.cc">unitree</maintainer>
     <license>TODO</license>
