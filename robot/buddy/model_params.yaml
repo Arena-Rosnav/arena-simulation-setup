@@ -1,7 +1,7 @@
 robot_model: buddy
 robot_radius: 0.347
 robot_base_frame: base_link
-robot_sensor_frame: base_laser_front_link
+robot_sensor_frame: laser_link
 is_holonomic: True
 actions:
   discrete:
