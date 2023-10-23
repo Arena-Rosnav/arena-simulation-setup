@@ -2,32 +2,34 @@
 <launch>
 
     <arg name="robot_namespace" />
-    <arg name="robot_tf_prefix" default=""/>
-    <arg name="x" default="0.0"/>
-    <arg name="y" default="0.0"/>
-    <arg name="z" default="0.3"/>
-    <arg name="yaw" default="0.0"/>
+    <arg name="robot_tf_prefix" default="" />
+    <arg name="x" default="0.0" />
+    <arg name="y" default="0.0" />
+    <arg name="z" default="0.3" />
+    <arg name="yaw" default="0.0" />
 
+    <!-- move_base common params -->
+    <rosparam file="$(find arena-simulation-setup)/robot/buddy/costmaps/costmap_common_params.yaml" command="load" ns="move_base/global_costmap" />
+    <rosparam file="$(find arena-simulation-setup)/robot/buddy/costmaps/costmap_common_params.yaml" command="load" ns="move_base/local_costmap" />  
 
     <!-- Load controller config  -->
-    <rosparam file="$(find arena-simulation-setup)/robot/$(arg model)/robot_control.yaml" command="load"/>
+    <rosparam command="load" file="$(find arena-simulation-setup)/robot/buddy/control.yaml" />
     <param name="diff_drive_controller/base_frame_id" value="$(arg robot_tf_prefix)/base_link" />
     <param name="diff_drive_controller/odom_frame_id" value="$(arg robot_tf_prefix)/odom" />
 
 
-    <!-- Note there is a intentional / for the robot description -->
-
     <!-- load the controllers -->
-    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" args="joint_state_controller diff_drive_controller" >
-         <remap from="/base_link" to="base_link"/>
-     <remap from="/odom" to="/odom"/>
-     </node>
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="joint_state_controller diff_drive_controller">
+        <remap from="/base_link" to="base_link"/>
+        <remap from="/odom" to="/odom"/>
+    </node>
 
-  <node 
-   name="odom_pub" 
-   pkg="gazebo_utils" 
-   type="odom.py" 
-   args="$(arg robot_namespace)" 
+    <node
+        name="odom_pub"
+        pkg="gazebo_utils"
+        type="odom.py"
+        args="$(arg robot_namespace)"
     />
+
+    <node pkg="topic_tools" type="relay" name="cmd_vel_relay" args="cmd_vel diff_drive_controller/cmd_vel" />
 </launch>   

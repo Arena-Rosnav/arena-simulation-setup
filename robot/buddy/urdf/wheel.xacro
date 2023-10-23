@@ -2,7 +2,7 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <xacro:include filename="$(find buddy_description)/xacro/transmission.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/buddy/xacro/transmission.xacro"/>
 
     <xacro:macro name="wheel" params="name *origin">
 
