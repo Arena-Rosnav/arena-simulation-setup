@@ -1,0 +1,42 @@
+<launch>
+
+    <arg name="robot_namespace" default=""/>
+    <arg name="robot_tf_prefix" default=""/>
+    <arg name="x" default="0.0"/>
+    <arg name="y" default="0.0"/>
+    <arg name="z" default="0.1"/>
+    <arg name="yaw" default="0.0"/>
+
+    <!-- Load controller config  -->
+    <rosparam file="$(find buddy_description)/config/robot_control.yaml" command="load"/>
+    <param name="diff_drive_controller/base_frame_id" value="$(arg robot_tf_prefix)/base_link" />
+    <param name="diff_drive_controller/odom_frame_id" value="$(arg robot_tf_prefix)/odom" />
+
+    <!-- Create robot spawner -->
+    <node name="buddy_urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+        args="-x $(arg x)
+              -y $(arg y)
+              -z $(arg z)
+              -Y $(arg yaw)
+              -unpause 
+              -urdf 
+              -model $(arg robot_namespace) 
+              -param /robot_description" 
+        respawn="false" 
+        output="screen" />
+
+    <!-- Note there is a intentional / for the robot description -->
+
+
+    <!-- load the controllers -->
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" args="joint_state_controller diff_drive_controller" >
+         <remap from="/base_link" to="base_link"/>
+     <remap from="/odom" to="/odom"/>
+     </node>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+        <remap from="robot_description" to="robot_description" />
+    </node>
+
+</launch>

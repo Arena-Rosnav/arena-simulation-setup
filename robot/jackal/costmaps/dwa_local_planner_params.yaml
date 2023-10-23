@@ -4,7 +4,7 @@ DWAPlannerROS:
   acc_lim_th: 20.0
 
   max_vel_x: 2.0
-  min_vel_x: -0.1
+  min_vel_x: -2.0
   max_vel_y: 0.0
   min_vel_y: 0.0
   max_vel_trans: 2.0
@@ -31,4 +31,3 @@ DWAPlannerROS:
   goal_distance_bias: 24.0
   occdist_scale: 0.1
   forward_point_distance: 0.355
-
