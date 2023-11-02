@@ -1,5 +1,6 @@
 TebLocalPlannerROS:
   odom_topic: odom
+  robot_base_frame: base
 
   # Robot
 
