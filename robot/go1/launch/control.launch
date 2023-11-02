@@ -16,10 +16,10 @@
       RR_hip_controller RR_thigh_controller RR_calf_controller " />
 
   <!-- load the parameter unitree_controller -->
-  <include file="$(find unitree_controller_go1)/launch/set_ctrl.launch">
+  <!-- <include file="$(find unitree_controller_go1)/launch/set_ctrl.launch">
     <arg name="robot_namespace" value="$(arg robot_namespace)" />
     <arg name="target_state" value="5" />
-  </include>
+  </include> TODO -->
 
 
   <node name="odom_pub" pkg="gazebo_utils" type="odom.py"
