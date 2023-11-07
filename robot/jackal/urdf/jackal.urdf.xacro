@@ -92,11 +92,11 @@
     <origin xyz="${-wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
   </xacro:wheel>
 
-  <link name="base_link"></link>
+  <link name="link_base"></link>
 
-  <joint name="base_link_joint" type="fixed">
+  <joint name="link_base_joint" type="fixed">
     <origin xyz="0 0 0" rpy="0 0 0" />
-    <parent link="base_link"/>
+    <parent link="link_base"/>
     <child link="chassis_link" />
   </joint>
 

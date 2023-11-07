@@ -1,6 +1,4 @@
 TebLocalPlannerROS:
-  odom_topic: odom
-
   # Robot
 
   max_vel_x: 2.0
