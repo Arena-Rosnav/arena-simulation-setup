@@ -10,8 +10,6 @@
 
     <!-- Load controller config  -->
     <rosparam command="load" file="$(find arena-simulation-setup)/robot/buddy/control.yaml" />
-    <param name="diff_drive_controller/base_frame_id" value="/base_link" />
-    <param name="diff_drive_controller/odom_frame_id" value="/odom" />
 
 
     <!-- load the controllers -->

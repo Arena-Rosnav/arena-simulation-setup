@@ -25,7 +25,7 @@ static_map_layer:
     {
       sensor_frame: $(arg frame)helios_lidar,
       data_type: LaserScan,
-      topic: $(arg namespace)helios_points,
+      topic: $(arg namespace)/helios_points,
       marking: true,
       clearing: true
     }
@@ -38,7 +38,7 @@ static_map_layer:
     {
       sensor_frame: $(arg frame)helios_lidar,
       data_type: PointCloud2,
-      topic: $(arg namespace)helios_points,
+      topic: $(arg namespace)/helios_points,
       marking: true,
       clearing: true
     }
@@ -47,7 +47,7 @@ static_map_layer:
     {
       sensor_frame: $(arg frame)front_rgbd_reference_frame,
       data_type: PointCloud2,
-      topic: $(arg namespace)front_rgbd/front_rgbd/depth/points,
+      topic: $(arg namespace)/front_rgbd/front_rgbd/depth/points,
       marking: true,
       clearing: true,
     }
@@ -56,7 +56,7 @@ static_map_layer:
     {
       sensor_frame: $(arg frame)rear_rgbd_reference_frame,
       data_type: PointCloud2,
-      topic: $(arg namespace)rear_rgbd/rear_rgbd/depth/points,
+      topic: $(arg namespace)/rear_rgbd/rear_rgbd/depth/points,
       marking: true,
       clearing: true,
     }
@@ -65,7 +65,7 @@ static_map_layer:
     {
       sensor_frame: $(arg frame)rear_left_rgbd_reference_frame,
       data_type: PointCloud2,
-      topic: $(arg namespace)rear_left_rgbd/rear_left_rgbd/depth/points,
+      topic: $(arg namespace)/rear_left_rgbd/rear_left_rgbd/depth/points,
       marking: true,
       clearing: true,
     }
@@ -74,7 +74,7 @@ static_map_layer:
     {
       sensor_frame: $(arg frame)rear_right_rgbd_reference_frame,
       data_type: PointCloud2,
-      topic: $(arg namespace)rear_right_rgbd/rear_right_rgbd/depth/points,
+      topic: $(arg namespace)/rear_right_rgbd/rear_right_rgbd/depth/points,
       marking: true,
       clearing: true,
     }
