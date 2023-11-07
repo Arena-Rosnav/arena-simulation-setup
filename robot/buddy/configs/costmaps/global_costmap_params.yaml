@@ -1,15 +1,12 @@
-global_costmap:
-  global_frame: map
-  
-  static_map: true
+static_map: true
 
-  inflation_radius: 1.0
-  cost_scaling_factor: 5.0
+inflation_radius: 1.0
+cost_scaling_factor: 5.0
 
-  inscribed_radius: 0.5
-  circumscribed_radius: 0.5
+inscribed_radius: 0.5
+circumscribed_radius: 0.5
 
-  plugins:
+plugins:
     - {name: static_map_layer,    type: "costmap_2d::StaticLayer"}
     - {name: inflation_layer,     type: "costmap_2d::InflationLayer"}
     - {name: 2d_obstacles_layer,  type: "costmap_2d::ObstacleLayer"}

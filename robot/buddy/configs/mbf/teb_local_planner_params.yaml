@@ -1,6 +1,5 @@
 TebLocalPlannerROS:
   odom_topic: odom
-
   # Trajectory
 
   teb_autosize: True

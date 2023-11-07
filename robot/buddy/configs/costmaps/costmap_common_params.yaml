@@ -1,4 +1,4 @@
-robot_base_frame: base_link
+robot_base_frame: $(arg frame)base_link
 
 update_frequency: 5.0 
 publish_frequency: 5.0 
@@ -23,9 +23,9 @@ static_map_layer:
 
   helios:
     {
-      sensor_frame: helios_lidar,
+      sensor_frame: $(arg frame)helios_lidar,
       data_type: LaserScan,
-      topic: helios_points,
+      topic: $(arg namespace)helios_points,
       marking: true,
       clearing: true
     }
@@ -36,45 +36,45 @@ static_map_layer:
 
   helios_lidar:
     {
-      sensor_frame: helios_lidar,
+      sensor_frame: $(arg frame)helios_lidar,
       data_type: PointCloud2,
-      topic: helios_points,
+      topic: $(arg namespace)helios_points,
       marking: true,
       clearing: true
     }
 
   front_rgbd:
     {
-      sensor_frame: front_rgbd_reference_frame,
+      sensor_frame: $(arg frame)front_rgbd_reference_frame,
       data_type: PointCloud2,
-      topic: front_rgbd/front_rgbd/depth/points,
+      topic: $(arg namespace)front_rgbd/front_rgbd/depth/points,
       marking: true,
       clearing: true,
     }
 
   rear_rgbd:
     {
-      sensor_frame: rear_rgbd_reference_frame,
+      sensor_frame: $(arg frame)rear_rgbd_reference_frame,
       data_type: PointCloud2,
-      topic: rear_rgbd/rear_rgbd/depth/points,
+      topic: $(arg namespace)rear_rgbd/rear_rgbd/depth/points,
       marking: true,
       clearing: true,
     }
 
   rear_left_rgbd:
     {
-      sensor_frame: rear_left_rgbd_reference_frame,
+      sensor_frame: $(arg frame)rear_left_rgbd_reference_frame,
       data_type: PointCloud2,
-      topic: rear_left_rgbd/rear_left_rgbd/depth/points,
+      topic: $(arg namespace)rear_left_rgbd/rear_left_rgbd/depth/points,
       marking: true,
       clearing: true,
     }
 
   rear_right_rgbd:
     {
-      sensor_frame: rear_right_rgbd_reference_frame,
+      sensor_frame: $(arg frame)rear_right_rgbd_reference_frame,
       data_type: PointCloud2,
-      topic: rear_right_rgbd/rear_right_rgbd/depth/points,
+      topic: $(arg namespace)rear_right_rgbd/rear_right_rgbd/depth/points,
       marking: true,
       clearing: true,
     }
