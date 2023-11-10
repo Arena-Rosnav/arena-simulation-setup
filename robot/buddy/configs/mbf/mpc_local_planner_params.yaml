@@ -1,4 +1,6 @@
 MpcLocalPlannerROS:
+  odom_topic:
+    odom
 
     ## Robot settings
   robot:

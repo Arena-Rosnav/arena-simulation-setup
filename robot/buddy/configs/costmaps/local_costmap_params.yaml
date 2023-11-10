@@ -1,4 +1,3 @@
-static_map: false
 rolling_window: true
 width: 10.0
 height: 10.0
@@ -7,6 +6,6 @@ inflation_radius: 0.6
 cost_scaling_factor: 3.0
 
 plugins:
-- {name: inflation_layer,     type: "costmap_2d::InflationLayer"}
-- {name: 2d_obstacles_layer,  type: "costmap_2d::ObstacleLayer"}
-- {name: 3d_obstacles_layer,  type: "costmap_2d::VoxelLayer"}
+  - { name: 2d_obstacles_layer, type: "costmap_2d::ObstacleLayer" }
+  - { name: 3d_obstacles_layer, type: "costmap_2d::VoxelLayer" }
+  - { name: inflation_layer, type: "costmap_2d::InflationLayer" }
