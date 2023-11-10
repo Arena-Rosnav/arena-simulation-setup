@@ -17,7 +17,7 @@ diff_drive_controller:
   # Base frame_id
   base_frame_id: base_link
   #enable odom here
-  enable_odom_tf: true 
+  enable_odom_tf: false 
   odom_frame_id: odom
   # Husky hardware provides wheel velocities
   estimate_velocity_from_position: false

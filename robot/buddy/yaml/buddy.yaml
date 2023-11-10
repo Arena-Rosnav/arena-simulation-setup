@@ -23,8 +23,8 @@ plugins:
     pub_rate: 10
 
   - type: Laser
-    name: static_laser
-    frame: base_laser_front_link
+    name: helios_lidar
+    frame: helios_lidar
     topic: helios_points
     body: base_link
     broadcast_tf: true
