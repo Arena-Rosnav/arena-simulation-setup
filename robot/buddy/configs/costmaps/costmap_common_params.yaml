@@ -12,8 +12,6 @@ resolution: 0.05
 footprint: [[-0.55, -0.275], [-0.55, 0.275], [0.55, 0.275], [0.55, -0.275]]
 robot_radius: 0.615
 
-map_type: costmap
-
 static_map_layer:
   map_topic: map
   subscribe_to_updates: true
@@ -88,3 +86,4 @@ static_map_layer:
 
 inflation_layer:
   inflation_radius: 2.0
+  cost_scaling_factor: 5.0
