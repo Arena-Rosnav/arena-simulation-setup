@@ -2,6 +2,5 @@
 static_map: true
 width: 25.0
 height: 25.0
-inflation_radius: 0.1
 
-observation_sources: laser
+observation_sources: scan
