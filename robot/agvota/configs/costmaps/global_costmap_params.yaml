@@ -1,0 +1,8 @@
+#https://github.com/inomuh/agv/blob/7c5e97311a77bd878fdaeba2b263bd6aa054db71/agv_navigation/params/agv_global.yaml
+static_map: true
+width: 25.0
+height: 25.0
+
+inflation_radius: 0.1
+
+observation_sources: laser
