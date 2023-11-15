@@ -1,7 +1,4 @@
 # Please note that this is a basic parameter file and this config has not yet been configured with this specific robot in mind.
-odom_topic: odom
-map_frame: map
-
 planning_mode: 1
 
 # Trajectory
