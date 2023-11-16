@@ -1,0 +1,5 @@
+update_frequency: 5.0
+publish_frequency: 5.0
+transform_tolerance: 0.25
+
+static_map: true
