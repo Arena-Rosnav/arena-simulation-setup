@@ -20,7 +20,7 @@
     <visual>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/jackal-wheel.stl"/>
+        <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/jackal-wheel.stl"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -66,7 +66,7 @@
     <visual>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/jackal-wheel.stl"/>
+        <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/jackal-wheel.stl"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -112,7 +112,7 @@
     <visual>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/jackal-wheel.stl"/>
+        <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/jackal-wheel.stl"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -158,7 +158,7 @@
     <visual>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/jackal-wheel.stl"/>
+        <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/jackal-wheel.stl"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -210,7 +210,7 @@
     <visual>
       <origin rpy="1.5707963267948966 0 1.5707963267948966" xyz="0 0 -0.0655"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/jackal-base.stl"/>
+        <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/jackal-base.stl"/>
       </geometry>
       <material name="dark_grey"/>
     </visual>
@@ -231,7 +231,7 @@
   <link name="front_fender_link">
     <visual>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/jackal-fender.stl"/>
+        <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/jackal-fender.stl"/>
       </geometry>
       <material name="yellow"/>
     </visual>
@@ -244,7 +244,7 @@
   <link name="rear_fender_link">
     <visual>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/jackal-fender.stl"/>
+        <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/jackal-fender.stl"/>
       </geometry>
       <material name="yellow"/>
     </visual>
@@ -418,7 +418,7 @@
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <!-- Origin of this mesh is the base of the bracket. -->
-        <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/hokuyo_ust10.stl"/>
+        <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/hokuyo_ust10.stl"/>
       </geometry>
       <material name="dark_grey"/>
     </visual>

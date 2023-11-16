@@ -175,7 +175,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://jackal_description/meshes/ark_enclosure.stl"/>
+          <mesh filename="package://jackal_description/urdf/meshes/ark_enclosure.stl"/>
         </geometry>
         <material name="dark_grey" />
       </visual>
