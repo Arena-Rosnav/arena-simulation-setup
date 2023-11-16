@@ -1,9 +1,9 @@
-DWAPlannerROS:
+DwaLocalPlannerROS:
   # Robot Configuration Parameters
   acc_lim_x: 1.0
   acc_lim_theta: 20.0
 
-  max_vel_x: 1.3
+  max_vel_x: $(arg speed)
   min_vel_x: 0.2
   max_vel_y: 0.0
   min_vel_y: 0.0
