@@ -66,6 +66,9 @@
     />
   <node name="cmd_vel_relay" pkg="topic_tools" type="relay" args="$(arg robot_namespace)/cmd_vel $(arg robot_namespace)/mobile_base_controller/cmd_vel" />
 
+  <node name="scan_relay" pkg="topic_tools" type="relay" args="$(arg robot_namespace)/scan_raw $(arg robot_namespace)/scan" />
+
+
     <!-- run scan unifier -->
     <!-- Only needed if you are running tiago with omni_base variant -->
     <!-- <arg name="input_scans" value="['$(arg robot_namespace)/scan_front_raw', '$(arg robot_namespace)/scan_rear_raw']"/>
