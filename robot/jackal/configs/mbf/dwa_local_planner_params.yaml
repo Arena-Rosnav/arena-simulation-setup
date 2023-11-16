@@ -1,4 +1,4 @@
-DWAPlannerROS:
+DwaLocalPlannerROS:
   # Robot Configuration Parameters
   acc_lim_x: 10.0
   acc_lim_th: 20.0
