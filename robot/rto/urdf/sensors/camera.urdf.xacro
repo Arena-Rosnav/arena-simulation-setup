@@ -19,7 +19,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/rto/meshes/sensors/camera.dae" scale="${M_SCALE} ${M_SCALE} ${M_SCALE}"/>
+          <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/sensors/camera.dae" scale="${M_SCALE} ${M_SCALE} ${M_SCALE}"/>
         </geometry>
       </visual>
     </link>

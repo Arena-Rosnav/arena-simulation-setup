@@ -10,8 +10,8 @@ aluminum peripherial evaluation case.
 
 <robot name="sensor_l515" xmlns:xacro="http://ros.org/wiki/xacro">
   <!-- Includes -->
-  <xacro:include filename="$(find arena-simulation-setup)/robot/rto/realsense2/urdf/_materials.urdf.xacro" />
-  <xacro:include filename="$(find arena-simulation-setup)/robot/rto/realsense2/urdf/_usb_plug.urdf.xacro" /> <!-- this specific plug does not apply to L515 -->
+  <xacro:include filename="$(find arena-simulation-setup)/robot/rto/urdf/realsense2/urdf/_materials.urdf.xacro" />
+  <xacro:include filename="$(find arena-simulation-setup)/robot/rto/urdf/realsense2/urdf/_usb_plug.urdf.xacro" /> <!-- this specific plug does not apply to L515 -->
 
   <xacro:macro name="sensor_l515" params="parent *origin name:=camera use_nominal_extrinsics:=false add_plug:=false use_mesh:=true">
     <xacro:property name="M_PI" value="3.1415926535897931" />
@@ -74,7 +74,7 @@ aluminum peripherial evaluation case.
         <xacro:if value="${use_mesh}">
           <origin xyz="${l515_zero_depth_to_glass} 0 ${-l515_cam_center_to_depth_pz}" rpy="${M_PI/2} 0 ${M_PI/2}"/>
           <geometry>
-              <mesh filename="package://package://arena-simulation-setup/robot/rto/realsense2/meshes/meshes/l515.dae" />
+              <mesh filename="package://package://arena-simulation-setup/robot/rto/urdf/realsense2/urdf/meshes/urdf/meshes/l515.dae" />
           </geometry>
         </xacro:if>
         <xacro:unless value="${use_mesh}">

@@ -10,8 +10,8 @@ aluminum peripherial evaluation case.
 
 <robot name="sensor_d455" xmlns:xacro="http://ros.org/wiki/xacro">
   <!-- Includes -->
-  <xacro:include filename="$(find arena-simulation-setup)/robot/rto/realsense2/urdf/_materials.urdf.xacro" />
-  <xacro:include filename="$(find arena-simulation-setup)/robot/rto/realsense2/urdf/_usb_plug.urdf.xacro" />
+  <xacro:include filename="$(find arena-simulation-setup)/robot/rto/urdf/realsense2/urdf/_materials.urdf.xacro" />
+  <xacro:include filename="$(find arena-simulation-setup)/robot/rto/urdf/realsense2/urdf/_usb_plug.urdf.xacro" />
 
   <xacro:macro name="sensor_d455" params="parent *origin name:=camera use_nominal_extrinsics:=false">
     <xacro:arg name="add_plug" default="false" />
@@ -65,7 +65,7 @@ aluminum peripherial evaluation case.
         <origin xyz="${d455_zero_depth_to_glass + d455_glass_to_front} ${-d455_cam_depth_py} 0" rpy="${M_PI/2} 0 ${M_PI/2}"/>
         <geometry>
           <!-- <box size="${d455_cam_depth} ${d455_cam_width} ${d455_cam_height}"/> -->
-	        <mesh filename="package://package://arena-simulation-setup/robot/rto/realsense2/meshes/meshes/d455.stl" scale="0.001 0.001 0.001" />
+	        <mesh filename="package://package://arena-simulation-setup/robot/rto/urdf/realsense2/urdf/meshes/urdf/meshes/d455.stl" scale="0.001 0.001 0.001" />
         </geometry>
         <material name="aluminum"/>
       </visual>
