@@ -4,10 +4,10 @@
 
     <xacro:arg name="DEBUG" default="false"/>
 
-    <xacro:include filename="$(find laikago_description)/xacro/const.xacro"/>
-    <xacro:include filename="$(find laikago_description)/xacro/materials.xacro"/>
-    <xacro:include filename="$(find laikago_description)/xacro/leg.xacro"/>
-    <xacro:include filename="$(find laikago_description)/xacro/gazebo.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/laikago/xacro/const.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/laikago/xacro/materials.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/laikago/xacro/leg.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/laikago/xacro/gazebo.xacro"/>
     
     <!-- Rollover Protection mode will add an additional stick on the top, use "true" or "false" to switch it. -->
     <xacro:property name="rolloverProtection" value="false"/>
@@ -41,7 +41,7 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://laikago_description/meshes/trunk.dae" scale="1 1 1"/>
+                <mesh filename="package://arena-simulation-setup/robot/laikago/meshes/trunk.dae" scale="1 1 1"/>
             </geometry>
             <material name="orange"/>
         </visual>
