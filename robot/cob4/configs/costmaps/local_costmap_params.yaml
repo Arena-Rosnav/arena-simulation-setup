@@ -3,5 +3,3 @@ rolling_window: true
 width: 5.0
 height: 5.0
 resolution: 0.05
-
-observation_sources: scan

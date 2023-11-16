@@ -2,6 +2,7 @@
 <launch>
     <!-- changing the robot model here will load the robot with different configurations -->
     <arg name="robot_namespace" />
+    <arg name="frame" />
 
     <arg name="robot" default="cob4-11"/>
 
@@ -39,9 +40,12 @@
     <node pkg="cob_scan_unifier" type="scan_unifier_node" name="cob_scan_unifier" output="log">
         <rosparam subst_value="True" param="input_scans">$(arg input_scans)</rosparam>
         <remap from="scan_unified" to="$(arg robot_namespace)/scan_unified"/>
-        <param name="frame" value="$(arg robot_namespace)/base_link"/>
+        <param name="frame" value="$(arg frame)base_link"/>
 
     </node>
+
+    <node pkg="topic_tools" type="relay" name="laser_relay" args="$(arg robot_namespace)/scan_unified $(arg robot_namespace)/scan" />
+
 
 
     <!-- range filter -->

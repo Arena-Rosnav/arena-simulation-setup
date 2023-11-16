@@ -1,5 +1,3 @@
 static_map: true
 width: 25.0
 height: 25.0
-
-observation_sources: scan

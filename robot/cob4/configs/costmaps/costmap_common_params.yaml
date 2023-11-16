@@ -30,7 +30,7 @@ map_type: costmap
 observation_sources: scan
 scan:
   {
-    topic: $(arg namespace)/scan_unified,
+    topic: $(arg namespace)/scan,
     sensor_frame: $(arg frame)base_link,
     data_type: LaserScan,
     clearing: true,
