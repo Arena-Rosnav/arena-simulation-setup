@@ -1,10 +1,5 @@
-update_frequency: 5
-publish_frequency: 5 # changed from 5 since this works better with mpc-planer
-transform_tolerance: 0.2
+update_frequency: 5.0
+publish_frequency: 5.0
+transform_tolerance: 0.25
 
 static_map: true
-
-obstacle_range: 10.0
-raytrace_range: 15.0
-
-observation_sources: scan
