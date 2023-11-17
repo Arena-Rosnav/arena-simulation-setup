@@ -1,4 +1,4 @@
-DWAPlannerROS:
+DwaLocalPlannerROS:
   # Robot Configuration Parameters
   max_vel_x: 1.1
   min_vel_x: -1.1
