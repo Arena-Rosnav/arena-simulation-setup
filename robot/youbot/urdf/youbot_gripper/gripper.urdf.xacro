@@ -27,7 +27,7 @@
 			<visual>
 				<origin xyz="0 0 0" rpy="0 0 0" />
 				<geometry>
-					<mesh filename="package://arena-simulation-setup/robot/youbot/meshes/youbot_gripper/palm.dae" />
+					<mesh filename="package://arena-simulation-setup/robot/youbot/urdf/meshes/youbot_gripper/palm.dae" />
 				</geometry>
 				<material name="Black" />
 			</visual>
@@ -36,7 +36,7 @@
 				<origin xyz="0 0 0" rpy="0 0 0" />
 				<geometry>
 					<!--<box size="0.050 0.094 0.054"/>-->
-					<mesh filename="package://arena-simulation-setup/robot/youbot/meshes/youbot_gripper/palm_convex.dae" />
+					<mesh filename="package://arena-simulation-setup/robot/youbot/urdf/meshes/youbot_gripper/palm_convex.dae" />
 				</geometry>
 			</collision>
 		</link>
@@ -64,7 +64,7 @@
 			<visual>
 				<origin xyz="0 0 0" rpy="0 0 0" />
 				<geometry>
-					<mesh filename="package://arena-simulation-setup/robot/youbot/meshes/youbot_gripper/finger.dae" />
+					<mesh filename="package://arena-simulation-setup/robot/youbot/urdf/meshes/youbot_gripper/finger.dae" />
 				</geometry>
 				<material name="Black" />
 			</visual>
@@ -73,7 +73,7 @@
 				<origin xyz="0 0 0" rpy="0 0 0" />
 				<geometry>
 					<!--<box size="0.014 0.020 0.046"/>-->
-					<mesh filename="package://arena-simulation-setup/robot/youbot/meshes/youbot_gripper/finger_convex.dae" />
+					<mesh filename="package://arena-simulation-setup/robot/youbot/urdf/meshes/youbot_gripper/finger_convex.dae" />
 				</geometry>
 			</collision>
 		</link>
@@ -98,7 +98,7 @@
 			<visual>
 				<origin xyz="0 0 0" rpy="0 0 0" />
 				<geometry>
-					<mesh filename="package://arena-simulation-setup/robot/youbot/meshes/youbot_gripper/finger.dae" />
+					<mesh filename="package://arena-simulation-setup/robot/youbot/urdf/meshes/youbot_gripper/finger.dae" />
 				</geometry>
 				<material name="Black" />
 			</visual>
@@ -107,7 +107,7 @@
 				<origin xyz="0.000 0 0" rpy="0 0 0" />
 				<geometry>
 					<!--<box size="0.014 0.020 0.046"/>-->
-					<mesh filename="package://arena-simulation-setup/robot/youbot/meshes/youbot_gripper/finger_convex.dae" />
+					<mesh filename="package://arena-simulation-setup/robot/youbot/urdf/meshes/youbot_gripper/finger_convex.dae" />
 				</geometry>
 			</collision>
 		</link>

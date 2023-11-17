@@ -18,7 +18,7 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://arena-simulation-setup/robot/rto/meshes/parts/rto_wheel.dae" scale="${M_SCALE} ${M_SCALE} ${M_SCALE}"/>
+                    <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/parts/rto_wheel.dae" scale="${M_SCALE} ${M_SCALE} ${M_SCALE}"/>
                 </geometry>
             </visual>
         </link>
@@ -76,7 +76,7 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://arena-simulation-setup/robot/rto/meshes/parts/angle_bracket_usb_hub.dae" scale="${M_SCALE} ${M_SCALE} ${M_SCALE}"/>
+                    <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/parts/angle_bracket_usb_hub.dae" scale="${M_SCALE} ${M_SCALE} ${M_SCALE}"/>
                 </geometry>
             </visual>
         </link>
@@ -152,7 +152,7 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://arena-simulation-setup/robot/rto/meshes/parts/bracket.dae" scale="0.001 ${scale} ${scale}"/>
+                    <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/parts/bracket.dae" scale="0.001 ${scale} ${scale}"/>
                 </geometry>
                 <material name="dark_grey"/>
             </visual>

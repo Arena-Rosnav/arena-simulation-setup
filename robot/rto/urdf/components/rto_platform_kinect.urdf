@@ -14,7 +14,7 @@
     <visual>
       <origin rpy="0 0 1.570795" xyz="0.01 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/rto/meshes/parts/rto_base.dae" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/parts/rto_base.dae" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
     <collision>
@@ -37,7 +37,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/rto/meshes/parts/rto_wheel.dae" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/parts/rto_wheel.dae" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
   </link>
@@ -68,7 +68,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/rto/meshes/parts/rto_wheel.dae" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/parts/rto_wheel.dae" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
   </link>
@@ -99,7 +99,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/rto/meshes/parts/rto_wheel.dae" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/parts/rto_wheel.dae" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
   </link>
@@ -148,7 +148,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/rto/meshes/parts/angle_bracket_usb_hub.dae" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/parts/angle_bracket_usb_hub.dae" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
   </link>
@@ -209,7 +209,7 @@
       <origin rpy="0 0 1.570795" xyz="0 0 0"/>
       <!-- <origin xyz="0 0 0" rpy="0 0 0" /> -->
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/rto/meshes/sensors/kinect.dae"/>
+        <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/sensors/kinect.dae"/>
         <!-- <box size="${KINECT_LENGTH} ${KINECT_WIDTH} ${KINECT_HEIGHT}"/> -->
       </geometry>
       <!-- <material name="${color}"/> -->

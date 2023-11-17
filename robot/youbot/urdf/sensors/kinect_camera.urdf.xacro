@@ -26,14 +26,14 @@
     <visual>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
       <geometry>
-       <mesh filename="package://arena-simulation-setup/robot/youbot/meshes/sensors/kinect.dae"/>
+       <mesh filename="package://arena-simulation-setup/robot/youbot/urdf/meshes/sensors/kinect.dae"/>
       </geometry>
     </visual>
 
     <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/youbot/meshes/sensors/kinect.dae"/>
+        <mesh filename="package://arena-simulation-setup/robot/youbot/urdf/meshes/sensors/kinect.dae"/>
       </geometry>
     </collision>
   </link>
