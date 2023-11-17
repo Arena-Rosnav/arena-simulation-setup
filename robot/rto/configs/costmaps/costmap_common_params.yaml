@@ -1,0 +1,26 @@
+robot_base_frame: $(arg frame)base_link
+
+#footprint: [[x0, y0], [x1, y1], ... [xn, yn]]
+robot_radius: 0.225
+
+inscribed_radius: 0.225
+circumscribed_radius: 0.225
+
+obstacle_range: 5
+raytrace_range: 5.5
+
+inflation_radius: 1.0
+cost_scaling_factor: 5.0
+
+map_type: costmap
+observation_sources: scan
+scan:
+  {
+    sensor_frame: $(arg frame)hokuyo_link,
+    data_type: LaserScan,
+    topic: $(arg namespace)/scan,
+    marking: true,
+    clearing: true,
+  }
+
+

@@ -29,5 +29,5 @@ DwaLocalPlannerROS:
 
   path_distance_bias: 94.0
   goal_distance_bias: 24.0
-  occdist_scale: 0.1
+  occdist_scale: 1
   forward_point_distance: 0.355

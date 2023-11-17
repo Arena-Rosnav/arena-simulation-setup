@@ -1,6 +1,6 @@
 robot_model: youbot
 robot_radius: 0.347
-robot_base_frame: base_link
+robot_base_frame: base_footprint
 robot_sensor_frame: base_laser_front_link
 is_holonomic: True
 actions:
