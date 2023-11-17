@@ -4,7 +4,7 @@
   <arg name="robot_namespace" />
 
   <!-- Load joint controller configurations from YAML file to parameter server -->
-  <rosparam command="load" file="$(find arena-simulation-setup)/robot/laikago/robot_control.yaml" />
+  <rosparam command="load" file="$(find arena-simulation-setup)/robot/laikago/robot_control.yaml" ns="$(arg robot_namespace)"/>
 
   <!-- load the controllers -->
   <node pkg="controller_manager" type="spawner" name="controller_spawner" respawn="false"
@@ -21,11 +21,8 @@
     <arg name="target_state" value="5" />
   </include>
 
-  <!-- spawn base controller -->
-  <node
-    name="odom_pub"
-    pkg="gazebo_utils"
-    type="odom.py"
+
+  <node name="odom_pub" pkg="gazebo_utils" type="odom.py"
     args="$(arg robot_namespace)"
   />
 </launch>   
