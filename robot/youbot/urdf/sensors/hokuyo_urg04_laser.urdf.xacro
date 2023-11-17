@@ -23,14 +23,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/youbot/meshes/sensors/hokuyo.dae" />
+          <mesh filename="package://arena-simulation-setup/robot/youbot/urdf/meshes/sensors/hokuyo.dae" />
         </geometry>
       </visual>
 
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/youbot/meshes/sensors/hokuyo_convex.dae" />
+          <mesh filename="package://arena-simulation-setup/robot/youbot/urdf/meshes/sensors/hokuyo_convex.dae" />
         </geometry>
       </collision>
     </link>
