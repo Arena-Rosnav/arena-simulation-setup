@@ -9,7 +9,8 @@
 
   <!-- launch base controller -->
   <group>
-    <param name="base_controller/robot_description_name" value="$(arg robot_namespace)/robot_description"/>
+    <param name="base_controller/robot_description_name"
+      value="$(arg robot_namespace)/robot_description" />
     <remap from="base_controller/robot_description" to="robot_description" />
     <node pkg="topic_tools" type="relay" name="cmd_vel_relay" args="cmd_vel base_controller/cmd_vel" />
 

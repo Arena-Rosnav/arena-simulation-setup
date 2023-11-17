@@ -246,7 +246,7 @@
   <joint name="front_mount_joint" type="fixed">
     <parent link="mid_mount" />
     <child link="front_mount" />
-    <origin xyz="${-mount_spacing} 0 0" rpy="0 0 3.14159" />
+    <origin xyz="${-mount_spacing} 0 0" rpy="0 0 0" />
   </joint>
 
   <!-- Bring in simulation data for Gazebo. -->
