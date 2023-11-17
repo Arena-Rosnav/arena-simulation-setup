@@ -1,22 +1,24 @@
-robot_base_frame: $(arg frame)link_base
+robot_base_frame: $(arg frame)base_link
 
-footprint: [[-0.21, -0.21], [-0.21, 0.21], [0.21, 0.21], [0.21, -0.21]]
+footprint: [[-0.285, 0.285], [-0.285, -0.285], [0.285, -0.285], [0.285, 0.285]]
 robot_radius: 0.267
-
-inflation_radius: 1.0
-cost_scaling_factor: 5.0
 
 inscribed_radius: 0.267
 circumscribed_radius: 0.267
+
+obstacle_range: 2.5
+raytrace_range: 3.0
+
+inflation_radius: 2.
+cost_scaling_factor: 5.0
 
 map_type: costmap
 observation_sources: scan
 scan:
   {
-    sensor_frame: $(arg frame)front_laser,
+    sensor_frame: $(arg frame)base_laser_front_link,
     data_type: LaserScan,
     topic: $(arg namespace)/scan,
     marking: true,
     clearing: true,
   }
-
