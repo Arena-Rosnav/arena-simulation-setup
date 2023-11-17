@@ -1,12 +1,12 @@
 # information is based on http://www.youbot-store.com/wiki/index.php/YouBot_Detailed_Specifications
 bodies: # List of named bodies
-  - name: base_link
+  - name: base
     pose: [0, 0, 0]
     type: dynamic
     color: [0.2, 0.8, 0.2, 1.0]
     footprints:
       - type: polygon
-        points: [[-0.19, -0.29], [-0.19, 0.29], [0.19, 0.29], [0.19, -0.29]]
+        points: [[-0.29, -0.19], [-0.29, 0.19], [0.29, 0.19], [0.29, -0.19]]
         layers: ["all"]
         collision: true
         density: 1
@@ -17,7 +17,7 @@ bodies: # List of named bodies
 plugins:
   - type: DiffDrive
     name: diff_drive
-    body: base_link
+    body: base
     odom_frame_id: odom
     odom_pub: odom # topic odom is published on
     twist_sub: cmd_vel
@@ -25,9 +25,9 @@ plugins:
 
   - type: Laser
     name: static_laser
-    frame: base_laser_front_link
+    frame: laser_link
     topic: scan
-    body: base_link
+    body: base
     broadcast_tf: true
     origin: [0.0, 0.0, 0.0]
     range: 5.6

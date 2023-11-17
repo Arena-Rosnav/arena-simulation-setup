@@ -3,28 +3,26 @@
 
   <arg name="robot_namespace" />
 
-  <!-- launch joint state controller -->
-      <!-- load the parameter unitree_controller 
-    <include file="$(find unitree_controller)/launch/set_ctrl.launch">
-        <arg name="rname" value="$(arg rname)"/>
-    </include>
--->
-  <!-- launch base controller -->
-  <!-- <include file="$(find youbot_gazebo_control)/launch/base_controller.launch" /> -->
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam command="load" file="$(find arena-simulation-setup)/robot/laikago/robot_control.yaml" ns="$(arg robot_namespace)"/>
 
-  <!-- launch arm controller -->
-  <!-- <include file="$(find youbot_gazebo_control)/launch/arm_controller.launch" /> -->
-  
-  <!-- launch gripper controller -->
-  <!-- <include file="$(find youbot_gazebo_control)/launch/gripper_controller.launch" /> -->
-<!-- upload base controller parameters -->
-<!-- <rosparam file="$(find youbot_gazebo_control)/config/base_controller.yaml" command="load" />  -->
- 
-<!-- spawn base controller -->
-  <node 
-   name="odom_pub" 
-   pkg="gazebo_utils" 
-   type="odom.py" 
-   args="$(arg robot_namespace)" 
-    />
+  <!-- load the controllers -->
+  <node pkg="controller_manager" type="spawner" name="controller_spawner" respawn="false"
+    output="screen" ns="$(arg robot_namespace)"
+    args="joint_state_controller
+      FL_hip_controller FL_thigh_controller FL_calf_controller
+      FR_hip_controller FR_thigh_controller FR_calf_controller
+      RL_hip_controller RL_thigh_controller RL_calf_controller
+      RR_hip_controller RR_thigh_controller RR_calf_controller " />
+
+  <!-- load the parameter unitree_controller -->
+  <include file="$(find unitree_controller_go1)/launch/set_ctrl.launch">
+    <arg name="robot_namespace" value="$(arg robot_namespace)" />
+    <arg name="target_state" value="5" />
+  </include>
+
+
+  <node name="odom_pub" pkg="gazebo_utils" type="odom.py"
+    args="$(arg robot_namespace)"
+  />
 </launch>   

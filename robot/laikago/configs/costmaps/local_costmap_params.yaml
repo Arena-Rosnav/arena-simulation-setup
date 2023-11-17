@@ -1,30 +1,9 @@
-local_costmap:
-  global_frame: odom
-  robot_base_frame: base_link
-  update_frequency: 10.0
-  publish_frequency: 10.0
-  static_map: false
-  rolling_window: true
-  width: 5.0
-  height: 5.0
-  resolution: 0.05
+update_frequency: 10.0
+publish_frequency: 10.0
+static_map: false
+rolling_window: true
+width: 5.0
+height: 5.0
+resolution: 0.05
 
-  map_type: costmap
-  transform_tolerance: 0.2
-  obstacle_range: 2.5
-  raytrace_range: 3.0
-  inflation_radius: 2.
-
-  observation_sources: scan
-
-  footprint:
-    [[-0.285, 0.285], [-0.285, -0.285], [0.285, -0.285], [0.285, 0.285]]
-
-  scan:
-    {
-      sensor_frame: base_laser_front_link,
-      data_type: LaserScan,
-      topic: scan,
-      marking: true,
-      clearing: true,
-    }
+transform_tolerance: 0.2

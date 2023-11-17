@@ -1,6 +1,6 @@
 robot_model: laikago
 robot_radius: 0.629
-robot_base_frame: base_link
+robot_base_frame: base
 robot_sensor_frame: scan_link
 is_holonomic: False
 actions:

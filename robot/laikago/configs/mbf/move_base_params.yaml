@@ -1,1 +1,1 @@
-robot_frame: $(arg frame)link_base
+robot_frame: $(arg frame)base
