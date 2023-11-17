@@ -1,4 +1,4 @@
-DWAPlannerROS:
+DwaLocalPlannerROS:
   # params are from https://github.com/pal-robotics/pal_navigation_cfg_public/blob/master/pal_navigation_cfg_pmb2/config/base/dwa/local_planner.yaml
   acc_lim_th: 1.5
   acc_lim_x: 0.8

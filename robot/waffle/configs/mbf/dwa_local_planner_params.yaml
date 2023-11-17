@@ -1,5 +1,5 @@
 # params are from https://github.com/ROBOTIS-GIT/turtlebot3/blob/master/turtlebot3_navigation/param/dwa_local_planner_params_waffle_pi.yaml
-DWAPlannerROS:
+DwaLocalPlannerROS:
 
 # Robot Configuration Parameters
   max_vel_x: 0.28
