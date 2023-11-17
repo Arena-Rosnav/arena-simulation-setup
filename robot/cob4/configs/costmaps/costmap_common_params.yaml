@@ -1,7 +1,4 @@
 robot_base_frame: $(arg frame)base_footprint
-update_frequency: 5.0
-publish_frequency: 5.0
-transform_tolerance: 0.3
 
 #footprint: [[0.185, 0.185], [0.185, -0.185], [-0.185, -0.185], [-0.185, 0.185]]
 #footprint:
@@ -15,8 +12,8 @@ transform_tolerance: 0.3
 #  ]
 footprint: [[0.43, 0.35], [0.43, -0.35], [-0.43, -0.35], [-0.43, 0.35]] #[m]
 robot_radius: 0.36
-obstacle_range: 15 #default = 2.5
-raytrace_range: 30 #default = 3.0
+obstacle_range: 15
+raytrace_range: 30
 # If false, each pixel has one of 2 states: lethal obstacle or free. If true, each pixel has one of 3 states: lethal obstacle, free, or unknown
 track_unknown_space: false  # default: false
 # If true, the robot footprint will clear (mark as free) the space in which it travels.
@@ -26,7 +23,6 @@ track_unknown: false
 
 footprint_padding: 0.02
 
-map_type: costmap
 observation_sources: scan
 scan:
   {

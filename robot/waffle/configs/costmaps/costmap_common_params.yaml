@@ -7,10 +7,6 @@ robot_radius: 0.105
 inscribed_radius: 0.267
 circumscribed_radius: 0.267
 
-obstacle_range: 3.0
-raytrace_range: 3.5
-
-map_type: costmap
 observation_sources: scan
 scan:
   {

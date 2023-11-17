@@ -6,12 +6,6 @@ robot_base_frame: $(arg frame)base_footprint
 #footprint: [[x0, y0], [x1, y1], ... [xn, yn]]
 robot_radius: 0.225
 
-obstacle_range: 5.0
-raytrace_range: 5.5
-
-inflation_radius: 0.4
-cost_scaling_factor: 5.0
-
 observation_sources: scan
 scan:
   {
