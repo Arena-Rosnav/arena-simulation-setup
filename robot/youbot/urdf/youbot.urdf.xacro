@@ -7,28 +7,28 @@
   
   <!-- The following xacro:included files set up definitions of parts of the robot body -->
   <!-- misc common stuff? -->
-  <xacro:include filename="$(find youbot_description)/urdf/common.xacro" />
+  <xacro:include filename="$(find arena-simulation-setup)/robot/youbot/urdf/common.xacro" />
 
   <!-- youbot base -->
-  <xacro:include filename="$(find youbot_description)/urdf/youbot_base/base.urdf.xacro" />
+  <xacro:include filename="$(find arena-simulation-setup)/robot/youbot/urdf/youbot_base/base.urdf.xacro" />
 
   <!-- youbot plate -->
-  <xacro:include filename="$(find youbot_description)/urdf/youbot_plate/plate.urdf.xacro" /> 
+  <xacro:include filename="$(find arena-simulation-setup)/robot/youbot/urdf/youbot_plate/plate.urdf.xacro" /> 
 
   <!-- youbot arm -->
-  <xacro:include filename="$(find youbot_description)/urdf/youbot_arm/arm.urdf.xacro"/>
+  <xacro:include filename="$(find arena-simulation-setup)/robot/youbot/urdf/youbot_arm/arm.urdf.xacro"/>
 
   <!-- youbot gripper -->
-  <xacro:include filename="$(find youbot_description)/urdf/youbot_gripper/gripper.urdf.xacro" />
+  <xacro:include filename="$(find arena-simulation-setup)/robot/youbot/urdf/youbot_gripper/gripper.urdf.xacro" />
  
   <!-- controller manager -->
   <xacro:include filename="$(find youbot_description)/controller/ros_controller.urdf.xacro" />
   
   <!-- materials for visualization -->
-  <xacro:include filename="$(find youbot_description)/urdf/materials.urdf.xacro" />
+  <xacro:include filename="$(find arena-simulation-setup)/robot/youbot/urdf/materials.urdf.xacro" />
 
   <!-- sensors -->
-  <xacro:include filename="$(find youbot_description)/urdf/sensors/hokuyo_urg04_laser.urdf.xacro"/>
+  <xacro:include filename="$(find arena-simulation-setup)/robot/youbot/urdf/sensors/hokuyo_urg04_laser.urdf.xacro"/>
 						     
   <!-- Now we can start using the macros xacro:included above to define the actual youbot -->
 

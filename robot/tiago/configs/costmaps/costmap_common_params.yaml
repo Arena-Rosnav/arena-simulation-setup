@@ -1,0 +1,15 @@
+# params are from https://github.com/pal-robotics/pal_navigation_cfg_public/blob/master/pal_navigation_cfg_pmb2/config/base/common/local_costmap_public_sim.yaml
+robot_base_frame: $(arg frame)base_footprint
+
+footprint: [[-0.105, -0.105], [-0.105, 0.105], [0.041, 0.105], [0.041, -0.105]]
+robot_radius: 0.275
+
+observation_sources: scan
+scan:
+  {
+    sensor_frame: $(arg frame)base_laser_link,
+    data_type: LaserScan,
+    topic: $(arg namespace)/scan,
+    marking: true,
+    clearing: true
+  }

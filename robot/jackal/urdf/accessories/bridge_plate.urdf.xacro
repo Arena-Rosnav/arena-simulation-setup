@@ -11,7 +11,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="1.5707 0.0 1.5707" />
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/bridge-plate.stl"/>
+          <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/bridge-plate.stl"/>
         </geometry>
         <material name="dark_grey" />
       </visual>

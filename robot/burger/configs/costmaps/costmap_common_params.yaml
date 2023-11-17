@@ -1,0 +1,17 @@
+robot_base_frame: $(arg frame)base_footprint
+
+robot_radius: 0.113
+
+inscribed_radius: 0.113
+circumscribed_radius: 0.113
+
+observation_sources: scan
+scan:
+  {
+    sensor_frame: $(arg frame)base_scan,
+    data_type: LaserScan,
+    topic: $(arg namespace)/scan,
+    marking: true,
+    clearing: true,
+  }
+

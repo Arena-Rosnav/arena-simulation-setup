@@ -18,7 +18,7 @@
     <visual>
       <origin xyz="-0.064 0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/waffle/meshes/bases/waffle_pi_base.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://arena-simulation-setup/robot/waffle/urdf/meshes/bases/waffle_pi_base.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="light_black"/>
     </visual>
@@ -50,7 +50,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="1.57 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/waffle/meshes/wheels/left_tire.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://arena-simulation-setup/robot/waffle/urdf/meshes/wheels/left_tire.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dark"/>
     </visual>
@@ -82,7 +82,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="1.57 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/waffle/meshes/wheels/right_tire.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://arena-simulation-setup/robot/waffle/urdf/meshes/wheels/right_tire.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dark"/>
     </visual>
@@ -167,7 +167,7 @@
     <visual>
       <origin xyz="0 0 0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/waffle/meshes/sensors/lds.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://arena-simulation-setup/robot/waffle/urdf/meshes/sensors/lds.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dark"/>
     </visual>

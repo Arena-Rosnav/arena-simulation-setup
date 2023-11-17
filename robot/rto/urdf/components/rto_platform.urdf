@@ -13,7 +13,7 @@
     <visual>
       <origin rpy="0 0 1.570795" xyz="0.01 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/rto/meshes/parts/rto_base.dae" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/parts/rto_base.dae" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
     <collision>
@@ -36,7 +36,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/rto/meshes/parts/rto_wheel.dae" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/parts/rto_wheel.dae" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
   </link>
@@ -67,7 +67,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/rto/meshes/parts/rto_wheel.dae" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/parts/rto_wheel.dae" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
   </link>
@@ -98,7 +98,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/rto/meshes/parts/rto_wheel.dae" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/parts/rto_wheel.dae" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
   </link>
@@ -147,7 +147,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/rto/meshes/parts/angle_bracket_usb_hub.dae" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/parts/angle_bracket_usb_hub.dae" scale="0.01 0.01 0.01"/>
       </geometry>
     </visual>
   </link>

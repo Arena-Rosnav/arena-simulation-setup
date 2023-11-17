@@ -2,26 +2,32 @@
 <launch>
 
   <arg name="robot_namespace" />
+  <arg name="frame" />
 
   <!-- launch joint state controller -->
   <include file="$(find youbot_gazebo_control)/launch/joint_state_controller.launch" />
 
   <!-- launch base controller -->
-  <!-- <include file="$(find youbot_gazebo_control)/launch/base_controller.launch" /> -->
+  <group>
+    <param name="base_controller/robot_description_name"
+      value="$(arg robot_namespace)/robot_description" />
+    <remap from="base_controller/robot_description" to="robot_description" />
+    <node pkg="topic_tools" type="relay" name="cmd_vel_relay" args="cmd_vel base_controller/cmd_vel" />
+
+    <include file="$(find youbot_gazebo_control)/launch/base_controller.launch" />
+  </group>
 
   <!-- launch arm controller -->
   <!-- <include file="$(find youbot_gazebo_control)/launch/arm_controller.launch" /> -->
-  
+
   <!-- launch gripper controller -->
   <!-- <include file="$(find youbot_gazebo_control)/launch/gripper_controller.launch" /> -->
-<!-- upload base controller parameters -->
-<!-- <rosparam file="$(find youbot_gazebo_control)/config/base_controller.yaml" command="load" />  -->
- 
-<!-- spawn base controller -->
-  <node 
-   name="odom_pub" 
-   pkg="gazebo_utils" 
-   type="odom.py" 
-   args="$(arg robot_namespace)" 
-    />
+
+  <node
+    name="odom_pub"
+    pkg="gazebo_utils"
+    type="odom.py"
+    args="$(arg robot_namespace)"
+  />
+
 </launch>   

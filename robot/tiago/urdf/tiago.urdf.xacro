@@ -19,7 +19,7 @@
     <xacro:arg name="wrist_model" default="wrist-2010"/>
     <xacro:arg name="end_effector" default="false"/> <!-- false, pal-gripper, pal-hey5, schunk-wsg-->
     <xacro:arg name="ft_sensor" default="false"/> <!-- false, schunk-ft -->
-    <xacro:arg name="laser_model" default="sick-571"/> <!-- false, hokuyo, sick-551, sick-561, sick-571-->
+    <xacro:arg name="laser_model" default="sick-551"/> <!-- false, hokuyo, sick-551, sick-561, sick-571-->
     <xacro:arg name="camera_model" default="false"/> <!-- false, orbbec-astra, orbbec-astra-pro, asus-xtion -->
     <xacro:arg name="has_thermal_camera" default="false"/>
     <xacro:arg name="multiple" default="false"/>
@@ -99,7 +99,7 @@
 
   <!-- Now we can start using the macros included above to define the actual robot -->
   <xacro:if value="${base_type == 'pmb2'}">
-    <xacro:base_sensors name="base" laser_model="$(arg laser_model)" sonars="true" microphone="true"/>
+    <xacro:base_sensors name="base" laser_model="$(arg laser_model)" sonars="true" microphone="true" />
   </xacro:if>
   <xacro:if value="${base_type == 'omni_base'}">
     <xacro:base_sensors name="base" front_laser_model="$(arg laser_model)" rear_laser_model="$(arg laser_model)"/>

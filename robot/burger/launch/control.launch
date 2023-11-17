@@ -1,3 +1,4 @@
 <launch>
-  	<arg name="robot_namespace" />
+	<arg name="robot_namespace" />
+	<arg name="frame" />
 </launch>
