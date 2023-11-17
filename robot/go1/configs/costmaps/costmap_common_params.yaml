@@ -1,0 +1,21 @@
+robot_base_frame: $(arg frame)base_link
+
+map_type: costmap
+transform_tolerance: 0.2
+obstacle_range: 2.5
+raytrace_range: 3.0
+inflation_radius: 2.
+
+observation_sources: scan
+
+footprint:
+  [[-0.285, 0.285], [-0.285, -0.285], [0.285, -0.285], [0.285, 0.285]]
+
+scan:
+  {
+    sensor_frame: base_laser_front_link,
+    data_type: LaserScan,
+    topic: scan,
+    marking: true,
+    clearing: true,
+  }
