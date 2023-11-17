@@ -1,8 +1,6 @@
 MpcLocalPlannerROS:
-  odom_topic:
-    odom
 
-    ## Robot settings
+  ## Robot settings
   robot:
     type: "unicycle"
     unicycle:
