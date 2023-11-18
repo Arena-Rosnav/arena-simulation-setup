@@ -1,0 +1,16 @@
+TebLocalPlannerROS:
+  odom_topic: odom
+
+  # Robot
+
+  max_vel_x: 0.8
+  max_vel_x_backwards: 0.8
+  max_vel_y: 0.8
+  max_vel_theta: 1.2
+  acc_lim_x: 1.25
+  acc_lim_y: 1.25
+  acc_lim_theta: 1.0
+
+  footprint_model:
+    type: polygon
+    vertices: [[-0.285, 0.18], [-0.285, -0.18], [0.285, -0.18], [0.285, 0.18]]

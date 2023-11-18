@@ -23,7 +23,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/dingo/meshes/wheel.stl"/>
+          <mesh filename="package://arena-simulation-setup/robot/dingo/urdf/meshes/wheel.stl"/>
         </geometry>
         <material name="black" />
       </visual>
@@ -139,13 +139,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/dingo/meshes/diff_chassis.dae"/>
+        <mesh filename="package://arena-simulation-setup/robot/dingo/urdf/meshes/diff_chassis.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/dingo/meshes/diff_chassis_collision.stl"/>
+        <mesh filename="package://arena-simulation-setup/robot/dingo/urdf/meshes/diff_chassis_collision.stl"/>
       </geometry>
     </collision>
     <inertial>

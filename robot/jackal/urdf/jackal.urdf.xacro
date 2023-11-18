@@ -29,7 +29,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/jackal-wheel.stl"/>
+          <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/jackal-wheel.stl"/>
         </geometry>
         <material name="black" />
       </visual>
@@ -92,11 +92,11 @@
     <origin xyz="${-wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
   </xacro:wheel>
 
-  <link name="base_link"></link>
+  <link name="link_base"></link>
 
-  <joint name="base_link_joint" type="fixed">
+  <joint name="link_base_joint" type="fixed">
     <origin xyz="0 0 0" rpy="0 0 0" />
-    <parent link="base_link"/>
+    <parent link="link_base"/>
     <child link="chassis_link" />
   </joint>
 
@@ -104,7 +104,7 @@
     <visual>
       <origin xyz="0 0 ${footprint_vertical_offset}" rpy="${PI/2} 0 ${PI/2}"/>
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/jackal-base.stl"/>
+        <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/jackal-base.stl"/>
       </geometry>
       <material name="dark_grey" />
     </visual>
@@ -130,7 +130,7 @@
     <link name="front_fender_link">
       <visual>
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/jackal-fender.stl"/>
+          <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/jackal-fender.stl"/>
         </geometry>
         <material name="yellow" />
       </visual>
@@ -141,7 +141,7 @@
     <link name="front_fender_link">
       <visual>
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/accessory_fender.stl"/>
+          <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/accessory_fender.stl"/>
         </geometry>
         <material name="yellow" />
       </visual>
@@ -165,7 +165,7 @@
     <link name="rear_fender_link">
       <visual>
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/jackal-fender.stl"/>
+          <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/jackal-fender.stl"/>
         </geometry>
         <material name="yellow" />
       </visual>
@@ -176,7 +176,7 @@
     <link name="rear_fender_link">
       <visual>
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/jackal/meshes/accessory_fender.stl"/>
+          <mesh filename="package://arena-simulation-setup/robot/jackal/urdf/meshes/accessory_fender.stl"/>
         </geometry>
         <material name="yellow" />
       </visual>
@@ -239,14 +239,14 @@
   <joint name="rear_mount_joint" type="fixed">
     <parent link="mid_mount" />
     <child link="rear_mount" />
-    <origin xyz="${-mount_spacing} 0 0" />
+    <origin xyz="${mount_spacing} 0 0" />
   </joint>
 
   <link name="front_mount"></link>
   <joint name="front_mount_joint" type="fixed">
     <parent link="mid_mount" />
     <child link="front_mount" />
-    <origin xyz="${mount_spacing} 0 0" />
+    <origin xyz="${-mount_spacing} 0 0" rpy="0 0 0" />
   </joint>
 
   <!-- Bring in simulation data for Gazebo. -->

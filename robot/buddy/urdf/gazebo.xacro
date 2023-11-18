@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- ros_control plugin -->
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <!-- <robotNamespace>/</robotNamespace> -->
+            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+        </plugin>
+    </gazebo>
+
+    <!-- add some colour to the simulation~ -->
+    <gazebo reference="base_link">
+            <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="right_dd_wheel">
+        <material>Gazebo/FlatBlack</material>
+        <mu1 value="1.0"/>
+        <mu2 value="0.3"/>
+        <kp value="10000000.0" />
+        <kd value="1.0" />
+        <fdir1 value="1 0 0"/>
+    </gazebo>
+    <gazebo reference="left_dd_wheel">
+        <material>Gazebo/FlatBlack</material>
+        <mu1 value="1.0"/>
+        <mu2 value="0.3"/>
+        <kp value="10000000.0" />
+        <kd value="1.0" />
+        <fdir1 value="1 0 0"/>
+    </gazebo>
+    
+    <gazebo reference="rear_caster_caster_wheel">
+        <mu1 value="0.0001"/>
+        <mu2 value="0.0001"/>
+        <kp value="10000000.0" />
+        <kd value="1.0" />
+        <fdir1 value="1 0 0"/>
+    </gazebo>
+
+    <gazebo reference="inertial_link">
+        <gravity>true</gravity>
+        <sensor name="imu_sensor" type="imu">
+            <always_on>true</always_on>
+            <update_rate>100</update_rate>
+            <visualize>true</visualize>
+            <topic>imu/data</topic>
+            <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+                <topicName>imu</topicName>
+                <bodyName>inertial_link</bodyName>
+                <updateRateHZ>10.0</updateRateHZ>
+                <gaussianNoise>0.0</gaussianNoise>
+                <xyzOffset>0 0 0</xyzOffset>
+                <rpyOffset>0 0 0</rpyOffset>
+                <frameName>buddy_0_0/inertial_link</frameName>
+                <initialOrientationAsReference>false</initialOrientationAsReference>
+            </plugin>
+            <pose>0 0 0 0 0 0</pose>
+        </sensor>
+    </gazebo>
+
+</robot>
