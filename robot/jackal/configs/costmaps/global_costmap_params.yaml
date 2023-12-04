@@ -1,0 +1,5 @@
+plugins:
+    - {name: static_map_layer,    type: "costmap_2d::StaticLayer"}
+    - {name: obstacles_layer,  type: "costmap_2d::ObstacleLayer"}
+    - {name: inflation_layer,     type: "costmap_2d::InflationLayer"}
+    - {name: semantic_layer,     type: "costmap_2d::SemanticLayer"}

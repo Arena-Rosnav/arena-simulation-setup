@@ -1,6 +1,3 @@
-inscribed_radius: 0.5
-circumscribed_radius: 0.5
-
 plugins:
     - {name: static_map_layer,    type: "costmap_2d::StaticLayer"}
     - {name: 2d_obstacles_layer,  type: "costmap_2d::ObstacleLayer"}
