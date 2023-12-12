@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="arena_hawker_centre_food_sign_11">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="body">
+      <visual name="visual">
+        <geometry>
+          <mesh><uri>model://arena_hawker_centre_food_sign_11/media/arena_hawker_centre_food_sign_11.dae</uri></mesh>
+        </geometry>
+	      <!-- <material>
+          <script>
+            <uri>model://arena_hawker_centre_food_sign_10/media/scripts</uri>
+            <uri>model://arena_hawker_centre_food_sign_10/media/Textures</uri>
+            <name>arena_hawker_centre_food_sign_10</name>
+          </script>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <mesh><uri>model://arena_hawker_centre_food_sign_11/media/arena_hawker_centre_food_sign_11.dae</uri></mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

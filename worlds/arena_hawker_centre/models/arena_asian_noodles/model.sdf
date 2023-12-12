@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="arena_asian_noodles">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="body">
+      <visual name="visual">
+        <geometry>
+          <mesh><uri>model://arena_asian_noodles/media/arena_asian_noodles.dae</uri></mesh>
+        </geometry>
+	      <!-- <material>
+          <script>
+            <uri>model://hospital_floor/media/scripts</uri>
+            <uri>model://hospital_floor/media/Textures</uri>
+            <name>grey_floor</name>
+          </script>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <mesh><uri>model://arena_asian_noodles/media/arena_asian_noodles.dae</uri></mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
