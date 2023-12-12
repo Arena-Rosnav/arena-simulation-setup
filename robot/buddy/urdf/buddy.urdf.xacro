@@ -3,25 +3,25 @@
 <robot name="buddy" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <xacro:arg name="helios_5515_enabled" default="false" />
-    <xacro:arg name="helios_1_enabled" default="false" />
-    <xacro:arg name="rgbd_enabled" default="false" />
-    <xacro:arg name="ip_cameras_enabled" default="false" />
+    <xacro:arg name="helios_1_enabled" default="true" />
+    <xacro:arg name="rgbd_enabled" default="true" />
+    <xacro:arg name="ip_cameras_enabled" default="true" />
 
     <!-- <xacro:arg name="robot_namespace" default="/" /> -->
-    <xacro:include filename="$(find buddy_description)/xacro/const.xacro"/>
-    <xacro:include filename="$(find buddy_description)/xacro/wheel.xacro"/>
-    <xacro:include filename="$(find buddy_description)/xacro/gazebo.xacro"/>
-    <xacro:include filename="$(find buddy_description)/xacro/gazebo_rgbd.xacro"/>
-    <xacro:include filename="$(find buddy_description)/xacro/gazebo_camera.xacro"/>
-    <xacro:include filename="$(find buddy_description)/xacro/sick_scan.urdf.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/buddy/urdf/const.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/buddy/urdf/wheel.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/buddy/urdf/gazebo.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/buddy/urdf/gazebo_rgbd.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/buddy/urdf/gazebo_camera.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/buddy/urdf/sick_scan.urdf.xacro"/>
     <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
-    <xacro:include filename="$(find buddy_description)/xacro/VLP-1.urdf.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/buddy/urdf/VLP-1.urdf.xacro"/>
 
     <!-- Robot Base -->
     <link name="base_link">
         <visual>
             <geometry>
-                <mesh filename="package://buddy_description/meshes/buddy_simplified_mesh.stl" scale="1 1 1 "/>
+                <mesh filename="package://arena-simulation-setup/robot/buddy/urdf/meshes/buddy_simplified_mesh.stl" scale="1 1 1 "/>
             </geometry>
         </visual>
 
@@ -29,7 +29,7 @@
         <collision>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://buddy_description/meshes/buddy_simplified_mesh.stl" scale="1 1 1 "/>
+                <mesh filename="package://arena-simulation-setup/robot/buddy/urdf/meshes/buddy_simplified_mesh.stl" scale="1 1 1 "/>
             </geometry>
         </collision>
 

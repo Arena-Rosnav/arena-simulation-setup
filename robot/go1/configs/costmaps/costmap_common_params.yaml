@@ -1,0 +1,14 @@
+robot_base_frame: $(arg frame)base
+
+observation_sources: scan
+
+footprint: [[-0.29, -0.19], [-0.29, 0.19], [0.29, 0.19], [0.29, -0.19]]
+
+scan:
+  {
+    sensor_frame: $(arg frame)laser_link,
+    data_type: LaserScan,
+    topic: $(arg namespace)/scan,
+    marking: true,
+    clearing: true,
+  }

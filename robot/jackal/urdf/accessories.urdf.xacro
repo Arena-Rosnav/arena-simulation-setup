@@ -23,8 +23,8 @@
   <!--
     Add primary/secondary 2D lidar sensors.  By default these are SICK LMS1xx but can be changed with the
     JACKAL_LASER_MODEL and JACKAL_LASER_SECONDARY_MODEL environment variables. Valid model designations are:
-    - lms1xx (default) :: SICK LMS1xx
-    - ust10            :: Hokuyo UST10
+    - lms1xx           :: SICK LMS1xx
+    - ust10  (default) :: Hokuyo UST10
   -->
   <xacro:if value="$(optenv JACKAL_LASER 1)">
     <xacro:property name="lidar_model" value="$(optenv JACKAL_LASER_MODEL ust10)" />
@@ -175,7 +175,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://jackal_description/meshes/ark_enclosure.stl"/>
+          <mesh filename="package://jackal_description/urdf/meshes/ark_enclosure.stl"/>
         </geometry>
         <material name="dark_grey" />
       </visual>

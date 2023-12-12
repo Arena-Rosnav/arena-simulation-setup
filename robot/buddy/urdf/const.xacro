@@ -6,7 +6,7 @@
    
     <!--  3DLIDAR -->
     <xacro:property name="helios_com_x" value="0.1091"/>
-    <xacro:property name="helios_com_z" value="1.091"/>
+    <xacro:property name="helios_com_z" value="0.951"/>
     <!-- rotation in degrees  -->
     <xacro:property name="helios_pitch" value="10.0"/>
 

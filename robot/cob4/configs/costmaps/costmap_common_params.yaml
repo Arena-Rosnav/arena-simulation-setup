@@ -1,0 +1,37 @@
+robot_base_frame: $(arg frame)base_footprint
+
+#footprint: [[0.185, 0.185], [0.185, -0.185], [-0.185, -0.185], [-0.185, 0.185]]
+#footprint:
+#  [
+#   [0.4, 0.0],
+#    [0.35, 0.35],
+#    [-0.2, 0.4],
+#    [-0.45, 0.0],
+#    [-0.2, -0.4],
+#    [0.35, -0.35],
+#  ]
+footprint: [[0.43, 0.35], [0.43, -0.35], [-0.43, -0.35], [-0.43, 0.35]] #[m]
+robot_radius: 0.36
+obstacle_range: 15
+raytrace_range: 30
+# If false, each pixel has one of 2 states: lethal obstacle or free. If true, each pixel has one of 3 states: lethal obstacle, free, or unknown
+track_unknown_space: false  # default: false
+# If true, the robot footprint will clear (mark as free) the space in which it travels.
+footprint_clearing_enabled: false  # default: true
+# Whether keep unknown as unknown or clear it
+track_unknown: false
+
+footprint_padding: 0.02
+
+observation_sources: scan
+scan:
+  {
+    topic: $(arg namespace)/scan,
+    sensor_frame: $(arg frame)base_link,
+    data_type: LaserScan,
+    clearing: true,
+    marking: true,
+    inf_is_valid: false,
+    max_obstacle_height: 2.0,
+    min_obstacle_height: 0.0,
+  }

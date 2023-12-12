@@ -1,0 +1,38 @@
+DwaLocalPlannerROS:
+  holonomic_robot: false
+  dwa: true
+
+  heading_scoring: false
+  heading_lookahead: 1.0
+
+
+  acc_lim_x: 0.5
+  acc_lim_y: 0.0
+  acc_lim_theta: 0.3
+  max_vel_trans: 0.5
+  max_vel_x: 0.5     #0.12 0.3
+  min_vel_x: -0.5
+  max_vel_y: 0.0
+  min_vel_y: 0.0
+  max_vel_theta: 0.4
+  min_vel_theta: 0.1
+
+  yaw_goal_tolerance: 0.15
+  xy_goal_tolerance: 0.15 #0.10 # 0.50
+  sim_time: 2.0 #4.0 #2.0
+  sim_granularity: 0.025  #0.25 #0.025
+  vx_samples: 5 #20  #3
+  vth_samples: 10  #40 #5
+  goal_distance_bias: 24.0
+#    The weighting for how much the controller should attempt to reach its local goal, also controls speed. default: 24.0
+  occdist_scale: 0.5
+#    The weighting for how much the controller should attempt to avoid obstacles. default 0.01
+  stop_time_buffer: 1.0
+#    The amount of time that the robot must stop before a collision in order for a trajectory to be considered valid in seconds. default 0.2
+  oscillation_reset_angle: 0.1
+
+# Debugging
+  publish_cost_grid: true
+#	Whether or not to publish the cost grid that the planner will use when planning. When true, a sensor_msgs/PointCloud2 will be available on the ~<name>/cost_cloud topic. Each point cloud represents the cost grid and has a field for each individual scoring function component as well as the overall cost for each cell, taking the scoring parameters into account.
+  prune_plan: true
+#	Defines whether or not to eat up the plan as the robot moves along the path. If set to true, points will fall off the end of the plan once the robot moves 1 meter past them.  default: true

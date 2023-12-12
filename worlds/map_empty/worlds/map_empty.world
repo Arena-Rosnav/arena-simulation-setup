@@ -32,8 +32,5 @@
         </collision>
       </link>
     </model>
-
-             <plugin name="ActorPosesPlugin" filename="libActorPosesPlugin.so">
-        </plugin>
   </world>
 </sdf>

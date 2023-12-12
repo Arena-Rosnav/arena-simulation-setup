@@ -42,7 +42,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/tiago/meshes/sensors/xtion_pro_live/xtion_pro_live.dae" />
+          <mesh filename="package://arena-simulation-setup/robot/tiago/urdf/meshes/sensors/xtion_pro_live/xtion_pro_live.dae" />
         </geometry>
         <material name="Grey">
           <color rgba="0.5 0.5 0.5 1"/>

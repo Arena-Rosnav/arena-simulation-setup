@@ -37,7 +37,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/tiago/meshes/torso/torso_fix.stl" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/tiago/urdf/meshes/torso/torso_fix.stl" scale="1 1 1"/>
       </geometry>
       <material name="LightGrey"/>
     </visual>
@@ -109,28 +109,28 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
        <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/tiago/meshes/torso/torso_lift_with_arm.stl" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/tiago/urdf/meshes/torso/torso_lift_with_arm.stl" scale="1 1 1"/>
       </geometry>
       <material name="White"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
        <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/tiago/meshes/torso/torso_lift_collision_core.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/tiago/urdf/meshes/torso/torso_lift_collision_core.dae" scale="1 1 1"/>
       </geometry>
       <material name="LightGrey"/>
     </collision>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
        <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/tiago/meshes/torso/torso_lift_collision_shoulder.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/tiago/urdf/meshes/torso/torso_lift_collision_shoulder.dae" scale="1 1 1"/>
       </geometry>
       <material name="LightGrey"/>
     </collision>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
        <geometry>
-        <mesh filename="package://arena-simulation-setup/robot/tiago/meshes/torso/torso_lift_collision_neck.dae" scale="1 1 1"/>
+        <mesh filename="package://arena-simulation-setup/robot/tiago/urdf/meshes/torso/torso_lift_collision_neck.dae" scale="1 1 1"/>
       </geometry>
       <material name="LightGrey"/>
     </collision>

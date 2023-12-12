@@ -50,7 +50,7 @@
       <visual>
         <origin xyz="-0.01 0 0" rpy="${-M_PI/2} -${M_PI} ${-M_PI/2}"/>
         <geometry>
-          <mesh filename="package://arena-simulation-setup/robot/rto/meshes/sensors/asus_xtion_pro_live.dae" scale="${M_SCALE2} ${M_SCALE2} ${M_SCALE2}"/>
+          <mesh filename="package://arena-simulation-setup/robot/rto/urdf/meshes/sensors/asus_xtion_pro_live.dae" scale="${M_SCALE2} ${M_SCALE2} ${M_SCALE2}"/>
         </geometry>
       </visual>
       <collision>

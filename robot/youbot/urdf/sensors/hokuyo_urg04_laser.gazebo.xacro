@@ -10,7 +10,7 @@
       <sensor name="${name}" type="ray">
         <update_rate>${update_rate}</update_rate>
 		<pose>0 0 0 0 0 0</pose>
-		<visualize>false</visualize>
+		<visualize>true</visualize>
         <ray>
             <scan>
                 <horizontal>
@@ -31,7 +31,7 @@
             <gaussianNoise>0.005</gaussianNoise>
             <updateRate>${update_rate}</updateRate>
             <topicName>${ros_topic}</topicName>
-            <frameName>/${name}_link</frameName>
+            <frameName>${name}_link</frameName>
          </plugin>
       </sensor>
     </gazebo>

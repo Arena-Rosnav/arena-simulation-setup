@@ -57,7 +57,7 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <!-- Origin of this mesh is the base of the bracket. -->
-          <mesh filename="package://arena-simulation-setup/robot/dingo/meshes/hokuyo_ust10.stl" />
+          <mesh filename="package://arena-simulation-setup/robot/dingo/urdf/meshes/hokuyo_ust10.stl" />
         </geometry>
         <material name="dark_grey" />
       </visual>

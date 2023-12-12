@@ -4,15 +4,15 @@
 
     <xacro:arg name="DEBUG" default="false"/>
 
-    <xacro:include filename="$(find go1_description)/xacro/const.xacro"/>
-    <xacro:include filename="$(find go1_description)/xacro/materials.xacro"/>
-    <xacro:include filename="$(find go1_description)/xacro/leg.xacro"/>
-    <!-- <xacro:include filename="$(find go1_description)/xacro/stairs.xacro"/> -->
-    <xacro:include filename="$(find go1_description)/xacro/gazebo.xacro"/>
-    <xacro:include filename="$(find go1_description)/xacro/depthCamera.xacro"/>
-    <xacro:include filename="$(find go1_description)/xacro/ultraSound.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/go1/urdf/const.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/go1/urdf/materials.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/go1/urdf/leg.xacro"/>
+    <!-- <xacro:include filename="$(find arena-simulation-setup)/robot/go1/urdf/stairs.xacro"/> -->
+    <xacro:include filename="$(find arena-simulation-setup)/robot/go1/urdf/gazebo.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/go1/urdf/depthCamera.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/go1/urdf/ultraSound.xacro"/>
     <!-- <xacro:include filename="$(find go1_gazebo)/launch/stairs.urdf.xacro"/> -->
-    <xacro:include filename="$(find go1_description)/xacro/lidar.xacro"/>
+    <xacro:include filename="$(find arena-simulation-setup)/robot/go1/urdf/lidar.xacro"/>
 
     <!-- <xacro:stairs stairs="15" xpos="0" ypos="0" zpos="0" /> -->
 
@@ -48,7 +48,7 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://go1_description/meshes/trunk.dae" scale="1 1 1"/>
+                <mesh filename="package://arena-simulation-setup/robot/go1/urdf/meshes/trunk.dae" scale="1 1 1"/>
             </geometry>
             <!-- <material name="orange"/> -->
         </visual>

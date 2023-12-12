@@ -1,0 +1,27 @@
+TebLocalPlannerROS:
+  odom_topic: odom
+
+  # Trajectory
+
+  max_samples: 500
+  allow_init_with_backwards_motion: false
+  global_plan_viapoint_sep: -1
+  global_plan_prune_distance: 1
+  exact_arc_length: false
+  publish_feedback: false
+
+  # Robot
+
+  max_vel_x: 0.4
+  max_vel_x_backwards: 0.2
+  max_vel_y: 0.0
+  max_vel_theta: 0.3
+  acc_lim_x: 0.5
+  acc_lim_theta: 0.5
+  min_turning_radius: 0.0 # diff-drive robot (can turn on place!)
+
+  footprint_model:
+    type: point
+
+  # GoalTolerance
+
