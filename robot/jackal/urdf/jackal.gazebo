@@ -26,7 +26,7 @@
       <updateRate>40</updateRate>
       <!-- <robotNamespace>/</robotNamespace> -->
       <bodyName>navsat_link</bodyName>
-      <frameId>link_base</frameId>
+      <frameId>base_link</frameId>
       <topicName>/navsat/fix</topicName>
       <velocityTopicName>/navsat/vel</velocityTopicName>
       <referenceLatitude>49.9</referenceLatitude>
@@ -37,7 +37,7 @@
     </plugin>
   </gazebo>
 
-  <gazebo reference="link_base">
+  <gazebo reference="base_link">
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
 
