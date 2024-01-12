@@ -4,8 +4,8 @@
     <plugin name='gazebo_occupancy_map' filename='libgazebo_2Dmap_plugin.so'>
       <map_resolution>0.1</map_resolution>
       <map_height>0.3</map_height>
-      <map_size_x>100</map_size_x>
-      <map_size_y>100</map_size_y>
+      <map_size_x>200</map_size_x>
+      <map_size_y>200</map_size_y>
       <init_robot_x>0</init_robot_x>
       <init_robot_y>0</init_robot_y>
     </plugin>
@@ -35,7 +35,7 @@
     </light>
     <gui fullscreen='0'>
       <camera name='gui_camera'>
-        <pose>21.3134 6.59221 25.2356 0 1.02 -2.58692</pose>
+        <pose>58.541 -43.0713 47.275 0 0.779995 2.21231</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -105,10 +105,10 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='world'>
-      <sim_time>9077 417000000</sim_time>
-      <real_time>716 229034865</real_time>
-      <wall_time>1704383803 207689062</wall_time>
-      <iterations>715714</iterations>
+      <sim_time>8417 644000000</sim_time>
+      <real_time>56 148044328</real_time>
+      <wall_time>1704963575 763080380</wall_time>
+      <iterations>55941</iterations>
       <model name='Campus'>
         <pose>0.47498 -2.52106 0 0 -0 0</pose>
         <scale>1 1 1</scale>
