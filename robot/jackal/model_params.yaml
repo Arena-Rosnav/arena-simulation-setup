@@ -1,6 +1,6 @@
 robot_model: jackal
 robot_radius: 0.267
-robot_base_frame: link_base
+robot_base_frame: base_link
 robot_sensor_frame: front_laser
 is_holonomic: False
 actions:

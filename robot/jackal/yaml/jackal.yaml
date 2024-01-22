@@ -1,5 +1,5 @@
 bodies: # List of named bodies
-  - name: link_base
+  - name: base_link
     pose: [0, 0, 0]
     type: dynamic
     color: [0.5, 0.5, 0.5, 1.0]
@@ -16,7 +16,7 @@ bodies: # List of named bodies
 plugins:
   - type: DiffDrive
     name: diff_drive
-    body: link_base
+    body: base_link
     odom_frame_id: odom
     odom_pub: odom # topic odom is published on
     twist_sub: cmd_vel
@@ -26,7 +26,7 @@ plugins:
     name: static_laser
     frame: front_laser
     topic: scan
-    body: link_base
+    body: base_link
     broadcast_tf: true
     origin: [0.0, 0.0, 0.0]
     # range: 3
