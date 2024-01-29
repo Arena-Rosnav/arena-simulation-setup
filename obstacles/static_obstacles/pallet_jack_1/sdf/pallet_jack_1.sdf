@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.9">
-  <model name="aws_robomaker_warehouse_PalletJackB_01">
+  <model name="pallet_jack_1">
     <link name="link">
       <inertial>
         <mass>2</mass>
@@ -16,7 +16,7 @@
       <collision name="collision">
         <geometry>
           <mesh>
-            <uri>meshes/aws_robomaker_warehouse_PalletJackB_01_collision.DAE</uri>
+            <uri>model://obstacles/static_obstacles/pallet_jack_1/sdf/meshes/aws_robomaker_warehouse_PalletJackB_01_collision.DAE</uri>
           </mesh>
         </geometry>
         <surface>
@@ -34,7 +34,7 @@
       <visual name="visual">
         <geometry>
           <mesh>
-            <uri>meshes/aws_robomaker_warehouse_PalletJackB_01_visual.DAE</uri>
+            <uri>model://obstacles/static_obstacles/pallet_jack_1/sdf/meshes/aws_robomaker_warehouse_PalletJackB_01_visual.DAE</uri>
           </mesh>
         </geometry>
         <meta> <layer> 1 </layer></meta>
