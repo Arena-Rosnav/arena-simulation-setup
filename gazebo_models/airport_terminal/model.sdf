@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="airport terminal writing">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://airport_terminal/meshes/airport_terminal.stl</uri>
+          </mesh>
+           <surface>
+            <friction>
+              <ode>
+                <mu>1.2</mu>
+                <mu2>1.2</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://airport_terminal/meshes/airport_terminal.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
