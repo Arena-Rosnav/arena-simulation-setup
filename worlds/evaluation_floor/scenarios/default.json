@@ -1,0 +1,73 @@
+{
+  "obstacles": {
+    "dynamic": [
+      {
+        "name": "1",
+        "id": 0,
+        "pos": [-6.73, -1.72],
+        "type": "adult",
+        "waypoints": [
+          [-9.24, 5.21],
+          [-6.8, -1.63]
+        ],
+        "waypoint_mode": 0
+      },
+      {
+        "name": "2",
+        "id": 0,
+        "pos": [-3.82, 5.16],
+        "type": "adult",
+        "waypoints": [
+          [-5.08, -6.41],
+          [-3.83, 5.18]
+        ],
+        "waypoint_mode": 0
+      },
+      {
+        "name": "3",
+        "id": 0,
+        "pos": [0.96, -1.3],
+        "type": "adult",
+        "waypoints": [
+          [8.99, -3.78],
+          [0.93, -1.71]
+        ],
+        "waypoint_mode": 0
+      },
+      {
+        "name": "4",
+        "id": 0,
+        "pos": [1.52, 4.94],
+        "type": "adult",
+        "waypoints": [
+          [1.32, 0.7],
+          [8.51, 0.7],
+          [7.09, 5.03],
+          [1.55, 5.29]
+        ],
+        "waypoint_mode": 0
+      },
+      {
+        "name": "5",
+        "id": 0,
+        "pos": [-1.57, 5.06],
+        "type": "adult",
+        "waypoints": [
+          [-1.62, -5.78],
+          [8.59, -5.88],
+          [-1.58, -5.7],
+          [-1.63, 5.15]
+        ],
+        "waypoint_mode": 0
+      }
+    ],
+    "static": [],
+    "interactive": []
+  },
+  "robots": [
+    {
+      "start": [-8.01, -5.78],
+      "goal": [8.27, 5.2]
+    }
+  ]
+}
