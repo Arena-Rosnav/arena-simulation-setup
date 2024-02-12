@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <arg name="robot_namespace" />
+  <arg name="frame" />
+
+  <rosparam command="load" file="$(find arena_simulation_setup)/entities/robots/jackal/control.yaml" />
+  
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" args="jackal_joint_publisher jackal_velocity_controller">
+  </node>
+  
+  <node 
+    name="odom_pub" 
+    pkg="gazebo_utils" 
+    type="odom.py" 
+    args="$(arg robot_namespace)" 
+  />
+
+  <node pkg="topic_tools" type="relay" name="cmd_vel_relay" args="cmd_vel jackal_velocity_controller/cmd_vel" />
+</launch>

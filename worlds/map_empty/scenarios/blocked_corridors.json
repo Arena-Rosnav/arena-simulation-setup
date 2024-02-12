@@ -1,0 +1,138 @@
+{
+  "obstacles": {
+    "dynamic": [
+      {
+        "name": "20",
+        "id": 0,
+        "pos": [21.02, 16.89],
+        "type": "adult",
+        "waypoints": [
+          [18.42, 15.03],
+          [18.42, 7.99],
+          [0.8, 10.4],
+          [1.51, 3.68],
+          [7.09, -3.0],
+          [10.53, -1.58],
+          [11.87, 6.76]
+        ],
+        "waypoint_mode": 0
+      },
+      {
+        "name": "23",
+        "id": 0,
+        "pos": [1.44, 8.61],
+        "type": "adult",
+        "waypoints": [],
+        "waypoint_mode": 0
+      },
+      {
+        "name": "24",
+        "id": 0,
+        "pos": [0.33, 6.78],
+        "type": "adult",
+        "waypoints": [],
+        "waypoint_mode": 0
+      },
+      {
+        "name": "25",
+        "id": 0,
+        "pos": [18.15, 11.52],
+        "type": "adult",
+        "waypoints": [],
+        "waypoint_mode": 0
+      },
+      {
+        "name": "26",
+        "id": 0,
+        "pos": [17.0, 9.9],
+        "type": "adult",
+        "waypoints": [],
+        "waypoint_mode": 0
+      },
+      {
+        "name": "27",
+        "id": 0,
+        "pos": [11.32, 2.5],
+        "type": "adult",
+        "waypoints": [],
+        "waypoint_mode": 0
+      },
+      {
+        "name": "28",
+        "id": 0,
+        "pos": [10.18, 0.88],
+        "type": "adult",
+        "waypoints": [],
+        "waypoint_mode": 0
+      }
+    ],
+    "static": [
+      {
+        "name": "3",
+        "model": "shelf.yaml",
+        "pos": [16.01, 10.02, 0.0]
+      },
+      {
+        "name": "4",
+        "model": "shelf.yaml",
+        "pos": [20.48, 10.17, 0.0]
+      },
+      {
+        "name": "5",
+        "model": "shelf.yaml",
+        "pos": [16.09, 12.15, 0.0]
+      },
+      {
+        "name": "6",
+        "model": "shelf.yaml",
+        "pos": [20.56, 12.31, 0.0]
+      },
+      {
+        "name": "11",
+        "model": "shelf.yaml",
+        "pos": [8.81, 0.61, 0.0]
+      },
+      {
+        "name": "12",
+        "model": "shelf.yaml",
+        "pos": [13.13, 0.36, 0.0]
+      },
+      {
+        "name": "13",
+        "model": "shelf.yaml",
+        "pos": [8.84, 2.56, 0.0]
+      },
+      {
+        "name": "14",
+        "model": "shelf.yaml",
+        "pos": [13.21, 2.22, 0.0]
+      },
+      {
+        "name": "15",
+        "model": "shelf.yaml",
+        "pos": [3.0, 6.93, 3.142]
+      },
+      {
+        "name": "16",
+        "model": "shelf.yaml",
+        "pos": [-1.42, 6.73, 3.142]
+      },
+      {
+        "name": "17",
+        "model": "shelf.yaml",
+        "pos": [3.03, 8.92, 3.142]
+      },
+      {
+        "name": "18",
+        "model": "shelf.yaml",
+        "pos": [-1.44, 8.76, 3.142]
+      }
+    ]
+  },
+  "robots": [
+    {
+      "start": [18.74, 17.12],
+      "goal": [22.05, -1.72]
+    }
+  ]
+}
