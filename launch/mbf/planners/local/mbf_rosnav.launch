@@ -15,7 +15,7 @@
   <param name="agent_name" value="$(arg agent_name)" />
 
   <!-- DRL action frequency -->
-  <rosparam command="load" file="$(find arena_simulation_setup)/configs/drl.yaml" />
+  <rosparam command="load" file="$(find arena_bringup)/params/drl.yaml" />
 
   <!-- <rosparam file="$(find arena_bringup)/launch/plan_fsm_param.yaml" command="load" /> -->
   <group if="$(eval arg('train_mode') == false)">
