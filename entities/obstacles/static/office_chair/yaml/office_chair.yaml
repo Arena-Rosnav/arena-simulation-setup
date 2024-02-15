@@ -4,7 +4,7 @@ bodies:
 
     footprints:
       - type: polygon
-        points: [[-0.4, 0.4], [0.4, 0.4], [0.4, -0.4], [-0.4, -0.4]]
+        points: [[-0.2, 0.2], [0.2, 0.2], [0.2, -0.2], [-0.2, -0.2]]
         density: 1
         layers: ["static"]
         collision: false
