@@ -1,0 +1,48 @@
+{
+  "robots": [
+    {
+      "start": [24.0, 20.0, 0.7],
+      "goal": [2.0, 2.0, 0.0]
+    }
+  ],
+  "obstacles": {
+    "static": [],
+
+    "dynamic": [
+      {
+        "name": "1",
+        "pos": [14.0, 2.0, 0.0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+            [2.0, 14.0, 0.0],
+            [14.0, 2.0, 0.0]
+        ],
+        "waypoint_mode": 1
+      },
+      {
+        "name": "2",
+        "pos": [2.0, 8.0, 0.0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+            [8.0, 2.0, 0.0],
+            [8.0, 2.0, 0.0]
+        ],
+        "waypoint_mode": 1
+      },
+      {
+        "name": "3",
+        "pos": [8.0, 2.0, 0.0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+          [2.0, 8.0, 0.0],
+          [8.0, 2.0, 0.0]
+        ],
+        "waypoint_mode": 1
+      }
+    ],
+    "interactive": []
+  }
+}
