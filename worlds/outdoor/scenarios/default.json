@@ -1,0 +1,53 @@
+{
+  "robots": [
+    {
+      "start": [1.0, 1.0, 0.7],
+      "goal": [24, 24, 0]
+    }
+  ],
+  "obstacles": {
+    "static": [],
+
+    "dynamic": [
+      {
+        "name": "1",
+        "pos": [2.0, 8.0, 0.0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+            [13.0, 8.0, 0.0],
+            [24.0, 10.0, 0.0]
+        ],
+        "waypoint_mode": 1
+      },
+      {
+        "name": "2",
+        "pos": [23, 20, 0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+            [11.0, 20.0, 0.0],
+            [12.0, 13.0, 0.0]
+        ],
+        "waypoint_mode": 1
+      },
+      {
+        "name": "3",
+        "pos": [12.0, 13.0, 0.0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+          [22.0, 15.0, 0.0],
+          [22.0, 10.0, 0.0]
+        ],
+        "waypoint_mode": 1
+      },
+      {"name": "4", "pos": [7, 3, 0], "type": "adult", "model": "actor1", "waypoints": [[7, 12, 0]], "waypoint_mode": 1},
+      {"name": "5", "pos": [23, 5, 0], "type": "adult", "model": "actor1", "waypoints": [[12, 9, 0]], "waypoint_mode": 1},
+      {"name": "6", "pos": [19, 23, 0], "type": "adult", "model": "actor1", "waypoints": [[8, 23, 0]], "waypoint_mode": 1},
+      {"name": "7", "pos": [11, 19, 0], "type": "adult", "model": "actor1", "waypoints": [[21, 18, 0]], "waypoint_mode": 1},
+      {"name": "8", "pos": [12, 16, 0], "type": "adult", "model": "actor1", "waypoints": [[20, 23, 0]], "waypoint_mode": 1}
+    ],
+    "interactive": []
+  }
+}
