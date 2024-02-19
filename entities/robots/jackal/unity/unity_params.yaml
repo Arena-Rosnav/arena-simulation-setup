@@ -1,0 +1,5 @@
+components:
+  collider:
+    height: 0.92
+    radius: 0.32
+    position: [0, 0, 0]
