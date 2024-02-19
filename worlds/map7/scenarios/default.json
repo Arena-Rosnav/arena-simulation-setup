@@ -1,0 +1,43 @@
+{
+  "robots": [
+    {
+      "start": [-40.0, -45.0, 0.0],
+      "goal": [45.0, 40.0, 0.0]
+    }
+  ],
+  "obstacles": {
+    "static": [],
+
+    "dynamic": [
+      {
+        "name": "1",
+        "model": "actor1",
+        "id": 0,
+        "pos": [45.0, 40.0, 0.0],
+        "waypoints": [[-40.0, -45.0, 0.0]],
+        "waypoint_mode": 1
+      },
+      {"name": "2", "pos": [-33, 38, 0], "type": "adult", "model": "actor1", "waypoints": [[-32, 14.7, 0]], "waypoint_mode": 1},
+      {"name": "3", "pos": [-32.7, 24.4, 0], "type": "adult", "model": "actor1", "waypoints": [[13.6, 26, 0]], "waypoint_mode": 1},
+      {"name": "4", "pos": [-13.7, 25.8, 0], "type": "adult", "model": "actor1", "waypoints": [[12, 34.5, 0]], "waypoint_mode": 1},
+      {"name": "5", "pos": [-38.7, 13.4, 0], "type": "adult", "model": "actor1", "waypoints": [[-28.3, 24.5, 0]], "waypoint_mode": 1},
+      {"name": "6", "pos": [11.2, 27.2, 0], "type": "adult", "model": "actor1", "waypoints": [[10.9, 0, 0]], "waypoint_mode": 1},
+      {"name": "7", "pos": [10, 0.5, 0], "type": "adult", "model": "actor1", "waypoints": [[12.6, -0.3, 0]], "waypoint_mode": 1},
+      {"name": "8", "pos": [-26, 3, 0], "type": "adult", "model": "actor1", "waypoints": [[-13, -18, 0]], "waypoint_mode": 1},
+      {"name": "9", "pos": [-30, -41, 0], "type": "adult", "model": "actor1", "waypoints": [[-25, -7, 0]], "waypoint_mode": 1},
+      {"name": "10", "pos": [42, 41, 0], "type": "adult", "model": "actor1", "waypoints": [[41, 6, 0]], "waypoint_mode": 1},
+      {"name": "11", "pos": [41, 6, 0], "type": "adult", "model": "actor1", "waypoints": [[42, -30, 0]], "waypoint_mode": 1},
+      {"name": "12", "pos": [-10, -27, 0], "type": "adult", "model": "actor1", "waypoints": [[-14, -7, 0]], "waypoint_mode": 1},
+      {"name": "13", "pos": [-16, -41, 0], "type": "adult", "model": "actor1", "waypoints": [[-38, -43, 0]], "waypoint_mode": 1},
+      {"name": "14", "pos": [21, 14 , 0], "type": "adult", "model": "actor1", "waypoints": [[22, -4, 0]], "waypoint_mode": 1},
+      {"name": "15", "pos": [-28, -28, 0], "type": "adult", "model": "actor1", "waypoints": [[-25, -8, 0]], "waypoint_mode": 1},
+      {"name": "16", "pos": [0, 0, 0], "type": "adult", "model": "actor1", "waypoints": [[-19, -8, 0]], "waypoint_mode": 1},
+      {"name": "17", "pos": [41, 6, 0], "type": "adult", "model": "actor1", "waypoints": [[17, 6, 0]], "waypoint_mode": 1},
+      {"name": "18", "pos": [38, 46, 0], "type": "adult", "model": "actor1", "waypoints": [[8, 46, 0]], "waypoint_mode": 1},
+      {"name": "19", "pos": [8, 46, 0], "type": "adult", "model": "actor1", "waypoints": [[-17, 45, 0]], "waypoint_mode": 1},
+      {"name": "20", "pos": [21, 6, 0], "type": "adult", "model": "actor1", "waypoints": [[42, 20, 0]], "waypoint_mode": 1},
+      {"name": "21", "pos": [-15, -7, 0], "type": "adult", "model": "actor1", "waypoints": [[0, 0, 0]], "waypoint_mode": 1}
+    ],
+    "interactive": []
+  }
+}
