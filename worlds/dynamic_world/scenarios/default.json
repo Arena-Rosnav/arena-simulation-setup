@@ -32,19 +32,8 @@
           ],
           "waypoint_mode": 1
         },
-        {
-          "name": "Visitor_2",
-          "pos": [-3, 2.3, 0],
-          "type": "adult",
-          "model": "actor1",
-          "waypoints": [
-              [2, 0, 0],
-              [4, 1.5, 0]                                             
-          ],
-          "waypoint_mode": 1
-        },
-        {"name": "visitor3", "pos": [1, 0, 0], "type": "adult", "model": "actor1", "waypoints": [[-2.5, -4, 0], [0, -1.8, 0]], "waypoint_mode": 1},
-        {"name": "visitor5", "pos": [2, 3, 0], "type": "adult", "model": "actor1", "waypoints": [[2, -3, 0]], "waypoint_mode": 1}                                               
+        {"name": "visitor2", "pos": [1, 0, 0], "type": "adult", "model": "actor1", "waypoints": [[-2.5, -4, 0], [0, -1.8, 0]], "waypoint_mode": 1},
+        {"name": "visitor3", "pos": [2, 3, 0], "type": "adult", "model": "actor1", "waypoints": [[2, -3, 0]], "waypoint_mode": 1}                                               
       ],
       "interactive": []
     },
