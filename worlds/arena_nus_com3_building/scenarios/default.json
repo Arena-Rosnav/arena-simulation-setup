@@ -1,0 +1,51 @@
+{
+  "robots": [
+    {
+      "start": [35.0, 20.0, 0.7],
+      "goal": [-35.0, -7.0, 0.0]
+    }
+  ],
+  "obstacles": {
+    "static": [
+      {
+        "name": "shelf1",
+        "model": "shelf",
+        "pos": [9.0, 4.0, -0.5]
+      },
+      {
+        "name": "shelf2",
+        "model": "shelf",
+        "pos": [8.0, 4.0, -0.5]
+      },
+      {
+        "name": "chair1",
+        "model": "office_chair",
+        "pos": [-21.0, -6.0, 0]
+      },
+      {
+        "name": "shelf3",
+        "model": "shelf",
+        "pos": [-5.0, 9.0, -0.5]
+      },
+      {
+        "name": "shelf4",
+        "model": "shelf",
+        "pos": [-6.0, 9.0, -0.5]
+      }
+    ],
+
+    "dynamic": [
+      {"name": "visitor0", "pos": [28, 15, 0], "type": "adult", "model": "actor1", "waypoints": [[18, 6, 0], [30, -8, 0]], "waypoint_mode": 1},
+      {"name": "visitor1", "pos": [10, 2, 0], "type": "adult", "model": "actor1", "waypoints": [[4, 9, 0]], "waypoint_mode": 1},
+      {"name": "visitor2", "pos": [19, 6, 0], "type": "adult", "model": "actor1", "waypoints": [[0, 7, 0]], "waypoint_mode": 1},
+      {"name": "visitor3", "pos": [-4, 9, 0], "type": "adult", "model": "actor1", "waypoints": [[-7, -4, 0]], "waypoint_mode": 1},
+      {"name": "visitor4", "pos": [-7, -4, 0], "type": "adult", "model": "actor1", "waypoints": [[-5, 18, 0]], "waypoint_mode": 1},
+      {"name": "visitor5", "pos": [-7, 12, 0], "type": "adult", "model": "actor1", "waypoints": [[-14, -7, 0]], "waypoint_mode": 1},
+      {"name": "visitor6", "pos": [-27, -7, 0], "type": "adult", "model": "actor1", "waypoints": [[-14, -7, 0]], "waypoint_mode": 1},
+      {"name": "visitor7", "pos": [-23, -10, 0], "type": "adult", "model": "actor1", "waypoints": [[-26, 2, 0]], "waypoint_mode": 1},
+      {"name": "visitor8", "pos": [37, 8, 0], "type": "adult", "model": "actor1", "waypoints": [[22, 12, 0]], "waypoint_mode": 1},
+      {"name": "visitor9", "pos": [-10, 3, 0], "type": "adult", "model": "actor1", "waypoints": [[16, 20, 0]], "waypoint_mode": 1}
+    ],
+    "interactive": []
+  }
+}

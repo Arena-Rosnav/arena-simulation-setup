@@ -1,0 +1,10 @@
+bodies:
+  - name: base
+    color: [0.8, 0.2, 0, 1.0]
+
+    footprints:
+      - type: polygon
+        points: [[-1.1, 0.35], [1.1, 0.35], [1.1, -0.35], [-1.1, -0.35]]
+        density: 1
+        layers: ["static"]
+        collision: false
