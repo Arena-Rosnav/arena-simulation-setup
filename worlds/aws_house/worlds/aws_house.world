@@ -1,15 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <sdf version="1.6">
     <world name="default">
+    
         <!-- override the default position of the camera !-->
         <gui>
             <camera name="gzclient_camera">
                 <!--
         <pose>5 -4 2 0 0.2756 2.3561</pose>
         -->
-                <pose>-4.4965503 -0.4874 1.508684 0 -0 0</pose>
+                <pose>0.679719 -0.230569 22.016933 0.000403 1.569797 1.568392</pose>
             </camera>
         </gui>
+        
         <gravity>0 0 -9.8</gravity>
         <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
         <atmosphere type="adiabatic"/>

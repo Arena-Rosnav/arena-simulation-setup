@@ -1,9 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version='1.7'>
   <world name='default'>
-
-
-
     <light name='sun' type='directional'>
       <cast_shadows>1</cast_shadows>
       <pose>0 0 10 0 -0 0</pose>
@@ -29,13 +26,13 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://hospital_floor/media/hospital_floor.dae</uri>
+              <uri>model://hospital_floor_large/media/hospital_floor.dae</uri>
             </mesh>
           </geometry>
           <material>
             <script>
-              <uri>model://hospital_floor/media/scripts</uri>
-              <uri>model://hospital_floor/media/Textures</uri>
+              <uri>model://hospital_floor_large/media/scripts</uri>
+              <uri>model://hospital_floor_large/media/Textures</uri>
               <name>grey_floor</name>
             </script>
           </material>
@@ -43,7 +40,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://hospital_floor/media/hospital_floor.dae</uri>
+              <uri>model://hospital_floor_large/media/hospital_floor.dae</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -72,13 +69,13 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://hospital_walls/media/hospital_walls.dae</uri>
+              <uri>model://hospital_walls_large/media/hospital_walls.dae</uri>
             </mesh>
           </geometry>
           <material>
             <script>
-              <uri>model://hospital_walls/media/scripts</uri>
-              <uri>model://hospital_walls/media/Textures</uri>
+              <uri>model://hospital_walls_large/media/scripts</uri>
+              <uri>model://hospital_walls_large/media/Textures</uri>
               <name>grey_walls</name>
             </script>
           </material>
@@ -86,7 +83,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://hospital_walls/media/hospital_walls.dae</uri>
+              <uri>model://hospital_walls_large/media/hospital_walls.dae</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -108,13 +105,15 @@
         <kinematic>0</kinematic>
       </link>
     </model>
+    
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>-0.734176 20.0957 33.4659 0 1.02699 -1.56807</pose>
+        <pose>-1.509093 0.440648 47.367844 0.000082 1.561796 -1.567767</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
+    
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
@@ -129,6 +128,8 @@
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
       <shadows>1</shadows>
+      <grid>false</grid>
+      <origin_visual>false</origin_visual>
     </scene>
 
     <wind/>
@@ -175,7 +176,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>-12.1593 -1.17666 0 0 -0 0</pose>
+      <pose>-17.2844 0.139328 0 0 0 -1.58049</pose>
     </model>
     <model name='PotatoChipChair'>
       <static>1</static>
@@ -212,7 +213,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-7.94796 -0.437334 0 0 -0 0</pose>
+      <pose>-9.22091 -0.597514 0 0 0 -1.57721</pose>
     </model>
     <model name='PotatoChipChair_clone'>
       <static>1</static>
@@ -249,7 +250,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-6.61707 -0.591797 0 0 0 -1.57721</pose>
+      <pose>-7.56165 -0.607882 0 0 0 -1.57721</pose>
     </model>
     <model name='PotatoChipChair_clone_0'>
       <static>1</static>
@@ -286,7 +287,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-8.2052 1.81245 0 0 0 -1.57721</pose>
+      <pose>-9.2068 1.81887 0 0 0 -1.57721</pose>
     </model>
     <model name='PotatoChipChair_clone_1'>
       <static>1</static>
@@ -323,7 +324,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-6.55764 1.807 0 0 0 -1.57721</pose>
+      <pose>-7.57981 1.81356 0 0 0 -1.57721</pose>
     </model>
     <model name='PotatoChipChair_clone_clone'>
       <static>1</static>
@@ -360,7 +361,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-6.66243 -2.29344 0 0 0 -1.57721</pose>
+      <pose>-7.57584 -0.141605 -0 0 -0 1.57639</pose>
     </model>
     <model name='PotatoChipChair_clone_clone_clone'>
       <static>1</static>
@@ -397,7 +398,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-8.27542 -0.128116 0 0 -0 1.57639</pose>
+      <pose>-9.23183 -0.150635 0 0 -0 1.57639</pose>
     </model>
     <model name='PotatoChipChair_clone_clone_clone_clone'>
       <static>1</static>
@@ -434,7 +435,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-6.57225 2.52701 0 0 -0 1.57639</pose>
+      <pose>-7.59037 2.25337 0 0 -0 1.57639</pose>
     </model>
     <model name='PotatoChipChair_clone_clone_clone_clone_0'>
       <static>1</static>
@@ -471,7 +472,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-8.28275 2.51821 0 0 -0 1.57639</pose>
+      <pose>-9.2284 2.24174 0 0 -0 1.57639</pose>
     </model>
     <model name='PotatoChipChair_clone_clone_clone_clone_1'>
       <static>1</static>
@@ -508,7 +509,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-6.77338 -2.73489 0 0 -0 1.57639</pose>
+      <pose>-7.57839 -2.82326 0 0 -0 1.57639</pose>
     </model>
     <model name='PotatoChipChair_clone_clone_clone_clone_2'>
       <static>1</static>
@@ -545,7 +546,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-8.42054 -2.73374 0 0 -0 1.57639</pose>
+      <pose>-9.23147 -2.83209 0 0 -0 1.57639</pose>
     </model>
     <model name='ElderMalePatient'>
       <link name='link'>
@@ -593,7 +594,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-15.41 -10.1238 0 0 -0 0</pose>
+      <pose>-13.1491 -10.9243 0.001656 0 -1e-06 1.58535</pose>
     </model>
     <model name='MetalCabinet'>
       <static>1</static>
@@ -630,7 +631,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-15.0725 -10.399 0 0 -0 0</pose>
+      <pose>-16.8824 -12.071 0 0 -0 -3.13275</pose>
     </model>
     <model name='aws_robomaker_residential_PortraitA_01'>
       <link name='link'>
@@ -673,7 +674,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>-19.5375 -10.2306 0 0 -0 0</pose>
+      <pose>-14.6023 -12.2865 1.92247 0 0 -0.009352</pose>
     </model>
     <model name='aws_robomaker_residential_PortraitA_01_clone'>
       <link name='link'>
@@ -716,7 +717,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>-15.2655 -12.288 1.64376 0 -0 0.00336</pose>
+      <pose>-15.2656 -12.2957 1.91263 0 -0 0.00336</pose>
     </model>
     <model name='BPCart'>
       <link name='body'>
@@ -764,7 +765,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-14.2169 -11.8367 0 0 -0 0</pose>
+      <pose>-14.17 -11.6591 0.003446 0 0 -3.08462</pose>
     </model>
     <model name='BPCart_clone'>
       <link name='body'>
@@ -812,7 +813,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-15.1693 -11.7354 0.003436 1e-06 -0 3.10728</pose>
+      <pose>-15.6193 -11.5584 0.003446 0 0 -3.13898</pose>
     </model>
     <model name='BedsideTable'>
       <link name='body'>
@@ -860,7 +861,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-13.9975 -8.67987 0 0 -0 0</pose>
+      <pose>-11.9697 -11.7516 0.00018 1e-06 -0 0</pose>
     </model>
     <model name='BloodPressureMonitor'>
       <static>1</static>
@@ -897,7 +898,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-14.5663 -11.3059 0 0 -0 0</pose>
+      <pose>-14.862 -11.6901 0 0 -0 2.68664</pose>
     </model>
     <model name='CGMClassic'>
       <static>1</static>
@@ -936,7 +937,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-9.4888 -11.386 0 0 -0 0</pose>
+      <pose>-8.50743 -9.4435 0 0 -0 -3.13237</pose>
     </model>
     <model name='CGMVanguard'>
       <link name='body'>
@@ -986,7 +987,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-9.26637 -8.81826 0 0 -0 0</pose>
+      <pose>-0.605858 -11.0679 0.00165 -1e-06 -0 1.56577</pose>
     </model>
     <model name='Cafe table'>
       <static>1</static>
@@ -1065,7 +1066,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>10.0126 -9.79682 0 0 -0 0</pose>
+      <pose>-2.4269 3.2404 0 0 -0 0</pose>
     </model>
     <model name='Chair'>
       <link name='body'>
@@ -1192,7 +1193,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>6.61453 8.04672 0 0 -0 0</pose>
+      <pose>8.13436 10.5137 0 0 0 -1.29972</pose>
     </model>
     <model name='DigitalKiosk'>
       <static>1</static>
@@ -1229,7 +1230,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-4.84569 3.49229 0 0 -0 0</pose>
+      <pose>-8.15396 6.33825 0 0 0 -1.56021</pose>
     </model>
     <model name='ElderLadyPatient'>
       <link name='body'>
@@ -1277,7 +1278,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>1.37147 8.59614 0 0 -0 0</pose>
+      <pose>-1.8929 9.48017 0.001654 0 1e-06 -0.002939</pose>
     </model>
     <model name='ElderMalePatient_0'>
       <link name='link'>
@@ -1325,7 +1326,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-9.37764 9.42304 0 0 -0 0</pose>
+      <pose>-9.13948 11.0771 0.001656 0 -0 -1.58009</pose>
     </model>
     <model name='ElectronicsRecycling'>
       <static>1</static>
@@ -1362,7 +1363,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-4.6833 1.74367 0 0 -0 0</pose>
+      <pose>-4.3189 -1.27977 0 0 -0 0</pose>
     </model>
     <model name='ElectronicsRecycling_clone'>
       <static>1</static>
@@ -1399,7 +1400,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-4.5986 1.67017 0 0 -0 0</pose>
+      <pose>-4.32475 1.86895 0 0 -0 0</pose>
     </model>
     <model name='PotatoChipChair_clone_0_clone'>
       <static>1</static>
@@ -1547,7 +1548,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-2.7421 0.584121 0 0 -0 0</pose>
+      <pose>-3.62982 7.55577 0 0 -0 0</pose>
     </model>
     <model name='FoodCourtTable1'>
       <static>1</static>
@@ -1584,7 +1585,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-1.96635 2.1151 0 0 -0 0</pose>
+      <pose>-3.77425 10.569 0 0 -0 0</pose>
     </model>
     <model name='InstrumentCart1'>
       <static>1</static>
@@ -1621,7 +1622,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-14.3245 -9.38841 0 0 -0 0</pose>
+      <pose>-12.8425 -9.46679 0 0 -0 3.13147</pose>
     </model>
     <model name='InstrumentCart1_clone'>
       <static>1</static>
@@ -1658,7 +1659,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-14.1417 -9.38042 0 0 -0 3.13147</pose>
+      <pose>-13.4721 -9.47022 0 0 -0 3.13147</pose>
     </model>
     <model name='FemaleVisitorSit_clone'>
       <static>1</static>
@@ -1695,7 +1696,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-14.2674 -9.34744 0 0 -0 0</pose>
+      <pose>-14.3871 -10.6403 0 0 -0 1.57339</pose>
     </model>
     <model name='InstrumentCart2'>
       <static>1</static>
@@ -1732,7 +1733,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-11.2983 -10.2005 0 0 -0 0</pose>
+      <pose>-7.80224 -10.5164 -0 0 -0 -1.47781</pose>
     </model>
     <model name='KitchenCountertop'>
       <link name='link'>
@@ -1780,7 +1781,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-2.12745 -1.56888 0 0 -0 0</pose>
+      <pose>-1.76364 0.139133 1e-06 0 0 -2e-06</pose>
     </model>
     <model name='LitterBin'>
       <static>1</static>
@@ -1817,7 +1818,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>12.3563 -10.3306 0 0 -0 0</pose>
+      <pose>5.9158 -9.25585 0 0 -0 0</pose>
     </model>
     <model name='MalePatientBed'>
       <link name='link'>
@@ -1865,7 +1866,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-12.8895 9.60294 0 0 -0 0</pose>
+      <pose>-11.0558 11.1191 0.001653 0 -2e-06 -1.57689</pose>
     </model>
     <model name='MaleVisitorSit'>
       <static>1</static>
@@ -1950,7 +1951,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>3.99578 -0.173733 0 0 -0 0</pose>
+      <pose>3.99578 -2.51962 3e-05 0 -1e-06 0</pose>
     </model>
     <model name='MopCart3'>
       <link name='link'>
@@ -1998,7 +1999,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>4.17854 2.28833 0 0 -0 0</pose>
+      <pose>2.41237 0.337605 -6.3e-05 -2e-06 2e-06 -0</pose>
     </model>
     <model name='OfficeChairBlack'>
       <static>1</static>
@@ -2035,7 +2036,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>8.99909 7.77444 0 0 -0 0</pose>
+      <pose>9.35229 8.26765 0 0 -0 3.0953</pose>
     </model>
     <model name='OfficeChairGrey'>
       <static>1</static>
@@ -2072,7 +2073,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>12.1023 9.97463 0 0 -0 0</pose>
+      <pose>10.5709 8.49479 0 0 0 -2.78963</pose>
     </model>
     <model name='ElderLadyPatient_clone'>
       <link name='body'>
@@ -2120,7 +2121,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-8.81376 11.0996 0.00166 0 -0 0</pose>
+      <pose>-7.11308 11.0975 0.001656 0 1e-06 -1.57713</pose>
     </model>
     <model name='RecTable'>
       <static>1</static>
@@ -2157,7 +2158,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-15.465 8.21837 0 0 -0 0</pose>
+      <pose>-11.6719 7.19022 0 0 -0 0</pose>
     </model>
     <model name='StorageRack'>
       <link name='link'>
@@ -2205,7 +2206,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>3.74754 -9.00818 0 0 -0 0</pose>
+      <pose>3.23983 -10.2297 0 0 -0 0</pose>
     </model>
     <model name='StorageRack_clone_0'>
       <link name='link'>
@@ -2253,7 +2254,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>3.26365 -7.86695 0 0 -0 0</pose>
+      <pose>3.26365 -8.43459 -0 0 -0 0</pose>
     </model>
     <!-- <model name='SurgicalTrolley'>
       <static>1</static>
@@ -2327,7 +2328,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-15.9082 9.43564 0 0 -0 0</pose>
+      <pose>-16.9473 9.93031 0 0 -0 1.51544</pose>
     </model>
     <model name='Toilet'>
       <link name='body'>
@@ -2377,7 +2378,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-5.17387 3.16626 0 0 -0 0</pose>
+      <pose>0.539702 0.447683 0.000387 1e-06 -0 1.5742</pose>
     </model>
     <model name='Toilet_clone'>
       <link name='body'>
@@ -2427,7 +2428,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-0.124308 -2.73825 0.000387 0 -0 0</pose>
+      <pose>0.530683 -0.650357 0.000387 0 1e-06 -1.59736</pose>
     </model>
     <model name='TrolleyBed'>
       <link name='link'>
@@ -2475,7 +2476,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-13.3611 11.0448 0 0 -0 0</pose>
+      <pose>-13.0128 11.0829 0 0 0 -1.56039</pose>
     </model>
     <model name='aws_robomaker_hospital_curtain_closed_01'>
       <link name='link'>
@@ -2511,7 +2512,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>6.84301 -1.80725 0 0 -0 0</pose>
+      <pose>5.96576 -2.76358 0 0 -0 0</pose>
     </model>
     <model name='aws_robomaker_hospital_curtain_half_open_01'>
       <link name='link'>
@@ -2547,7 +2548,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>7.10213 2.0886 0 0 -0 0</pose>
+      <pose>12.2661 4.68692 0 0 0 -3.12782</pose>
     </model>
     <model name='aws_robomaker_hospital_curtain_open_01'>
       <link name='link'>
@@ -2583,7 +2584,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>10.7646 -1.70206 0 0 -0 0</pose>
+      <pose>8.74523 -2.94536 0 0 -0 0</pose>
     </model>
     <model name='aws_robomaker_residential_KitchenCabinet_01'>
       <link name='link'>
@@ -2627,7 +2628,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>9.32821 2.25839 0 0 -0 0</pose>
+      <pose>7.14836 -10.9954 0 0 -0 1.58167</pose>
     </model>
     <model name='aws_robomaker_residential_PortraitD_01'>
       <link name='link'>
@@ -2670,7 +2671,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>-5.39813 -9.68884 0 0 -0 0</pose>
+      <pose>-12.2903 -8.64772 1.515 0 -0 1.57486</pose>
     </model>
     <model name='aws_robomaker_residential_Refrigerator_01'>
       <link name='link'>
@@ -2713,7 +2714,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>-7.10354 -4.54298 0 0 -0 0</pose>
+      <pose>9.286 -11.8647 0 0 -0 3.1349</pose>
     </model>
     <model name='aws_robomaker_residential_SofaB_01'>
       <link name='link'>
@@ -2764,7 +2765,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>3.83669 8.46343 0 0 -0 0</pose>
+      <pose>0.752301 -8.392 -5e-06 0 -1.5e-05 3.13376</pose>
     </model>
     <model name='aws_robomaker_residential_Sofa_01'>
       <link name='link'>
@@ -2815,7 +2816,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>11.9348 -9.08886 0 0 -0 0</pose>
+      <pose>12.3502 -7.7238 -3e-06 1.4e-05 1e-06 -1.56769</pose>
     </model>
     <model name='washer'>
       <link name='link'>
@@ -2879,7 +2880,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-3.59075 4.8211 0 0 -0 0</pose>
+      <pose>-3.59073 4.82111 -0.0003 0.021646 -0.033722 -0.000451</pose>
     </model>
     <model name='aws_robomaker_residential_Carpet_01'>
       <link name='link'>
@@ -2923,7 +2924,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>11.5326 -9.92101 0 0 -0 0</pose>
+      <pose>11.5934 -8.23178 0 0 0 -1.56284</pose>
     </model>
     <model name='aws_robomaker_residential_CoffeeTable_01'>
       <link name='link'>
@@ -2976,7 +2977,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>12.5752 -9.53331 0 0 -0 0</pose>
+      <pose>11.5461 -8.17999 0 0 -0 0</pose>
     </model>
     <model name='MiniSofa_clone'>
       <link name='body'>
@@ -3026,7 +3027,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>10.2996 -9.12087 -0.000899 0 -0 1e-06</pose>
+      <pose>10.167 -8.1922 -0.000899 -1e-06 0 -3.12459</pose>
     </model>
     <model name='Standing person_clone'>
       <link name='link'>
@@ -3096,7 +3097,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-1.93707 1.91645 -0 0 -0 0.001144</pose>
+      <pose>-1.06806 0.351149 -0 0 0 -1.59713</pose>
     </model>
     <model name='VendingMachine_clone'>
       <link name='body'>
@@ -3144,7 +3145,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-5.55011 1.87937 2e-06 5e-06 -1e-06 0</pose>
+      <pose>-3.31083 -4.31228 -3e-06 -4e-06 3e-06 1.5708</pose>
     </model>
     <model name='VendingMachine_clone_clone'>
       <link name='body'>
@@ -3192,7 +3193,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-2.38619 -4.3077 -2e-06 4e-06 -0 1.5708</pose>
+      <pose>-2.38619 -4.3077 -0 0 -1e-06 1.5708</pose>
     </model>
     <model name='VendingMachine_clone_clone_clone'>
       <link name='body'>
@@ -3240,7 +3241,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-1.65899 -2.76042 0 0 -0 1.5708</pose>
+      <pose>-1.22014 -2.11192 -5e-06 1e-05 -1e-06 3.12974</pose>
     </model>
     <model name='VendingMachine_clone_clone_clone_clone'>
       <link name='body'>
@@ -3288,7 +3289,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-2.27877 -2.46869 -0 0 -0 3.12887</pose>
+      <pose>-1.23619 -3.04549 -2e-06 4e-06 0 3.12887</pose>
     </model>
     <model name='LitterBin_clone'>
       <static>1</static>
@@ -3325,7 +3326,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-1.43498 -3.99893 0 0 -0 0</pose>
+      <pose>-1.43498 -3.99893 0 0 0 -0.816377</pose>
     </model>
     <model name='MaleVisitorOnPhone_0_clone'>
       <static>1</static>
@@ -3362,7 +3363,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-3.07037 3.38588 0 0 -0 0</pose>
+      <pose>-3.15889 3.3287 0 0 -0 0</pose>
     </model>
     <model name='Standing person_clone_0'>
       <link name='link'>
@@ -3432,7 +3433,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-1.5617 3.43547 -0 0 -0 0.001144</pose>
+      <pose>-1.6866 3.347 -0 0 0 -1.5703</pose>
     </model>
     <model name='FemaleVisitorSit_clone_1'>
       <static>1</static>
@@ -3580,7 +3581,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-8.69344 -0.776161 0 0 -0 0</pose>
+      <pose>-8.69344 -0.72166 0 0 0 -0.01932</pose>
     </model>
     <model name='MaleVisitorSit_clone'>
       <static>1</static>
@@ -3765,7 +3766,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-14.7635 -9.47826 0 0 -0 0</pose>
+      <pose>-14.7635 -9.47826 0 0 0 -0.515352</pose>
     </model>
     <model name='OpScrubs_clone'>
       <static>1</static>
@@ -3802,7 +3803,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-14.2953 -9.91121 0 0 -0 0</pose>
+      <pose>-14.2953 -9.91121 0 0 0 -0.555871</pose>
     </model>
     <model name='Nurse_clone'>
       <static>1</static>
@@ -3839,7 +3840,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-14.1247 -0.012359 0 0 -0 0</pose>
+      <pose>-13.7376 -0.012359 0 0 -0 0</pose>
     </model>
     <model name='Nurse_clone_0'>
       <static>1</static>
@@ -3876,7 +3877,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-14.9059 -1.74772 0 0 -0 0</pose>
+      <pose>-14.9059 -1.74772 0 0 0 -0.760713</pose>
     </model>
     <model name='Nurse_clone_0_clone'>
       <static>1</static>
@@ -3913,7 +3914,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-14.9721 2.00139 0 0 0 -0.760713</pose>
+      <pose>-14.9721 2.00139 0 0 -0 0.56533</pose>
     </model>
     <model name='FemaleVisitorSit_clone_4_clone'>
       <static>1</static>
@@ -3950,7 +3951,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-10.5235 -1.94398 0 0 -0 0</pose>
+      <pose>-8.10145 -2.75581 0 0 -0 3.12061</pose>
     </model>
     <model name='FemaleVisitorSit_clone_4_clone_clone'>
       <static>1</static>
@@ -4098,7 +4099,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-10.8888 -1.03886 0 0 -0 0</pose>
+      <pose>-9.74689 -2.75377 0 0 0 -3.08712</pose>
     </model>
     <model name='MaleVisitorSit_clone_2_clone'>
       <static>1</static>
@@ -4357,7 +4358,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-10.9653 -1.48569 0 0 -0 0</pose>
+      <pose>-8.71478 -2.72522 0.079775 0 -0 3.10777</pose>
     </model>
     <model name='VisitorKidSit_clone_3_clone'>
       <static>1</static>
@@ -4468,7 +4469,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-8.6763 -10.8551 0.079775 0 -0 3.10777</pose>
+      <pose>-8.60573 -9.65175 0.209743 0 -0 0.055194</pose>
     </model>
     <model name='Nurse_clone_0_clone_clone'>
       <static>1</static>
@@ -4505,7 +4506,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-8.35439 -9.96339 0 0 -0 0.56533</pose>
+      <pose>-8.49363 -10.7711 -0 0 -0 0.310187</pose>
     </model>
     <model name='MetalCabinet_clone'>
       <static>1</static>
@@ -4542,7 +4543,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-9.71616 -11.8719 0 0 -0 -3.13275</pose>
+      <pose>-9.71458 -12.0504 0 0 0 -3.13275</pose>
     </model>
     <model name='aws_robomaker_residential_Trash_01_clone'>
       <link name='link'>
@@ -4593,7 +4594,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-11.1968 -12.0005 0.000904 0 -1e-06 1e-06</pose>
+      <pose>-11.1968 -12.0005 0.000904 -0 -1e-06 2e-06</pose>
     </model>
     <model name='aws_robomaker_residential_Trash_01_clone_0'>
       <link name='link'>
@@ -4644,7 +4645,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-10.6524 -12.0126 0.000904 0 -1e-06 1e-06</pose>
+      <pose>-10.6524 -12.0126 0.000894 0 -0 2e-06</pose>
     </model>
     <model name='Sofa_clone'>
       <link name='link'>
@@ -4692,7 +4693,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-11.7583 -9.21875 0.000118 0 -1e-06 -1e-06</pose>
+      <pose>-11.7583 -9.21875 0.000112 0 1e-06 -3e-06</pose>
     </model>
     <model name='Suitcase1_clone'>
       <static>1</static>
@@ -4729,7 +4730,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-7.58928 -8.59083 0 0 -0 0</pose>
+      <pose>-9.12531 -8.65192 0 0 0 -1.49356</pose>
     </model>
     <model name='BPCart_clone_0'>
       <link name='body'>
@@ -4777,7 +4778,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-8.36897 -8.46437 0.003446 0 0 -3.08462</pose>
+      <pose>-7.80423 -8.52548 0.003446 0 0 -1.44449</pose>
     </model>
     <model name='KitchenSink_clone'>
       <link name='link'>
@@ -4825,7 +4826,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>0.368277 3.95371 -0.001609 0 -0 0</pose>
+      <pose>0.089993 4.30383 -0.001609 0 0 -1.56476</pose>
     </model>
     <model name='KitchenSink_clone_0'>
       <link name='link'>
@@ -4873,7 +4874,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>0.561121 -4.1618 -0.001609 0 -0 0</pose>
+      <pose>-0.335974 -4.22569 -0.001617 0 -0 0</pose>
     </model>
     <model name='KitchenSink_clone_clone'>
       <link name='link'>
@@ -4964,7 +4965,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>3.30669 4.55369 0 0 -0 0</pose>
+      <pose>0.127232 4.7523 1.00757 0 -0 0</pose>
     </model>
     <model name='aws_robomaker_residential_PortraitC_01_clone_clone_2'>
       <link name='link'>
@@ -5007,7 +5008,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>0.838985 4.7404 1.00757 0 -0 0</pose>
+      <pose>0.838985 4.75815 1.00757 0 -0 0</pose>
     </model>
     <model name='aws_robomaker_residential_PortraitC_01_clone_clone'>
       <link name='link'>
@@ -5050,7 +5051,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>-0.431922 -3.50258 1.00757 0 -0 0</pose>
+      <pose>-0.710427 -4.22466 0.907092 0 -0 1.58669</pose>
     </model>
     <model name='KitchenSink_clone_0_clone'>
       <link name='link'>
@@ -5098,7 +5099,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-14.0864 -7.32191 -0.001609 0 -0 0</pose>
+      <pose>-12.9413 -6.89379 -0.001609 0 0 -1.58104</pose>
     </model>
     <model name='KitchenSink_clone_0_clone_clone'>
       <link name='link'>
@@ -5189,7 +5190,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>-15.9232 -5.79944 0 0 -0 0</pose>
+      <pose>-13.3317 -6.51185 1.00843 0 -0 0</pose>
     </model>
     <model name='MiniSofa_clone_clone'>
       <link name='body'>
@@ -5239,7 +5240,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-16.9179 -8.24596 -0.000899 -1e-06 0 -3.12459</pose>
+      <pose>-16.9179 -8.24596 -0.000899 0 0 -3.12459</pose>
     </model>
     <model name='MiniSofa_clone_clone_0'>
       <link name='body'>
@@ -5448,7 +5449,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>13.2108 7.1127 -0.001609 0 0 -3.12384</pose>
+      <pose>13.2037 7.11359 -0.001609 0 0 -3.12623</pose>
     </model>
     <model name='KitchenSink_clone_2'>
       <link name='link'>
@@ -5544,7 +5545,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>5.74415 11.1742 -3e-06 8e-06 -0 1.5708</pose>
+      <pose>5.19913 11.7899 4e-06 1.6e-05 -0 0.012293</pose>
     </model>
     <model name='VendingMachine_clone_clone_clone_1'>
       <link name='body'>
@@ -5592,7 +5593,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>5.88279 10.6547 0 0 -0 1.5708</pose>
+      <pose>5.22687 10.861 -1e-06 2e-06 0 0.021943</pose>
     </model>
     <model name='DeskChair_clone'>
       <static>1</static>
@@ -5632,7 +5633,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>8.14751 8.18478 0 0 0 -1.29972</pose>
+      <pose>8.22242 8.47287 0 0 -0 1.31639</pose>
     </model>
     <model name='FemaleVisitorSit_clone_1_clone'>
       <static>1</static>
@@ -5743,7 +5744,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>11.9626 9.24542 0 0 -0 0</pose>
+      <pose>9.33 8.3488 0 0 0 -2.84449</pose>
     </model>
     <model name='OpScrubs_clone_0'>
       <static>1</static>
@@ -6113,7 +6114,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>6.11137 6.9026 0 0 0 -3.13275</pose>
+      <pose>6.11137 6.9026 0 0 0 -3.132756.11137 6.9026 0 0 0 -3.13275</pose>
     </model>
     <model name='Scrubs_clone_1'>
       <static>1</static>
@@ -6150,7 +6151,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>8.69449 8.005 0 0 -0 0</pose>
+      <pose>8.69449 8.005 0 0 -0 2.19401</pose>
     </model>
     <model name='Scrubs_clone_2'>
       <static>1</static>
@@ -6230,7 +6231,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>-1.98602 -1.61943 0 0 -0 0</pose>
+      <pose>-0.926262 -0.578119 1.55119 0 0 -1.55657</pose>
     </model>
     <model name='aws_robomaker_residential_PortraitE_02_clone_clone'>
       <link name='link'>
@@ -6273,7 +6274,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>-1.36434 -0.568805 1.55119 0 0 -1.55657</pose>
+      <pose>-0.923939 1.186 1.55119 0 0 -1.55657</pose>
     </model>
     <model name='aws_robomaker_hospital_curtain_closed_01_clone'>
       <link name='link'>
@@ -6309,7 +6310,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>8.41003 3.42308 0 0 -0 0</pose>
+      <pose>9.94286 4.75831 0 0 -0 3.13562</pose>
     </model>
     <model name='ElderLadyPatient_clone_clone'>
       <link name='body'>
@@ -6357,7 +6358,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>7.42925 0.767954 0.00166 0 -0 -1e-06</pose>
+      <pose>6.33003 -3.21054 0.001655 0 -2e-06 1.56868</pose>
     </model>
     <model name='ElderMalePatient_0_clone'>
       <link name='link'>
@@ -6405,7 +6406,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>10.7984 -0.443329 0.001654 -0 -0 -1e-06</pose>
+      <pose>9.20381 -3.16549 0.001656 -0 -1e-06 1.57431</pose>
     </model>
     <model name='MalePatientBed_clone'>
       <link name='link'>
@@ -6453,7 +6454,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>6.96672 2.62294 0.00166 0 -0 9e-06</pose>
+      <pose>9.33562 5.06578 0.001659 1e-06 -1e-06 -1.55596</pose>
     </model>
     <model name='MetalCabinet_clone_0'>
       <static>1</static>
@@ -6490,7 +6491,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>4.90376 -12.05 0 0 -0 -3.13275</pose>
+      <pose>4.94428 -12.0496 0 0 0 -3.13275</pose>
     </model>
     <model name='MetalCabinet_clone_0_clone'>
       <static>1</static>
@@ -6527,7 +6528,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>4.08787 -12.051 0 0 0 -3.13275</pose>
+      <pose>4.14819 -12.0505 0 0 0 -3.13275</pose>
     </model>
     <model name='MetalCabinet_clone_0_clone_0'>
       <static>1</static>
@@ -6564,7 +6565,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>3.26175 -12.0459 0 0 0 -3.13275</pose>
+      <pose>3.36005 -12.0542 0 0 0 -3.13275</pose>
     </model>
     <model name='MetalCabinet_clone_0_clone_1'>
       <static>1</static>
@@ -6601,7 +6602,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>2.44731 -12.0441 0 0 0 -3.13275</pose>
+      <pose>2.58495 -12.0633 -0 0 0 -3.13275</pose>
     </model>
     <model name='MetalCabinet_clone_0_clone_2'>
       <static>1</static>
@@ -6638,7 +6639,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>4.6693 -10.9759 0 0 0 -3.13275</pose>
+      <pose>1.79456 -12.0694 -0 0 0 -3.13275</pose>
     </model>
     <model name='SurgicalTrolley_clone'>
       <static>1</static>
@@ -6897,7 +6898,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>7.77574 1.32879 0 0 -0 0</pose>
+      <pose>7.77574 1.32879 0 0 0 -1.62446</pose>
     </model>
     <model name='OpScrubs_clone_2'>
       <static>1</static>
@@ -6934,7 +6935,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>9.10279 -1.3035 0 0 -0 0</pose>
+      <pose>11.4069 10.091 0 0 0 -2.68381</pose>
     </model>
     <model name='TrolleyBed_clone'>
       <link name='link'>
@@ -6982,7 +6983,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>11.8462 0.054424 -1e-06 1e-06 -0 0</pose>
+      <pose>11.8117 4.91009 -1e-06 2e-06 -0 -1.55517</pose>
     </model>
     <model name='Nurse_clone_1'>
       <static>1</static>
@@ -7019,7 +7020,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>8.50394 4.74429 0 0 -0 0</pose>
+      <pose>9.86105 3.35223 -0 0 -0 1.88716</pose>
     </model>
     <model name='Nurse_clone_1_clone'>
       <static>1</static>
@@ -7056,7 +7057,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>9.25288 -0.234308 -0 0 -0 1.88716</pose>
+      <pose>9.25288 -0.234308 0 0 -0 1.88716</pose>
     </model>
     <model name='KitchenSink_clone_1_clone'>
       <link name='link'>
@@ -7104,7 +7105,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>12.7431 -3.70325 -0.001609 0 0 -3.12623</pose>
+      <pose>13.1991 -2.56689 -0.001609 0 0 -3.12623</pose>
     </model>
     <model name='KitchenSink_clone_1_clone_clone'>
       <link name='link'>
@@ -7152,7 +7153,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>13.2133 -3.33434 -0.001609 0 0 -3.12623</pose>
+      <pose>13.2057 -3.33338 -0.001619 -0 -0 -3.12889</pose>
     </model>
     <model name='KitchenSink_clone_1_clone_clone_0'>
       <link name='link'>
@@ -7200,7 +7201,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>11.7783 -3.91806 -0.001609 0 0 -3.12623</pose>
+      <pose>11.7683 -4.24655 -0.001618 0 -0 1.56889</pose>
     </model>
     <model name='KitchenSink_clone_1_clone_clone_0_clone'>
       <link name='link'>
@@ -7248,7 +7249,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>11.0045 -3.99224 -0.001619 0 -0 1.56572</pose>
+      <pose>10.9976 -4.23853 -0.001618 0 -0 1.56196</pose>
     </model>
     <model name='Scrubs_clone_3'>
       <static>1</static>
@@ -7285,7 +7286,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-2.88408 -3.24933 0 0 -0 0</pose>
+      <pose>-2.37995 -3.36438 -0.002789 -0.005366 -0.001343 -1.81601</pose>
     </model>
     <model name='LampAndStand_clone'>
       <static>1</static>
@@ -7370,7 +7371,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>3.56787 10.6359 0.00012 0 0 -3e-06</pose>
+      <pose>4.07908 11.2937 0.000115 2e-06 0 -3.12737</pose>
     </model>
     <model name='Sofa_clone_0_clone'>
       <link name='link'>
@@ -7418,7 +7419,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>4.02536 9.45924 0.00012 0 -0 3.12452</pose>
+      <pose>4.02536 9.45924 0.000112 -2e-06 -0 3.12452</pose>
     </model>
     <model name='aws_robomaker_residential_Carpet_01_clone'>
       <link name='link'>
@@ -7462,7 +7463,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>1.84097 9.91999 0 0 0 -1.56284</pose>
+      <pose>2.92675 10.3 0 0 0 -3.1413</pose>
     </model>
     <model name='aws_robomaker_residential_CoffeeTable_01_clone'>
       <link name='link'>
@@ -7515,7 +7516,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>2.24666 10.3033 0 0 -0 0</pose>
+      <pose>2.65709 11.3008 0 0 0 -1.58465</pose>
     </model>
     <model name='aws_robomaker_residential_CoffeeTable_01_clone_clone'>
       <link name='link'>
@@ -7605,7 +7606,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>2.87032 8.28232 0 0 -0 0</pose>
+      <pose>3.72049 9.86276 0 0 0 -1.54646</pose>
     </model>
     <model name='VisitorKidSit_clone_0'>
       <static>1</static>
@@ -7642,7 +7643,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>3.18282 11.0832 0 0 -0 0</pose>
+      <pose>3.75047 11.0669 0 0 0 -1.59959</pose>
     </model>
     <model name='VisitorKidSit_clone_0_clone'>
       <static>1</static>
@@ -7716,7 +7717,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-2.24264 10.4023 0 0 -0 3.13147</pose>
+      <pose>-2.61623 10.4079 0 0 -0 1.55568</pose>
     </model>
     <model name='Scrubs_clone_4'>
       <static>1</static>
@@ -7753,7 +7754,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-1.78619 10.3827 0 0 -0 0</pose>
+      <pose>-1.78619 10.3827 0 0 0 -1.49688</pose>
     </model>
     <model name='Suitcase2_clone'>
       <static>1</static>
@@ -7827,7 +7828,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>5.39831 1.08614 0 0 -0 0</pose>
+      <pose>5.39831 2.68825 0 0 -0 0</pose>
     </model>
     <model name='SquareShelf_clone'>
       <static>1</static>
@@ -7949,7 +7950,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>1.90452 7.22316 -0.001609 0 -0 0</pose>
+      <pose>2.56005 7.04313 -0.001619 0 -0 1.57611</pose>
     </model>
     <model name='KitchenSink_clone_0_clone_0_clone'>
       <link name='link'>
@@ -7997,7 +7998,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>1.67576 7.07595 -0.001618 0 -0 1.58692</pose>
+      <pose>1.77591 7.03585 -0.001619 0 -0 1.56557</pose>
     </model>
     <model name='NormalBed_clone'>
       <link name='body'>
@@ -10422,7 +10423,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>16.561686 0.561251 0 0 -0 1.561578</pose>
+      <pose>16.6128 0.082108 0 0 -0 1.54162</pose>
     </model>
     <model name='Scrubs_clone_5'>
       <static>1</static>
@@ -10459,7 +10460,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>16.716057 -0.163949 0 0 -0 1.694480</pose>
+      <pose>16.5893 -0.60667 0 0 -0 1.49484</pose>
     </model>
     <model name='MaleVisitorOnPhone_clone'>
       <static>1</static>
@@ -10533,7 +10534,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-8.55331 -8.46285 0 0 -0 0</pose>
+      <pose>-8.55331 -8.46285 0 0 0 -1.41155</pose>
     </model>
     <model name='WhiteCabinet_clone'>
       <static>1</static>
@@ -10570,7 +10571,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-2.638930 6.912710 0 0 -0 -3.111440</pose>
+      <pose>-2.63893 6.91271 0 0 -0 -3.11144</pose>
     </model>
     <model name='WhiteCabinet_clone_clone'>
       <static>1</static>
@@ -10607,7 +10608,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-1.732170 6.931120 0 0 -0 -3.111440</pose>
+      <pose>-1.73217 6.93112 0 0 0 -3.11144</pose>
     </model>
     <model name='aws_robomaker_residential_PortraitB_01_clone'>
       <link name='link'>
@@ -10650,7 +10651,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>-2.179698 6.696250 0 0 -0 -3.123134</pose>
+      <pose>-1.62583 6.6849 1.41833 0 0 -3.13193</pose>
     </model>
     <model name='aws_robomaker_residential_PortraitB_01_clone_clone'>
       <link name='link'>
@@ -10693,7 +10694,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>-2.212459 6.691126 1.425835 0 0 -3.141375</pose>
+      <pose>-2.47829 6.67831 1.41833 0 0 -3.13091</pose>
     </model>
     <model name='Fridge_clone'>
       <static>1</static>
@@ -10730,7 +10731,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>10.106155 -11.979081 0 0 -0 3.124990</pose>
+      <pose>10.1154 -11.8805 0 0 -0 3.13601</pose>
     </model>
     <model name='TrashBin_clone_0'>
       <static>1</static>
@@ -10841,7 +10842,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-3.593406 8.500725 0 0 -0 -1.586763</pose>
+      <pose>-3.60583 8.57312 0 0 0 -1.60211</pose>
     </model>
     <model name='CoffeeTable_clone_0'>
       <link name='body'>
@@ -10891,7 +10892,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-4.50206 8.48724 -0.000131 0 -0 0</pose>
+      <pose>-4.43991 8.61044 -0.000121 -1e-06 1e-06 0</pose>
     </model>
     <model name='CoffeeTable_clone_1'>
       <link name='body'>
@@ -10941,7 +10942,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-4.49857 7.51909 -0.000131 0 -0 0</pose>
+      <pose>-4.57435 7.4888 -0.000131 0 -0 0.676637</pose>
     </model>
     <model name='RecTable_clone'>
       <static>1</static>
@@ -11089,7 +11090,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-3.591200 7.514379 0 0 -0 -1.684488</pose>
+      <pose>-3.63352 7.4413 0 0 0 -1.67559</pose>
     </model>
     <model name='Suitcase2_clone_clone'>
       <static>1</static>
@@ -11126,7 +11127,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-3.742292 10.578470 0 0 -0 0</pose>
+      <pose>-3.90405 10.6618 0.865177 0 -0 0</pose>
     </model>
     <model name='KitchenSink_clone_clone_clone'>
       <link name='link'>
@@ -11174,7 +11175,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-4.57668 11.9024 -0.001609 0 0 -1.56476</pose>
+      <pose>-4.79087 11.9011 -0.001609 0 0 -1.56476</pose>
     </model>
     <model name='KitchenSink_clone_clone_clone_clone'>
       <link name='link'>
@@ -11222,7 +11223,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-5.58451 11.8998 -0.001609 0 0 -1.56476</pose>
+      <pose>-5.58451 11.8998 -0.001619 -0 -0 -1.56476</pose>
     </model>
     <model name='IVStand_clone'>
       <link name='body'>
@@ -11272,7 +11273,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-6.71066 -6.86431 0.000675 0 -0 1.4e-05</pose>
+      <pose>-6.71066 -6.86431 0.000675 0 -0 1.5e-05</pose>
     </model>
     <model name='Drawer_clone'>
       <static>1</static>
@@ -11357,7 +11358,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-4.34097 -10.7003 0.00166 0 -0 -1.57689</pose>
+      <pose>-4.46262 -10.9677 0.00166 0 -0 1.57242</pose>
     </model>
     <model name='CoffeeTable_clone_1_clone'>
       <link name='body'>
@@ -11407,7 +11408,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-2.5689 -11.8272 -0.000121 0 1e-06 0.676637</pose>
+      <pose>-2.5689 -11.8272 -0.000121 0 -0 0.676637</pose>
     </model>
     <model name='KitchenSink_clone_clone_clone_clone_clone'>
       <link name='link'>
@@ -11455,7 +11456,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>0.509006 -7.27612 -0.001609 0 0 -1.56476</pose>
+      <pose>0.737552 -6.87305 -0.001609 0 0 -1.56476</pose>
     </model>
     <model name='KitchenSink_clone_clone_clone_clone_clone_0'>
       <link name='link'>
@@ -11610,7 +11611,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-6.864450 -11.892278 0 0 0 1.582705</pose>
+      <pose>-6.74181 -11.8755 0 0 -0 1.57987</pose>
     </model>
     <model name='MetalCabinet_clone_clone_0_clone'>
       <static>1</static>
@@ -11647,7 +11648,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-6.876724 -11.074920 0 0 -0 1.579870</pose>
+      <pose>-6.73892 -11.0595 0 0 -0 1.57987</pose>
     </model>
     <model name='BPCart_clone_1'>
       <link name='body'>
@@ -11743,7 +11744,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-12.1124 11.8046 0.003446 0 0 -3.08462</pose>
+      <pose>-12.1124 11.8046 0.003446 0 -0 0.029809</pose>
     </model>
     <model name='BloodPressureMonitor_clone'>
       <static>1</static>
@@ -11780,7 +11781,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-3.40687 -11.9012 0 0 -0 2.68664</pose>
+      <pose>-3.40687 -11.9012 0 0 -0 -2.59175</pose>
     </model>
     <model name='BloodPressureMonitor_clone_0'>
       <static>1</static>
@@ -11817,7 +11818,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-8.19654 11.7873 0 0 -0 2.68664</pose>
+      <pose>-8.19654 11.7873 0 0 0 -0.093119</pose>
     </model>
     <model name='InstrumentCart1_clone_clone'>
       <static>1</static>
@@ -11891,7 +11892,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-11.090564 9.660469 0 0 -0 -0.020436</pose>
+      <pose>-11.1054 9.6842 0 0 0 -0.008571</pose>
     </model>
     <model name='InstrumentCart1_clone_clone_0_clone'>
       <static>1</static>
@@ -12088,7 +12089,7 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose>-5.56258 -12.2306 1.41833 0 0 -3.13193</pose>
+      <pose>-5.56214 -12.2766 1.41833 0 0 -3.13193</pose>
     </model>
     <model name='BedsideTable_clone'>
       <link name='body'>
@@ -12136,7 +12137,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-6.68712 -9.14272 0.00018 0 -0 0</pose>
+      <pose>-6.68712 -9.14272 0.000179 -4e-06 0 0</pose>
     </model>
     <model name='BedsideTable_clone_0'>
       <link name='body'>
@@ -13901,16 +13902,6 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <!-- <model name='SurgicalTrolley'>
-        <pose>-15.2935 7.23165 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='body'>
-          <pose>-15.2935 7.23165 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model> -->
       <model name='SurgicalTrolleyMed'>
         <pose>-16.9473 9.93031 0 0 -0 1.51544</pose>
         <scale>1 1 1</scale>
@@ -14262,7 +14253,7 @@
         </link>
       </model>
       <model name='aws_robomaker_hospital_nursesstation_01'>
-<!--        <pose>-17.2844 0.139328 0 0 0 -1.58049</pose>-->
+       <pose>-17.2844 0.139328 0 0 0 -1.58049</pose>
         <scale>1 1 1</scale>
         <link name='link'>
           <pose>-17.2844 0.139328 0 0 0 -1.58049</pose>
@@ -14531,74 +14522,6 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <!-- <model name='turtlebot_clone'>
-        <pose>15.5749 -7.80993 0.000819 0.000193 -0.021608 -0.013766</pose>
-        <scale>1 1 1</scale>
-        <link name='create::base'>
-          <pose>15.5749 -7.80993 0.000821 0.000192 -0.021608 -0.013766</pose>
-          <velocity>-0.000946 -0.000263 -0.001289 -0.004681 -0.001875 5.7e-05</velocity>
-          <acceleration>0.000929 0.069828 0.895702 2.72046 0.112217 -0.297848</acceleration>
-          <wrench>0.002076 0.155997 2.001 0 -0 0</wrench>
-        </link>
-        <link name='create::left_wheel'>
-          <pose>15.576 -7.67994 0.03298 0.000227 -0.403425 -0.013851</pose>
-          <velocity>-0.001014 -8e-06 -0.037287 -0.009133 -0.031131 5e-05</velocity>
-          <acceleration>0.019666 0.253315 -64.3348 1.71978 0.235778 -0.095193</acceleration>
-          <wrench>0.000197 0.002533 -0.643348 0 -0 0</wrench>
-        </link>
-        <link name='create::right_wheel'>
-          <pose>15.5724 -7.93992 0.033021 0.000228 -0.338089 -0.013838</pose>
-          <velocity>-0.000996 8e-06 0.030658 -0.000344 -0.030199 7.4e-05</velocity>
-          <acceleration>-0.0009 0.327285 80.1878 1.19539 -0.004241 -0.052146</acceleration>
-          <wrench>-9e-06 0.003273 0.801878 0 -0 0</wrench>
-        </link>
-        <link name='kinect::link'>
-          <pose>15.4813 -7.8087 0.302722 0.000195 -0.021608 -0.013766</pose>
-          <velocity>-0.001522 0.000307 -0.001443 -0.002175 -0.001904 0.000132</velocity>
-          <acceleration>0.00718 0.984277 0.794009 1.73727 0.04032 0.09662</acceleration>
-          <wrench>0.000718 0.098428 0.079401 0 -0 0</wrench>
-        </link>
-        <link name='rack'>
-          <pose>15.5749 -7.80993 0.000819 0.000193 -0.021608 -0.013766</pose>
-          <velocity>-0.000946 -0.000315 -0.001272 -0.003593 -0.001885 -6e-06</velocity>
-          <acceleration>-0.001835 -0.108 0.831146 -1.4022 0.086719 -0.47655</acceleration>
-          <wrench>-0.004099 -0.241272 1.85678 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='turtlebot_clone_0'>
-        <pose>-12.298 4.86118 0.000819 0.000189 -0.02153 -0.008664</pose>
-        <scale>1 1 1</scale>
-        <link name='create::base'>
-          <pose>-12.298 4.86118 0.000821 0.000188 -0.02153 -0.008664</pose>
-          <velocity>-0.000589 -0.000264 -0.001302 -0.004363 0.000277 6.4e-05</velocity>
-          <acceleration>0.000604 0.069312 0.880046 2.72706 0.061835 -0.29636</acceleration>
-          <wrench>0.001349 0.154843 1.96602 0 -0 0</wrench>
-        </link>
-        <link name='create::left_wheel'>
-          <pose>-12.2976 4.99118 0.03298 0.000246 -0.590691 -0.008797</pose>
-          <velocity>-0.00059 -1e-05 -0.037395 -0.008585 -0.018284 6e-05</velocity>
-          <acceleration>0.016496 0.269568 -64.472 1.717 0.148395 -0.094252</acceleration>
-          <wrench>0.000165 0.002696 -0.64472 0 -0 0</wrench>
-        </link>
-        <link name='create::right_wheel'>
-          <pose>-12.2998 4.73119 0.033021 0.000238 -0.486233 -0.008771</pose>
-          <velocity>-0.000569 -1e-05 0.030624 0.000216 -0.017275 8.3e-05</velocity>
-          <acceleration>-0.001603 0.310878 80.0426 1.18612 0.007256 -0.051746</acceleration>
-          <wrench>-1.6e-05 0.003109 0.800426 0 -0 0</wrench>
-        </link>
-        <link name='kinect::link'>
-          <pose>-12.3917 4.86193 0.30273 0.00019 -0.02153 -0.008664</pose>
-          <velocity>-0.000511 0.000207 -0.001251 -0.001851 0.00026 0.00014</velocity>
-          <acceleration>0.002185 0.981727 0.78005 1.74462 0.0171 0.096674</acceleration>
-          <wrench>0.000218 0.098173 0.078005 0 -0 0</wrench>
-        </link>
-        <link name='rack'>
-          <pose>-12.298 4.86118 0.000819 0.000189 -0.02153 -0.008664</pose>
-          <velocity>-0.000589 -0.000316 -0.001284 -0.003272 0.000272 -3e-06</velocity>
-          <acceleration>-0.00125 -0.108552 0.816608 -1.39452 0.047401 -0.474882</acceleration>
-          <wrench>-0.002792 -0.242504 1.8243 0 -0 0</wrench>
-        </link>
-      </model> -->
       <model name='washer'>
         <pose>-3.59073 4.82111 -0.0003 0.021646 -0.033722 -0.000451</pose>
         <scale>1 1 1</scale>

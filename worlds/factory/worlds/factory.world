@@ -27,11 +27,15 @@
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>1000</real_time_update_rate>
     </physics>
+    
     <scene>
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
       <shadows>1</shadows>
+      <grid>false</grid>
+      <origin_visual>false</origin_visual>
     </scene>
+    
     <wind/>
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
@@ -84,12 +88,16 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
+      
+      <!--
       <plugin name="object_disposal_plugin" filename="libObjectDisposalPlugin.so">
         <contact_sensor_name>object_disposal_contact</contact_sensor_name>
         <contact_side_normal>1 0 0</contact_side_normal>
         <disposal_pose>30 30 0 0 0 0</disposal_pose>
         <update_rate>5</update_rate>
       </plugin>
+      -->
+      
       <pose>0.199032 -1.08981 0 0 -0 0</pose>
     </model>
     <model name="drone_collection_zone">
@@ -127,6 +135,8 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
+      
+      <!--
       <plugin name="object_disposal_plugin" filename="libObjectDisposalPlugin.so">
         <contact_sensor_name>object_disposal_contact</contact_sensor_name>
         <contacting_box_topic>/ariac/waiting_shipping_box</contacting_box_topic>
@@ -135,6 +145,8 @@
         <disposal_pose>-7.5 -10 -0.5 0 0 0</disposal_pose>
         <update_rate>5</update_rate>
       </plugin>
+      -->
+      
       <pose>-0.093674 -2.00167 0 0 -0 0</pose>
     </model>
     <model name="workcell">
@@ -4556,13 +4568,15 @@
         <pose>4.47445 -6.80903 7.17268 0 -0 0</pose>
       </light>
     </state>
+    
     <gui fullscreen="0">
       <camera name="user_camera">
-        <pose>2.54203 23.9732 25.8912 0 0.677798 -1.53663</pose>
+        <pose>10.626368 21.325399 27.971518 0 0.869799 -1.572632</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
+    
     <model name="cabinet">
       <static>1</static>
       <link name="cabinet_bottom_plate">
