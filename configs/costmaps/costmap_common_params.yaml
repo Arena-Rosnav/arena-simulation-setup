@@ -12,7 +12,7 @@ cost_scaling_factor: 5.0
 map_type: costmap
 
 semantic_layer:
-    observation_sources: pedestrian pedestrian_moving pedestrian_type pedestrian_vel_x pedestrian_vel_y
+    observation_sources: pedestrian pedestrian_moving pedestrian_type pedestrian_vel_x pedestrian_vel_y social_state
 
     pedestrian:
         topic: /pedsim_agents/semantic/pedestrian
@@ -28,3 +28,6 @@ semantic_layer:
     
     pedestrian_vel_y:
       topic: /pedsim_agents/semantic/pedestrian_vel_y
+
+    social_state:
+      topic: /pedsim_agents/semantic/social_state
