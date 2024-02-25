@@ -19,7 +19,7 @@
         <geometry>
           <mesh>
             <scale>0.4 0.6 0.6</scale>
-            <uri>model://../../../entities/obstacles/static/warehouse_shelf/sdf/meshes/shelf_big_movai.dae</uri>
+            <uri>model://warehouse_shelf/sdf/meshes/shelf_big_movai.dae</uri>
           </mesh>
         </geometry>
       </visual>

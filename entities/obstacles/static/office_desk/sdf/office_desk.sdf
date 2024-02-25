@@ -6,7 +6,7 @@
       <visual name="visual">
         <geometry>
           <mesh>
-            <uri>model://../../../entities/obstacles/static/office_desk/sdf/meshes/desk.dae</uri>
+            <uri>model://office_desk/sdf/meshes/desk.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -14,9 +14,9 @@
           <specular>1.0 1.0 1.0</specular>
           <pbr>
             <metal>
-              <albedo_map>model://../../../entities/obstacles/static/office_desk/sdf/materials/textures/Desk_Albedo.png</albedo_map>
-              <normal_map>model://../../../entities/obstacles/static/office_desk/sdf/materials/textures/Desk_Normal.png</normal_map>
-              <roughness_map>model://../../../entities/obstacles/static/office_desk/sdf/materials/textures/Desk_Roughness.png</roughness_map>
+              <albedo_map>model://office_desk/sdf/materials/textures/Desk_Albedo.png</albedo_map>
+              <normal_map>model://office_desk/sdf/materials/textures/Desk_Normal.png</normal_map>
+              <roughness_map>model://office_desk/sdf/materials/textures/Desk_Roughness.png</roughness_map>
             </metal>
           </pbr>
         </material>
