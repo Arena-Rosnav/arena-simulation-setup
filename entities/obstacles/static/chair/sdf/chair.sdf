@@ -6,14 +6,14 @@
             <visual name="visual">
                 <geometry>
                     <mesh>
-                        <uri>model://obstacles/static/chair/sdf/chair.dae</uri>
+                        <uri>model://chair/sdf/chair.dae</uri>
                     </mesh>
                 </geometry>
             </visual>
             <collision name="collision">
                 <geometry>
                     <mesh>
-                        <uri>model://obstacles/static/chair/sdf/chair.dae</uri>
+                        <uri>model://chair/sdf/chair.dae</uri>
                     </mesh>
                 </geometry>
             </collision>

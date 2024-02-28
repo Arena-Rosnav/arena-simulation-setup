@@ -6,14 +6,14 @@
             <visual name="visual">
                 <geometry>
                     <mesh>
-                        <uri>model://obstacles/static/table/sdf/table.dae</uri>
+                        <uri>model://table/sdf/table.dae</uri>
                     </mesh>
                 </geometry>
             </visual>
             <collision name="collision">
                 <geometry>
                     <mesh>
-                        <uri>model://obstacles/static/table/sdf/table.dae</uri>
+                        <uri>model://table/sdf/table.dae</uri>
                     </mesh>
                 </geometry>
             </collision>

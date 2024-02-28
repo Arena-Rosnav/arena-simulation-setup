@@ -8,7 +8,7 @@
       <visual name="visual">
         <geometry>
           <mesh>
-            <uri>model://../../../entities/obstacles/static/office_chair/sdf/meshes/OfficeChairGrey.obj</uri>
+            <uri>model://office_chair/sdf/meshes/OfficeChairGrey.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -16,7 +16,7 @@
       <collision name="collision">
         <geometry>
           <mesh>
-            <uri>model://../../../entities/obstacles/static/office_chair/sdf/meshes/OfficeChairGrey_Col.obj</uri>
+            <uri>model://office_chair/sdf/meshes/OfficeChairGrey_Col.obj</uri>
           </mesh>
         </geometry>
       </collision>

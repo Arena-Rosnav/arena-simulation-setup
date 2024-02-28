@@ -43,7 +43,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://../../../entities/obstacles/static/pallet/sdf/meshes/pallet.dae</uri>
+            <uri>model://pallet/sdf/meshes/pallet.dae</uri>
           </mesh>
         </geometry>
       </visual>
