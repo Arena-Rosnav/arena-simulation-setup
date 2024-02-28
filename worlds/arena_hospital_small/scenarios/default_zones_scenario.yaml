@@ -1,0 +1,20 @@
+- name: visitor
+  pedestrian: actor1
+  waypoints in: [public]
+  amount: 5
+- name: janitor
+  pedestrian: actor1
+  waypoints in: [public, staff]
+  amount: 1
+- name: nurse
+  pedestrian: actor1
+  waypoints in: [public, staff, patient]
+  amount: 2
+- name: doctor
+  pedestrian: actor1
+  waypoints in: [public, staff, patient]
+  amount: 2
+- name: patient
+  pedestrian: actor1
+  waypoints in: [patient]
+  amount: 5
