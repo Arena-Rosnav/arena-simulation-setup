@@ -16,7 +16,7 @@
       <collision name="collision">
         <geometry>
           <mesh>
-            <uri>model://../../../entities/obstacles/static/pallet_jack_1/sdf/meshes/aws_robomaker_warehouse_PalletJackB_01_collision.DAE</uri>
+            <uri>model://pallet_jack_1/sdf/meshes/aws_robomaker_warehouse_PalletJackB_01_collision.DAE</uri>
           </mesh>
         </geometry>
         <surface>
@@ -34,7 +34,7 @@
       <visual name="visual">
         <geometry>
           <mesh>
-            <uri>model://../../../entities/obstacles/static/pallet_jack_1/sdf/meshes/aws_robomaker_warehouse_PalletJackB_01_visual.DAE</uri>
+            <uri>model://pallet_jack_1/sdf/meshes/aws_robomaker_warehouse_PalletJackB_01_visual.DAE</uri>
           </mesh>
         </geometry>
         <meta>
@@ -43,7 +43,7 @@
       </visual>
     </link>
     <link name='pallet_base'>
-      <pose frame=''>0.5 0 0.3 0 0 0</pose>
+      <pose frame=''>0.5 0 0.02 0 0 0</pose>
       <collision name="pallet_top_collision">
         <pose>0 0 0.125 0 0 0</pose>
         <geometry>
@@ -81,7 +81,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://../../../entities/obstacles/static/pallet/sdf/meshes/pallet.dae</uri>
+            <uri>model://pallet/sdf/meshes/pallet.dae</uri>
           </mesh>
         </geometry>
       </visual>
