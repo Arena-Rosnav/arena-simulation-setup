@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-
-  <node name="mbf_cmd_vel_relay" pkg="topic_tools" type="relay" args="cmd_vel_internal cmd_vel" />
-
   <!-- Arguments -->
   <arg name="model" default="burger"/>
   <arg name="speed" />
