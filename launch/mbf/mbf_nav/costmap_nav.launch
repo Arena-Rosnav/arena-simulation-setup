@@ -84,6 +84,8 @@
             />
 
             <param name="base_global_planner" value="NavfnROS" />
+            <remap from="/clock" to="/$(arg namespace)/clock" if="$(eval arg('local_planner') == 'rosnav')"/>
+
         </node>
     </group>
 
@@ -100,5 +102,7 @@
             command="load" subst_value="True"
             if="$(eval arg('model') != '')"
         />
+
+        <remap from="/clock" to="/$(arg namespace)/clock" if="$(eval arg('local_planner') == 'rosnav')"/>
     </node>
 </launch>
