@@ -4,7 +4,6 @@
   <arg name="model" default="burger"/>
   <arg name="speed" />
   <arg name="namespace" />
-  <arg name="frame" />
   <arg name="train_mode" default="false"/>
   <arg name="agent_name" default="rule_05"/>
 
@@ -44,7 +43,6 @@
       command="load" subst_value="True" />
 
     <param name="base_local_planner" value="TebLocalPlannerROS" />
-    <param name="base_global_planner" value="NavfnROS" />
 
   </group>
 
