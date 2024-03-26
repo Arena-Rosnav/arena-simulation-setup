@@ -1,0 +1,123 @@
+- label: "Storage Room"
+  category: ["staff"]
+  polygon: [[
+    [1.6, -11.6],
+    [1.6, -6.7],
+    [4.42, -6.7],
+    [4.42, -11.6]
+  ]]
+
+- label: "Lobby"
+  category: ["public"]
+  polygon: [[
+    [-12.1, -6.06],
+    [-12.1, 6.22],
+    [-4.12, 6.22],
+    [-4.12, -6.06]
+  ]]
+
+- label: "Reception"
+  category: ["public"]
+  polygon: [[
+    [-17, 4],
+    [-12, 4],
+    [-12, -4],
+    [-17, -4]
+  ]]
+
+- label: "Patient Room 1"
+  category: ["patient"]
+  polygon: [[
+    [-17, 12],
+    [-3.5, 12],
+    [-3.5, 7],
+    [-17, 7],
+  ]]
+
+- label: "Patient Room 2"
+  category: ["patient"]
+  polygon: [[
+    [-2.89, 7.33],
+    [-2.89, 12],
+    [4.5, 12],
+    [4.5, 7.33],
+  ]]
+
+- label: "Patient Room 3"
+  category: ["patient"]
+  polygon: [[
+    [-17, -6.5],
+    [-12.7, -6.5],
+    [-12.7, -12.1],
+    [-17, -12.1],
+  ]]
+
+- label: "Patient Room 4"
+  category: ["patient"]
+  polygon: [[
+    [-12.1, -6.6],
+    [-7.37, -6.6],
+    [-7.37, -12.1],
+    [-12.1, -12.1]
+  ]]
+
+- label: "Patient Room 5"
+  category: ["patient"]
+  polygon: [[
+    [-6.92, -6.6],
+    [1, -6.6],
+    [1, -12.1],
+    [-6.92, -12.1]
+  ]]
+
+- label: "Restroom 1"
+  category: ["public"]
+  polygon: [[
+    [-0.6, 4.6],
+    [1.73, 4.6],
+    [1.73, 0],
+    [-0.6, 0],
+  ]]
+
+- label: "Restroom 2"
+  category: ["public"]
+  polygon: [[
+    [-0.6, -0.4],
+    [1.73, -0.4],
+    [1.73, -4.5],
+    [-0.6, -4.5],
+  ]]
+
+- label: "Break Room"
+  category: ["staff"]
+  polygon: [[
+    [-3.55, 4.55],
+    [-1.1, 4.55],
+    [-1.1, -3.88],
+    [-3.55, -3.88]
+  ]]
+
+- label: "Hallway"
+  category: ["public"]
+  polygon: [
+      [
+        [-4.13, 5.22], # hallway 1
+        [-4.13, 6.22],
+        [2.2, 6.22],
+        [2.2, 5.22],
+      ],
+
+      [
+        [-4.13, -6.06], # ...
+        [-4.13, -5.06],
+        [2.2, -5.06],
+        [2.2, -6.06],
+      ],
+
+      [
+        [2.21, -6.06],
+        [2.21, 6.22],
+        [4.4, 6.22],
+        [4.4, -6.06]
+      ],
+    ]
