@@ -26,7 +26,7 @@
   <env name="ROSCONSOLE_CONFIG_FILE" value="$(find arena_simulation_setup)/configs/rosconsole.conf"/>
   
   <!-- spacial_horizon -->
-  <node pkg="spacial_horizon" type="spacial_horizon_node" name="spacial_horizon_node" output="screen" >
+  <node pkg="spacial_horizon" type="spacial_horizon_node" name="spacial_horizon_node" output="log" >
     <remap from="$(arg namespace)_$(arg model)/goal" to="$(arg namespace)/$(arg namespace)_$(arg model)/move_base_simple/goal" />
     <remap from="/move_base/NavfnROS/make_plan" to="$(arg namespace)/$(arg namespace)_$(arg model)/move_base_flex/NavfnROS/make_plan" />
     <remap from="/clock" to="$(arg namespace)/clock" />
