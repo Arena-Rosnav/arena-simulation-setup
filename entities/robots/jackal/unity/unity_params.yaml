@@ -15,9 +15,9 @@ components:
     target_fps: 10
     # width: 1280
     # height: 720
-    width: 500
-    height: 501
-    fov: 70
+    width: 128
+    height: 128
+    fov: 90
     near_clip: 0.45
     far_clip: 1000
     use_rgb: true
