@@ -1,4 +1,4 @@
-global_frame: odom
+global_frame: $(arg frame)odom
 
 static_map: false
 rolling_window: true

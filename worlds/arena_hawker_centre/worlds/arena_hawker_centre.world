@@ -16048,13 +16048,15 @@
         <kinematic>0</kinematic>
       </link>
     </model>
+    
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>11.5918 -19.958 25.6681 0 0.960001 1.96</pose>
+        <pose>9.296621 -10.290380 9.603374 0.000001 0.636000 2.235999</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
+    
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
@@ -16063,11 +16065,15 @@
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>1000</real_time_update_rate>
     </physics>
+    
     <scene>
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
       <shadows>1</shadows>
+      <grid>false</grid>
+      <origin_visual>false</origin_visual>
     </scene>
+    
     <wind/>
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>

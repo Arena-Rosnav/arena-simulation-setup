@@ -1,17 +1,30 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <sdf version="1.6">
   <world name="world">
+  
+  
+    <gui fullscreen='0'>
+      <camera name='gui_camera'>
+        <pose>-1.260360 -6.493694 54.621380 0 1.570796 0</pose>
+      </camera>
+    </gui>  
+  
+  
     <gravity>0 0 -9.8</gravity>
     <physics default="0" name="default_physics" type="ode">
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>1000</real_time_update_rate>
     </physics>
+    
     <scene>
       <ambient>0.6 0.6 0.6 1</ambient>
       <background>0.4 0.4 0.4 1</background>
       <shadows>false</shadows>
+      <grid>false</grid>
+      <origin_visual>false</origin_visual>
     </scene>
+    
     <include>
       <uri>model://sun</uri>
     </include>
