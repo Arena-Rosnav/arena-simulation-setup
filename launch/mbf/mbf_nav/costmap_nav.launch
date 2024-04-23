@@ -85,7 +85,7 @@
 
             <param name="base_global_planner" value="NavfnROS" />
             
-            <remap from="/clock" to="/$(arg namespace)/clock" if="$(eval local_planner == 'rosnav' and train_mode == true)"/>
+            <remap from="/clock" to="/$(arg namespace)/clock" if="$(eval (local_planner == 'rosnav' or local_planner == 'drl_switch') and train_mode == true)"/>
         </node>
     </group>
 
@@ -103,7 +103,7 @@
             if="$(eval arg('model') != '')"
         />
 
-        <remap from="/clock" to="/$(arg namespace)/clock" if="$(eval local_planner == 'rosnav' and train_mode == true)"/>
+        <remap from="/clock" to="/$(arg namespace)/clock" if="$(eval (local_planner == 'rosnav' or local_planner == 'drl_switch') and train_mode == true)"/>
     </node>
 
     
