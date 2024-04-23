@@ -1,0 +1,20 @@
+semantic_layer:
+    observation_sources: pedestrian pedestrian_moving pedestrian_type pedestrian_vel_x pedestrian_vel_y social_state
+
+    pedestrian:
+      topic: $(arg namespace)/crowdsim_agents/semantic/pedestrian
+
+    pedestrian_moving:
+      topic: $(arg namespace)/crowdsim_agents/semantic/pedestrian_moving  
+
+    pedestrian_type:
+      topic: $(arg namespace)/crowdsim_agents/semantic/pedestrian_type
+
+    pedestrian_vel_x:
+      topic: $(arg namespace)/crowdsim_agents/semantic/pedestrian_vel_x
+    
+    pedestrian_vel_y:
+      topic: $(arg namespace)/crowdsim_agents/semantic/pedestrian_vel_y
+
+    social_state:
+      topic: $(arg namespace)/crowdsim_agents/semantic/social_state

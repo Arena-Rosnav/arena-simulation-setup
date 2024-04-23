@@ -85,7 +85,22 @@
 
             <param name="base_global_planner" value="NavfnROS" />
             
-            <remap from="/clock" to="/$(arg namespace)/clock" if="$(eval (local_planner == 'rosnav' or local_planner == 'drl_switch') and train_mode == true)"/>
+            <!-- training on multiple envs overrides and remaps -->
+            <remap 
+                from="/clock" 
+                to="/$(arg namespace)/clock" 
+                if="$(eval (local_planner == 'rosnav' or local_planner == 'drl_switch') and train_mode == true)"
+            />
+            <rosparam
+                file="$(find arena_simulation_setup)/configs/costmaps/drl_switch/costmap_common_params.yaml"
+                command="load" ns="global_costmap" subst_value="True" 
+                if="$(eval (local_planner == 'rosnav' or local_planner == 'drl_switch') and train_mode == true)"
+            />
+            <rosparam
+                file="$(find arena_simulation_setup)/configs/costmaps/drl_switch/costmap_common_params.yaml"
+                command="load" ns="local_costmap" subst_value="True" 
+                if="$(eval (local_planner == 'rosnav' or local_planner == 'drl_switch') and train_mode == true)"
+            />
         </node>
     </group>
 
@@ -103,7 +118,12 @@
             if="$(eval arg('model') != '')"
         />
 
-        <remap from="/clock" to="/$(arg namespace)/clock" if="$(eval (local_planner == 'rosnav' or local_planner == 'drl_switch') and train_mode == true)"/>
+        <!-- remap clock when training on multiple envs -->
+        <remap 
+            from="/clock" 
+            to="/$(arg namespace)/clock" 
+            if="$(eval (local_planner == 'rosnav' or local_planner == 'drl_switch') and train_mode == true)"
+        />
     </node>
 
     
