@@ -8,6 +8,7 @@
   <arg name="agent_name" default="rule_05"/>
 
   <param name="agent_name" value="$(arg agent_name)" />
+  <param name="train_mode" value="$(arg train_mode)" />
 
   <!-- DRL action frequency -->
   <rosparam command="load" file="$(find arena_bringup)/params/drl.yaml" />
