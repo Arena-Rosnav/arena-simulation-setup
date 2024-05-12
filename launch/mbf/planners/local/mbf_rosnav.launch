@@ -10,7 +10,9 @@
   <param name="agent_name" value="$(arg agent_name)" />
 
   <!-- DRL action frequency -->
-  <rosparam command="load" file="$(find arena_bringup)/params/drl.yaml" />
+  <!-- <rosparam command="load" file="$(find arena_bringup)/params/drl.yaml" /> -->
+
+  <node name="mbf_cmd_vel_relay" pkg="topic_tools" type="relay" args="cmd_vel_internal cmd_vel" />
 
   <!-- <rosparam file="$(find arena_bringup)/launch/plan_fsm_param.yaml" command="load" /> -->
   <group if="$(eval arg('train_mode') == false)">
@@ -20,7 +22,7 @@
       type="rosnav_node.py" 
       output="screen" 
     />
-    <node name="rosnav_action_node" pkg="testing" type="drl_agent_node.py" output="screen"/>
+    <!-- <node name="rosnav_action_node" pkg="testing" type="drl_agent_node.py" output="screen"/> -->
   </group>
 
   <env name="ROSCONSOLE_CONFIG_FILE" value="$(find arena_simulation_setup)/configs/rosconsole.conf"/>
@@ -33,17 +35,14 @@
   </node>
 
   <group ns="move_base_flex">
-    <rosparam file="$(find arena_simulation_setup)/configs/mbf/local/teb_local_planner_params.yaml"
+    <rosparam file="$(find arena_simulation_setup)/configs/mbf/local/rosnav_local_planner_params.yaml"
       command="load" subst_value="True" />
     <rosparam
-      file="$(find arena_simulation_setup)/entities/robots/$(arg model)/configs/mbf/teb_local_planner_params.yaml"
+      file="$(find arena_simulation_setup)/entities/robots/$(arg model)/configs/mbf/rosnav_local_planner_params.yaml"
       command="load" subst_value="True" />
 
-    <param name="base_local_planner" value="TebLocalPlannerROS" />
+    <param name="base_local_planner" value="RosnavLocalPlanner" />
 
   </group>
-
-  <!-- move_base -->
-  <remap from="move_base_flex/TebLocalPlannerROS/global_plan" to="/devnull" /> <!-- optics -->
 
 </launch>
