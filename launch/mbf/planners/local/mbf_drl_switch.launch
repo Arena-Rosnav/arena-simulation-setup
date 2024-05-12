@@ -14,7 +14,7 @@
     <!-- <rosparam file="$(find arena_simulation_setup)/configs/mbf/local/drl_switch_local_planner_params.yaml"
       command="load" subst_value="True" /> -->
     <node pkg="rl_utils" type="model_based_aggregator.py" name="model_based_aggregator" output="screen"/>
-    <param name="base_local_planner" value="TebLocalPlannerROS" />
+    <param name="base_local_planner" value="RosnavLocalPlanner" />
   </group>
 
   <group ns="move_base_legacy_relay">
@@ -27,6 +27,6 @@
       <rosparam file="$(find arena_simulation_setup)/entities/robots/$(arg model)/configs/mbf/mpc_local_planner.yaml"
       command="load" subst_value="True" /> -->
     <node pkg="rl_utils" type="model_based_aggregator.py" name="model_based_aggregator" output="screen"/>
-    <param name="base_local_planner" value="TebLocalPlannerROS" />
+    <param name="base_local_planner" value="RosnavLocalPlanner" />
   </group>
 </launch>
