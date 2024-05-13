@@ -6,6 +6,7 @@
   <arg name="namespace" />
   <arg name="train_mode" default="false"/>
   <arg name="agent_name" default="rule_05"/>
+  <arg name="SIMULATOR" default="flatland" />
 
   <param name="agent_name" value="$(arg agent_name)" />
   <param name="train_mode" value="$(arg train_mode)" />
@@ -15,6 +16,7 @@
 
   <!-- <rosparam file="$(find arena_bringup)/launch/plan_fsm_param.yaml" command="load" /> -->
   <group if="$(eval arg('train_mode') == false)">
+    <param name="simulator" value="$(arg SIMULATOR)" />
     <node 
       name="rosnav_node" 
       pkg="rosnav" 
