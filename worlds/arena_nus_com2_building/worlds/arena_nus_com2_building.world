@@ -7,7 +7,10 @@
       <background>0 0 0 1</background>
       <grid>0</grid>
       <shadows>0</shadows>
+      <grid>false</grid>
+      <origin_visual>false</origin_visual>      
     </scene>
+    
     <light name='sun' type='directional'>
       <cast_shadows>0</cast_shadows>
       <pose>0 0 10 0 -0 0</pose>
@@ -26,14 +29,15 @@
         <falloff>0</falloff>
       </spot>
     </light>
+    
     <gui fullscreen='0'>
       <camera name='gui_camera'>
         <pose>-254.263 15.0824 219.886 -0 0.739997 -0.091682</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
-      
     </gui>
+    
     <model name='Campus'>
       <static>1</static>
       <link name='floor_1'>
@@ -41,7 +45,7 @@
           <pose>0 0 -0.25 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://Campus/meshes/Campus_world.obj</uri>
+              <uri>model://Campus2/meshes/Campus_world.obj</uri>
             </mesh>
           </geometry>
         </visual>
@@ -49,7 +53,7 @@
           <pose>0 0 -0.25 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://Campus/meshes/Campus_world.obj</uri>
+              <uri>model://Campus2/meshes/Campus_world.obj</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -70,8 +74,9 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>83.7385 -50.3184 0 0 -0 0</pose>
+      <pose>0.47498 -2.52106 0.470 0 -0 0</pose>
     </model>
+    
     <model name='campus_L1'>
       <static>1</static>
       <pose>-22000 -31500 0 0 -0 0</pose>
@@ -98,10 +103,10 @@
       <wall_time>1704976286 753862906</wall_time>
       <iterations>13770</iterations>
       <model name='Campus'>
-        <pose>0.47498 -2.52106 0 0 -0 0</pose>
+        <pose>0.47498 -2.52106 0.470 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='floor_1'>
-          <pose>0.47498 -2.52106 0 0 -0 0</pose>
+          <pose>0.47498 -2.52106 0.470 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -115,12 +120,6 @@
         <pose>0 0 10 0 -0 0</pose>
       </light>
     </state>
-    <rmf_charger_waypoints name='charger_waypoints'>
-      <rmf_vertex name='side_road' x='22160.047839565384' y='31339.55091437469' level='L1'/>
-      <rmf_vertex name='room_2' x='22218.54745099393' y='31365.736378304442' level='L1'/>
-      <rmf_vertex name='room_5' x='22119.377976544125' y='31427.34127980414' level='L1'/>
-      <rmf_vertex name='room_6' x='22109.921071506964' y='31413.46991680738' level='L1'/>
-    </rmf_charger_waypoints>
     <offset>22000 31500 0 0 0 0</offset>
     <crs>EPSG:3414</crs>
   </world>

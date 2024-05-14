@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-
-  <node name="mbf_cmd_vel_relay" pkg="topic_tools" type="relay" args="cmd_vel_internal cmd_vel" />
-
   <!-- Arguments -->
   <arg name="model" default="burger"/>
   <arg name="speed" />
   <arg name="namespace" />
-  <arg name="sim_namespace" default=""/>
-  <arg name="frame" />
   <arg name="train_mode" default="false"/>
   <arg name="agent_name" default="rule_05"/>
 
@@ -19,23 +14,22 @@
 
   <!-- <rosparam file="$(find arena_bringup)/launch/plan_fsm_param.yaml" command="load" /> -->
   <group if="$(eval arg('train_mode') == false)">
-    <node name="rosnav_manager" pkg="testing" type="drl_agent_node.py" args="--namespace $(arg namespace)" output="log"/>
-
     <node 
-      name="rosnav" 
+      name="rosnav_node" 
       pkg="rosnav" 
       type="rosnav_node.py" 
-      args="--namespace $(arg namespace)"
       output="screen" 
     />
+    <node name="rosnav_action_node" pkg="testing" type="drl_agent_node.py" output="screen"/>
   </group>
 
   <env name="ROSCONSOLE_CONFIG_FILE" value="$(find arena_simulation_setup)/configs/rosconsole.conf"/>
   
   <!-- spacial_horizon -->
-  <node pkg="spacial_horizon" type="spacial_horizon_node" name="spacial_horizon_node" output="screen" >
-    <remap from="$(arg namespace)/goal" to="$(arg namespace)/move_base_simple/goal" />
-    <remap from="/move_base/NavfnROS/make_plan" to="$(arg namespace)/move_base_flex/NavfnROS/make_plan" />
+  <node pkg="spacial_horizon" type="spacial_horizon_node" name="spacial_horizon_node" output="log" >
+    <remap from="$(arg namespace)_$(arg model)/goal" to="$(arg namespace)/$(arg namespace)_$(arg model)/move_base_simple/goal" />
+    <remap from="/move_base/NavfnROS/make_plan" to="$(arg namespace)/$(arg namespace)_$(arg model)/move_base_flex/NavfnROS/make_plan" />
+    <remap from="/clock" to="$(arg namespace)/clock" />
   </node>
 
   <group ns="move_base_flex">
@@ -46,10 +40,10 @@
       command="load" subst_value="True" />
 
     <param name="base_local_planner" value="TebLocalPlannerROS" />
+
   </group>
 
   <!-- move_base -->
   <remap from="move_base_flex/TebLocalPlannerROS/global_plan" to="/devnull" /> <!-- optics -->
-  <remap from="/clock" to="/$(arg sim_namespace)/clock"/>
 
 </launch>

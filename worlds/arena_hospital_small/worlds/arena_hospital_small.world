@@ -36,13 +36,13 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://hospital_floor/media/hospital_floor.dae</uri>
+              <uri>model://hospital_floor_small/media/hospital_floor.dae</uri>
             </mesh>
           </geometry>
           <material>
             <script>
-              <uri>model://hospital_floor/media/scripts</uri>
-              <uri>model://hospital_floor/media/Textures</uri>
+              <uri>model://hospital_floor_small/media/scripts</uri>
+              <uri>model://hospital_floor_small/media/Textures</uri>
               <name>grey_floor</name>
             </script>
           </material>
@@ -50,7 +50,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://hospital_floor/media/hospital_floor.dae</uri>
+              <uri>model://hospital_floor_small/media/hospital_floor.dae</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -79,13 +79,13 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://hospital_walls/media/hospital_walls.dae</uri>
+              <uri>model://hospital_walls_small/media/hospital_walls.dae</uri>
             </mesh>
           </geometry>
           <material>
             <script>
-              <uri>model://hospital_walls/media/scripts</uri>
-              <uri>model://hospital_walls/media/Textures</uri>
+              <uri>model://hospital_walls_small/media/scripts</uri>
+              <uri>model://hospital_walls_small/media/Textures</uri>
               <name>grey_walls</name>
             </script>
           </material>
@@ -93,7 +93,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://hospital_walls/media/hospital_walls.dae</uri>
+              <uri>model://hospital_walls_small/media/hospital_walls.dae</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -115,13 +115,15 @@
         <kinematic>0</kinematic>
       </link>
     </model>
+    
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>-6.25603 25.2206 37.56 0 1.01177 -1.5539</pose>
+        <pose>-10.098644 0.577744 48.103783 0.000105 1.565796 -1.569301</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
+    
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
@@ -130,11 +132,15 @@
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>1000</real_time_update_rate>
     </physics>
+    
     <scene>
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
       <shadows>1</shadows>
+      <grid>false</grid>
+      <origin_visual>false</origin_visual>
     </scene>
+    
     <wind/>
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
