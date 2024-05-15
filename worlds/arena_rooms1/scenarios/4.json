@@ -1,0 +1,54 @@
+{
+  "robots": [
+    {
+      "start": [6.26,29.2, 0],
+      "goal": [0.964,-30.0, -0.121222]
+    }
+  ],
+  "obstacles": {
+
+    "static": [
+    ],
+
+    "dynamic": [ 
+      {
+        "name": "Ped_1",
+        "pos": [-6.44,23.7, 2.929274],
+        "type": "human/adult",
+        "model": "actor1",
+        "waypoints": [
+            [-0.221,18.2, -0.285470],
+            [3.14,2.29, 2.929274],
+            [2.69,-18.8, 2.929274]                   
+        ],
+        "waypoint_mode": 1
+      },   
+      {
+        "name": "Ped_2",
+        "pos": [6.44,-23.7, 2.929274],
+        "type": "human/adult",
+        "model": "actor1",
+        "waypoints": [
+            [0.221,-18.2, -0.285470],
+            [-3.14,-2.29, 2.929274],
+            [-2.69,18.8, 2.929274]                   
+        ],
+        "waypoint_mode": 1
+      },   
+      {
+        "name": "Ped_3",
+        "pos": [0.235,2.27, 0.335816],
+        "type": "human/adult",
+        "model": "actor1",
+        "waypoints": [
+            [0.161,-22.4, -2.652455],
+            [0.284,20.1, 0.335816]                
+        ],
+        "waypoint_mode": 1
+      }                                                                         
+    ],
+    "interactive": []
+  },
+  "resets": 50,
+  "map": "arena_rooms1"
+}
