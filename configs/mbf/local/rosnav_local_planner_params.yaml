@@ -1,6 +1,6 @@
 controllers:
   - name: RosnavLocalPlanner
-    type: rosnav_local_planner/RosnavLocalPlanner
+    type: rosnav/RosnavLocalPlanner
 
 controller_frequency: 4.0
 controller_patience: 10.0

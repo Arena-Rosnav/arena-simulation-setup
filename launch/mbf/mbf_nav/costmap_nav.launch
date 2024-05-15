@@ -19,6 +19,7 @@
         <arg name="agent_name" value="$(arg agent_name)" if="$(eval arg('local_planner') == 'rosnav')" />
         <arg name="namespace" value="$(arg namespace)" />
         <arg name="frame" value="$(arg frame)" if="$(eval arg('local_planner') != 'rosnav')" /> 
+        <arg name="local_planner" value="$(arg local_planner)" if="$(eval arg('local_planner') == 'rosnav')" />
     </include>
 
     <include file="$(find arena_simulation_setup)/launch/mbf/planners/inter/mbf_$(arg inter_planner).launch">
@@ -39,7 +40,7 @@
         <remap from="cmd_vel" to="cmd_vel_internal" />
 
         <node pkg="mbf_costmap_nav" type="mbf_costmap_nav" respawn="false" name="move_base_flex"
-            output="log">
+            output="screen">
             <!-- system defaults -->
             <rosparam file="$(find arena_simulation_setup)/configs/mbf/move_base_params.yaml"
                 command="load" subst_value="True" />

@@ -6,6 +6,7 @@
   <arg name="namespace" />
   <arg name="train_mode" default="false"/>
   <arg name="agent_name" default="rule_05"/>
+  <arg name="local_planner" default="rosnav"/>
 
   <param name="agent_name" value="$(arg agent_name)" />
 
@@ -34,7 +35,7 @@
     <remap from="/clock" to="$(arg namespace)/clock" />
   </node>
 
-  <group ns="move_base_flex">
+  <group ns="move_base_flex" if="$(eval arg('local_planner') == 'drl_switch' or arg('train_mode') == false)">
     <rosparam file="$(find arena_simulation_setup)/configs/mbf/local/rosnav_local_planner_params.yaml"
       command="load" subst_value="True" />
     <rosparam
