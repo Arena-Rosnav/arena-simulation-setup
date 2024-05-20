@@ -1,0 +1,25 @@
+components:
+  collider:
+    type: ColliderSensor
+    height: 0.92
+    radius: 0.32
+    position: [0, 0, 0]
+  RGBDCamera:
+    type: RGBDCamera
+    name: rgbd_camera
+    frame: front_laser
+    topic: rgbd
+    body: link_base
+    broadcast_tf: true
+    origin: [0.0, 0.0, 0.0]
+    target_fps: 10
+    # width: 1280
+    # height: 720
+    width: 128
+    height: 128
+    fov: 90
+    near_clip: 0.45
+    far_clip: 1000
+    use_rgb: true
+    use_depth: true
+    depth_output_format: float32
