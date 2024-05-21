@@ -1,0 +1,5 @@
+RosnavLocalPlanner:
+  max_vel_x: 1.5
+  max_vel_x_backwards: 0
+  max_vel_y: 0.0
+  max_vel_theta: 2.0

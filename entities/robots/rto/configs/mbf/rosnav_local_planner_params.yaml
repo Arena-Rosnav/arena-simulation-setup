@@ -1,0 +1,7 @@
+RosnavLocalPlanner:
+  # Robot
+  max_vel_x: 2.78
+  max_vel_x_backwards: 2.78
+  max_vel_y: 2.78
+  max_vel_theta: 1.0
+
