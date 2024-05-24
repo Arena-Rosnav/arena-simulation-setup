@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<sdf version='1.7'>
+  <world name='world'>
+
+    <!-- <plugin name='gazebo_occupancy_map' filename='libgazebo_2Dmap_plugin.so'>
+      <map_resolution>0.1</map_resolution>
+      <map_height>0.3</map_height>
+      <map_size_x>130</map_size_x>
+      <map_size_y>130</map_size_y>
+      <init_robot_x>0</init_robot_x>
+      <init_robot_y>0</init_robot_y>
+    </plugin> -->
+
+    <scene>
+      <ambient>0.8 0.8 0.8 1</ambient>
+      <background>0 0 0 1</background>
+      <grid>0</grid>
+      <shadows>0</shadows>
+      <grid>false</grid>
+      <origin_visual>false</origin_visual>
+    </scene>
+    
+    <light name='sun' type='directional'>
+      <cast_shadows>0</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    
+    <gui fullscreen='0'>
+      <camera name='gui_camera'>
+        <pose>-1.158877 -0.505037 69.718475 0 1.570796 0</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+
+    </gui>
+    <model name='Campus'>
+      <static>1</static>
+      <link name='floor_1'>
+        <visual name='visual'>
+          <pose>0 0 -0.25 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://arena_rooms1/meshes/arena_rooms1.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <pose>0 0 -0.25 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://arena_rooms1/meshes/arena_rooms1.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.086099 -32.172443 1.159207 0 -0 0</pose>
+    </model>
+    <model name='campus_L1'>
+      <static>1</static>
+      <pose>-22000 -31500 0 0 -0 0</pose>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='world'>
+      <sim_time>8396 854000000</sim_time>
+      <real_time>35 301117866</real_time>
+      <wall_time>1705051501 550536323</wall_time>
+      <iterations>35151</iterations>
+      <model name='Campus'>
+        <pose>0.086099 -32.172443 1.159207 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='floor_1'>
+          <pose>0.086099 -32.172443 1.159207 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='campus_L1'>
+        <pose>-22000 -31500 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <offset>22000 31500 0 0 0 0</offset>
+    <crs>EPSG:3414</crs>
+  </world>
+</sdf>

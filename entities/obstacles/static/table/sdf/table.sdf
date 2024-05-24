@@ -1,0 +1,22 @@
+<?xml version='1.0'?>
+<sdf version='1.5'>
+    <model name='tree'>
+        <static>true</static>
+        <link name="curve1">
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://table/sdf/table.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://table/sdf/table.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+    </model>
+</sdf>

@@ -1,0 +1,26 @@
+robot_base_frame: $(arg frame)base_link
+
+footprint: [[-0.21, -0.21], [-0.21, 0.21], [0.21, 0.21], [0.21, -0.21]]
+robot_radius: 0.267
+
+inscribed_radius: 0.267
+circumscribed_radius: 0.267
+
+obstacle_range: 10.0
+raytrace_range: 15.0
+
+static_map_layer:
+  map_topic: map
+  subscribe_to_updates: true
+
+obstacles_layer:
+  observation_sources: scan
+  scan:
+    {
+      sensor_frame: $(arg frame)front_laser,
+      data_type: LaserScan,
+      topic: $(arg namespace)/scan,
+      marking: true,
+      clearing: true,
+    }
+

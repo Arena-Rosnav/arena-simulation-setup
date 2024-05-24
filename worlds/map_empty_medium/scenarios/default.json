@@ -1,0 +1,74 @@
+{
+  "robots": [
+    {
+      "start": [7.0, 4.5, 0.7],
+      "goal": [-3.0, -3.5, 0.0]
+    }
+  ],
+  "obstacles": {
+    "static": [
+      {
+        "name": "shelf1",
+        "model": "shelf",
+        "pos": [-2.0, 2.0, -0.5]
+      },
+      {
+        "name": "shelf2",
+        "model": "shelf",
+        "pos": [-1.0, 2.0, -0.5]
+      },
+      {
+        "name": "shelf3",
+        "model": "shelf",
+        "pos": [5.0, 2.0, -0.5]
+      },
+      {
+        "name": "chair1",
+        "model": "office_chair",
+        "pos": [1.0, -3.0, 0]
+      },
+      {
+        "name": "chair2",
+        "model": "office_chair",
+        "pos": [1.5, -3.0, 0]
+      }
+    ],
+
+    "dynamic": [
+      {
+        "name": "1",
+        "pos": [-3.0, -3.0, 0.0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+            [5, -3.0, 0.0],
+            [-3.0, 3.0, 0.0]
+        ],
+        "waypoint_mode": 1
+      },
+      {
+        "name": "2",
+        "pos": [-3.5, -3.0, 0.0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+            [-4.0, 4.0, 0.0],
+            [2.0, 3.0, 0.0]
+        ],
+        "waypoint_mode": 1
+      },
+      {
+        "name": "3",
+        "pos": [5.0, 0.0, 0.0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+          [1.0, 2.0, 0.0],
+          [7.0, -3.0, 0.0]
+        ],
+        "waypoint_mode": 1
+      }
+    ],
+    "interactive": []
+  }
+}

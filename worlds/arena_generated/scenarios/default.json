@@ -1,0 +1,32 @@
+{
+  "robots": [
+    {
+      "start": [-10.0, -14.0, 0.7],
+      "goal": [10.0, 14.0, 0.0]
+    }
+  ],
+  "obstacles": {
+
+    "static": [
+      {"name": "shelf1", "model": "shelf", "pos": [7.0, 7.0, 0]},
+      {"name": "shelf2", "model": "shelf", "pos": [7.0, -7.0, 0]},
+      {"name": "shelf3", "model": "shelf", "pos": [-7.0, 7.0, 0]},
+      {"name": "shelf4", "model": "shelf", "pos": [-7.0, -7.0, 0]}
+    ],
+
+    "dynamic": [
+      {"name": "visitor1", "pos": [-10, 0, 0], "type": "adult", "model": "actor1", "waypoints": [[-10, -1, 0], [-7, 1.8, 0]], "waypoint_mode": 1},
+      {"name": "visitor2", "pos": [-6, 0, 0], "type": "adult", "model": "actor1", "waypoints": [[-3, -1, 0], [0, 1.8, 0]], "waypoint_mode": 1},
+      {"name": "visitor3", "pos": [2, 0, 0], "type": "adult", "model": "actor1", "waypoints": [[5, -1, 0], [10, -1, 0]], "waypoint_mode": 1},
+      {"name": "visitor4", "pos": [-6, 5, 0], "type": "adult", "model": "actor1", "waypoints": [[10, -10, 0], [-7, 1.8, 0]], "waypoint_mode": 1},
+      {"name": "visitor5", "pos": [3, 4, 0], "type": "adult", "model": "actor1", "waypoints": [[-5, -1, 0], [8, -4.8, 0]], "waypoint_mode": 1},
+      {"name": "visitor6", "pos": [10, -10, 0], "type": "adult", "model": "actor1", "waypoints": [[0, -2, 0], [-7, 5.8, 0]], "waypoint_mode": 1},
+      {"name": "visitor7", "pos": [-10, 5, 0], "type": "adult", "model": "actor1", "waypoints": [[-10, -10, 0], [8, 3.8, 0]], "waypoint_mode": 1},
+      {"name": "visitor8", "pos": [-12, -5, 0], "type": "adult", "model": "actor1", "waypoints": [[-3, -5, 0], [3, 10.8, 0]], "waypoint_mode": 1},
+      {"name": "visitor9", "pos": [-13, -9, 0], "type": "adult", "model": "actor1", "waypoints": [[4, 6, 0], [-4, 7.8, 0]], "waypoint_mode": 1},
+      {"name": "visitor10", "pos": [12, 2, 0], "type": "adult", "model": "actor1", "waypoints": [[10, 12, 0], [7, 13.8, 0]], "waypoint_mode": 1}
+    ],
+    "interactive": []
+  },
+  "resets": 50
+}

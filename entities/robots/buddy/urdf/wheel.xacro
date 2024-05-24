@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find arena_simulation_setup)/entities/robots/buddy/urdf/transmission.xacro"/>
+
+    <xacro:macro name="wheel" params="name *origin">
+
+        <joint name="${name}_wheel_joint" type="continuous">
+            <xacro:insert_block name="origin"/>
+            <parent link="base_link"/>
+            <child link="${name}_wheel"/>
+            <axis xyz="0 1 0" rpy="0 0 0" />
+        </joint>
+
+        <link name="${name}_wheel">
+            <visual>
+                <origin rpy="${PI/2.0} 0 0" xyz="0 0 0"/>
+                <geometry>
+                    <cylinder length="${wheel_width}" radius="${wheel_diameter/2.0}"/>
+                </geometry>
+            </visual>
+
+            <collision>
+                <origin rpy="${PI/2.0} 0 0" xyz="0 0 0"/>
+                <geometry>
+                    <cylinder length="${wheel_width}" radius="${wheel_diameter/2.0}"/>
+                </geometry>
+            </collision>
+
+            <inertial>
+                <origin rpy="0 0 0" xyz="0 0 0"/>
+                <mass value="${wheel_mass}"/>
+                <inertia
+                    ixx="${wheel_ixx}" ixy="${wheel_ixy}" ixz="${wheel_ixz}"
+                    iyy="${wheel_iyy}" iyz="${wheel_iyz}"
+                    izz="${wheel_izz}"/>       
+            </inertial>
+        </link>
+        
+        <xacro:wheel_transmission name="${name}"/>
+
+    </xacro:macro>
+
+
+
+    <xacro:macro name="caster" params="name *origin">
+
+        <joint name="${name}_caster_joint" type="fixed">
+            <xacro:insert_block name="origin"/>
+            <parent link="base_link"/>
+            <child link="${name}_caster_wheel"/>
+        </joint>
+
+        <link name="${name}_caster_wheel">
+            <visual>
+                  
+                <geometry>
+                    <sphere radius="${caster_radius}"/>
+                </geometry>
+
+            </visual>
+
+            <collision>
+                <geometry>
+                    <sphere radius="${caster_radius}"/>
+                </geometry>
+            </collision>
+
+            <inertial>
+                <origin rpy="0 0 0" xyz="0 0 0"/>
+                <mass value="0.1"/>
+                <inertia
+                    ixx="0.001" ixy="0.0" ixz="0.0"
+                    iyy="0.001" iyz="0.0"
+                    izz="0.001"/>       
+            </inertial>
+        </link>
+
+    </xacro:macro>
+
+
+</robot>

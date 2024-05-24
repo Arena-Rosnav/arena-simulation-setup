@@ -1,0 +1,23 @@
+<sdf version="1.6">
+  <model name="Gazebo">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>3 3 2.5</scale>
+            <uri>model://Gazebo/meshes/gazebo.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>3 3 2.5</scale>
+            <uri>model://Gazebo/meshes/gazebo.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

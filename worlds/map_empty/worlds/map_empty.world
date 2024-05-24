@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sdf version="1.4">
+  <world name="default">
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <scene>
+      <ambient>0.0 0.0 0.0 1.0</ambient>
+      <shadows>0</shadows>
+      <grid>false</grid>
+      <origin_visual>false</origin_visual>
+    </scene>
+
+    <gui fullscreen='0'>
+      <camera name='gui_camera'>
+        <pose>13.592713 12.217493 42.511192 -0.000122 1.565795 -1.571874</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+    <model name="my_mesh">
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+          <pose frame="">0.0 0.0 1 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>//map.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision1">
+          <pose frame="">0.0 0.0 1 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>//map.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+  </world>
+</sdf>

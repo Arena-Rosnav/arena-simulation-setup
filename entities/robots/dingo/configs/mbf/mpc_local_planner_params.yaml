@@ -1,0 +1,35 @@
+MpcLocalPlannerROS:
+  robot:
+    type: unicycle
+    unicycle:
+      max_vel_x: 1.3
+      max_vel_x_backwards: 0.2
+      max_vel_theta: 1.57
+      acc_lim_x: 1.0 # deactive bounds with zero
+      dec_lim_x: 1.0 # deactive bounds with zero
+      acc_lim_theta: 20.0 # deactivate bounds with zero
+
+  ## Footprint model for collision avoidance
+  footprint_model:
+    type: polygon
+    vertices: [[0.2755, -0.2585], [0.2755, 0.2585], [-0.2755, 0.2585], [-0.2755, -0.2585]]
+    # RADIUS: 0.378 from (0.2755**2 + 0.2585**2)**(1/2)
+
+  min_obstacle_dist: 0.25
+
+  ## Planning grid
+  grid:
+    type: fd_grid
+    variable_grid:
+      enable: false # We want a fixed grid
+  planning:
+    objective:
+      type: quadratic_form   # minimum_time requires grid/variable_grid/enable=True and grid/xf_fixed set properly
+    terminal_cost:
+      type: quadratic   # can be "none"
+    terminal_constraint:
+      type: none   # can be "none"
+  solver:
+    type: ipopt
+    lsq_lm:
+      iterations: 10

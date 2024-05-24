@@ -1,0 +1,95 @@
+{
+  "robots": [
+    {
+      "start": [-14.909999, -8.27435, 0.7],
+      "goal": [6.195498, 8.74168, 0]
+    }
+  ],
+  "obstacles": {
+    "static": [],
+
+    "dynamic": [
+      {
+        "name": "Doktor_1",
+        "pos": [-5.815111, -10.739109, 0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+          [-9.373223, -10.645503, 0],
+          [-14.340542, -8.268405, 0],
+          [-12.190295, 9.302566, 0]
+        ],
+        "waypoint_mode": 1
+      },
+      {
+        "name": "Doktor_2",
+        "pos": [7.03362, 8.14994, 0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+          [6.40086, -1.19773, 0],
+          [-1.479799, 8.297351, 0],
+          [-5.85797, 10.5533, 0]
+        ],
+        "waypoint_mode": 1
+      },
+      {
+        "name": "Nurse_1",
+        "pos": [3.2749, -7.10904, 0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+          [6.95485, 2.76626, 0],
+          [1.48543, 9.832098, 0],
+          [-7.007491, 8.730052, 0]
+        ],
+        "waypoint_mode": 1
+      },
+      {
+        "name": "Nurse_2",
+        "pos": [6.835066, -8.479434, 0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+          [9.36064, 1.86913, 0],
+          [16.429601, 3.855411, 0],
+          [12.093401, 9.07867, 0]
+        ],
+        "waypoint_mode": 1
+      },
+      {
+        "name": "Visitor_1",
+        "pos": [-7.37652, -4.38962, 0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+          [0.779284, -2.58361, 0],
+          [3.877115, 5.866757, 0],
+          [-12.069702, 4.133681, 0]
+        ],
+        "waypoint_mode": 1
+      },
+      {
+        "name": "Visitor_2",
+        "pos": [0.443857, 2.520978, 0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+          [-2.815856, 5.769867, 0],
+          [-11.3797, -0.515222, 0],
+          [-15.7438, -5.59093, 0],
+          [-0.214736, -5.51731, 0]
+        ],
+        "waypoint_mode": 1
+      },
+      {"name": "visitor6", "pos": [-11, 0, 0], "type": "adult", "model": "actor1", "waypoints": [[0, 6, 0], [-5.5, 7.8, 0]], "waypoint_mode": 1},
+      {"name": "visitor7", "pos": [-12, 1, 0], "type": "adult", "model": "actor1", "waypoints": [[-4, -8, 0], [1, 2, 0]], "waypoint_mode": 1},
+      {"name": "visitor8", "pos": [-12, -1, 0], "type": "adult", "model": "actor1", "waypoints": [[7, 0, 0], [-6.5, 7.8, 0]], "waypoint_mode": 1},
+      {"name": "visitor9", "pos": [8, -5, 0], "type": "adult", "model": "actor1", "waypoints": [[-3, -8, 0], [-6, 0.6, 0]], "waypoint_mode": 1},
+      {"name": "visitor10", "pos": [-8, 5, 0], "type": "adult", "model": "actor1", "waypoints": [[2.5, 2, 0], [-6, -3, 0]], "waypoint_mode": 1} 
+    ],
+    "interactive": []
+  },
+  "resets": 50,
+  "map": "arena_hospital_large"
+}

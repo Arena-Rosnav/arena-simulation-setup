@@ -1,0 +1,78 @@
+{
+  "robots": [
+    {
+      "start": [22.494722, -0.334097,  0.7],
+      "goal": [-22.564642, 2.831997, 0]
+    }
+  ],
+  "obstacles": {
+
+    "static": [
+    ],
+
+    "dynamic": [
+      {
+        "name": "Visitor_1",
+        "pos": [-20.046099, -0.093180, 0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+            [-4.880071, -3.963900, 0],
+            [20.172101, 2.449140, 0]
+        ],
+        "waypoint_mode": 1
+      },   
+      {
+        "name": "Visitor_2",
+        "pos": [20, -0.181745, 0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+            [4.250036, 7.286859, 0],
+            [-20.295945, 2.392694, 0]
+        ],
+        "waypoint_mode": 1
+      },  
+      {
+        "name": "Visitor_3",
+        "pos": [1.898432, 10.729569, 0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+            [4.920499, 1.422948, 0],
+            [-6.991789, 2.604187, 0]                                             
+        ],
+        "waypoint_mode": 1
+      }, 
+      {
+        "name": "Visitor_4",
+        "pos": [-1.074179, -8.498156, 0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+            [7.361470, -0.553032, 0],
+            [0.652441, 5.412353, 0]          
+        ],
+        "waypoint_mode": 1
+      },   
+      {
+        "name": "Visitor_5",
+        "pos": [-5.639399, 5.363942, 0],
+        "type": "adult",
+        "model": "actor1",
+        "waypoints": [
+            [0.167776, -3.610720, 0],
+            [-1.330431, 10.211600, 0]                      
+        ],
+        "waypoint_mode": 1
+      },
+      {"name": "visitor6", "pos": [3, -5, 0], "type": "adult", "model": "actor1", "waypoints": [[0, 6, 0], [-4, 7.8, 0]], "waypoint_mode": 1},
+      {"name": "visitor7", "pos": [-1, 20, 0], "type": "adult", "model": "actor1", "waypoints": [[1, -10, 0], [1, 2, 0]], "waypoint_mode": 1},
+      {"name": "visitor8", "pos": [-2, -19, 0], "type": "adult", "model": "actor1", "waypoints": [[7, 0, 0], [-4, 7.8, 0]], "waypoint_mode": 1},
+      {"name": "visitor9", "pos": [1, 0, 0], "type": "adult", "model": "actor1", "waypoints": [[-1, -10, 0], [-7, 0.5, 0]], "waypoint_mode": 1},
+      {"name": "visitor10", "pos": [0, 1, 0], "type": "adult", "model": "actor1", "waypoints": [[-1, -10, 0], [-7, 0.5, 0]], "waypoint_mode": 1}                                                             
+    ],
+    "interactive": []
+  },
+  "resets": 50
+}

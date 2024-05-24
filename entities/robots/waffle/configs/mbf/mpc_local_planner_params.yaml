@@ -1,0 +1,53 @@
+MpcLocalPlannerROS:
+  robot:
+    type: unicycle
+    unicycle:
+      max_vel_x: 0.28
+      max_vel_x_backwards: 0.2
+      max_vel_theta: 1.82
+      acc_lim_x: 2.5 # deactive bounds with zero
+      dec_lim_x: 0.2 # deactive bounds with zero
+      acc_lim_theta: 3.2 # deactivate bounds with zero
+
+  ## Footprint model for collision avoidance
+  footprint_model:
+    type: point
+    is_footprint_dynamic: false
+
+  ## Collision avoidance
+  collision_avoidance:
+    min_obstacle_dist: 0.2 # Note, this parameter must be chosen w.r.t. the footprint_model
+    enable_dynamic_obstacles: false
+    force_inclusion_dist: 0.5
+    cutoff_dist: 2.5
+    include_costmap_obstacles: true
+    costmap_obstacles_behind_robot_dist: 1.5
+
+  ## Planning grid
+  grid:
+    type: fd_grid
+    xf_fixed: [true, true, true]
+  planning:
+    objective:
+      type: minimum_time   # minimum_time requires grid/variable_grid/enable=True and grid/xf_fixed set properly
+      quadratic_form:
+        state_weights: [2.0, 2.0, 2.0]
+        control_weights: [1.0, 1.0]
+      minimum_time_via_points:
+        position_weight: 10.5
+        orientation_weight: 0.0
+        via_points_ordered: false
+    terminal_cost:
+      type: none   # can be "none"
+      quadratic:
+        final_state_weights: [2.0, 2.0, 2.0]
+    terminal_constraint:
+      type: none   # can be "none"
+  controller:
+    outer_ocp_iterations: 5
+    max_global_plan_lookahead_dist: 1.5
+    global_plan_viapoint_sep: 5.5
+  solver:
+    type: ipopt
+    lsq_lm:
+      iterations: 10

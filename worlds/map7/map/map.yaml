@@ -1,0 +1,10 @@
+free_thresh: 0.196
+image: map.png
+negate: 0
+occupied_thresh: 0.65
+origin:
+- -50
+- -50
+- 0.0
+resolution: 0.4
+type: indoor

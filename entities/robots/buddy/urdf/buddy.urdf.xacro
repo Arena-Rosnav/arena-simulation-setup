@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+
+<robot name="buddy" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:arg name="helios_5515_enabled" default="false" />
+    <xacro:arg name="helios_1_enabled" default="true" />
+    <xacro:arg name="rgbd_enabled" default="true" />
+    <xacro:arg name="ip_cameras_enabled" default="true" />
+
+    <!-- <xacro:arg name="robot_namespace" default="/" /> -->
+    <xacro:include filename="$(find arena_simulation_setup)/entities/robots/buddy/urdf/const.xacro"/>
+    <xacro:include filename="$(find arena_simulation_setup)/entities/robots/buddy/urdf/wheel.xacro"/>
+    <xacro:include filename="$(find arena_simulation_setup)/entities/robots/buddy/urdf/gazebo.xacro"/>
+    <xacro:include filename="$(find arena_simulation_setup)/entities/robots/buddy/urdf/gazebo_rgbd.xacro"/>
+    <xacro:include filename="$(find arena_simulation_setup)/entities/robots/buddy/urdf/gazebo_camera.xacro"/>
+    <xacro:include filename="$(find arena_simulation_setup)/entities/robots/buddy/urdf/sick_scan.urdf.xacro"/>
+    <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
+    <xacro:include filename="$(find arena_simulation_setup)/entities/robots/buddy/urdf/VLP-1.urdf.xacro"/>
+
+    <!-- Robot Base -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://arena_simulation_setup/entities/robots/buddy/urdf/meshes/buddy_simplified_mesh.stl" scale="1 1 1 "/>
+            </geometry>
+        </visual>
+
+        <!-- Simplified collision values -->
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://arena_simulation_setup/entities/robots/buddy/urdf/meshes/buddy_simplified_mesh.stl" scale="1 1 1 "/>
+            </geometry>
+        </collision>
+
+    </link>
+        
+    <joint name="inertial_joint" type="fixed">
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <parent link="base_link"/>
+            <child link="inertial_link"/>
+    </joint>
+
+    <link name="inertial_link">
+     <inertial>
+            <origin rpy="0 0 0" xyz="${chassis_com_x} ${chassis_com_y} ${chassis_com_z}"/>
+            <mass value="${chassis_mass}"/>
+            <inertia
+                ixx="${chassis_ixx}" ixy="${chassis_ixy}" ixz="${chassis_ixz}"
+                iyy="${chassis_iyy}" iyz="${chassis_iyz}"
+                izz="${chassis_izz}"/>  
+        </inertial>
+    </link>
+
+
+<!-- Wheel Macros-->
+    <xacro:wheel name="right_dd" >
+        <origin rpy="0 0 0" xyz="0 ${wheel_base/2.0} 0"/>
+    </xacro:wheel>
+    
+    <xacro:wheel name="left_dd">
+        <origin rpy="0 0 0" xyz="0 ${-wheel_base/2.0} 0"/>
+    </xacro:wheel>
+
+  
+  
+<!-- Caster Wheel Macros-->
+
+    <xacro:caster name="rear_caster" >
+        <origin rpy="0 0 0" xyz="${caster_x_offset} ${caster_y_offset} -0.07"/>
+    </xacro:caster>
+
+<!-- helios_5515 -->
+    <xacro:if value="$(arg helios_5515_enabled)">
+        <xacro:VLP-16 name="helios_lidar" topic="helios_points" parent="base_link">
+            <origin rpy="0 ${helios_pitch/180.0*PI} 0" xyz="${helios_com_x} 0 ${helios_com_z}"/>
+        </xacro:VLP-16>
+    </xacro:if>
+
+<!-- simplified 2d ver -->
+    <xacro:if value="$(arg helios_1_enabled)">
+        <xacro:VLP-1 name="helios_lidar" topic="helios_points" parent="base_link">
+            <origin rpy="0 0 0" xyz="${helios_com_x} 0 ${helios_com_z}"/>
+        </xacro:VLP-1>
+    </xacro:if>
+
+<!-- Camera Links -->
+
+    <!-- RGBD Links -->
+    <joint name="base_link_to_front_rgbd" type="fixed">
+        <origin rpy="${forward_rgbd_roll/180.0*PI} ${forward_rgbd_pitch/180.0*PI} 0" xyz="${forward_rgbd_com_x} ${forward_rgbd_com_y} ${forward_rgbd_com_z}"/>
+        <parent link="base_link"/>
+        <child link="front_rgbd_reference_frame"/>
+    </joint>
+
+    <!-- Gazebo RGBD orientation is different from robot! correction Camera frame here. -->
+    <joint name="front_rgbd_to gazebo" type="fixed">
+        <origin rpy="${-PI/2} 0 ${-PI/2}" xyz="0 0 0"/>
+        <parent link="front_rgbd_reference_frame"/>
+        <child link="gazebo_camera_rgb_optical_frame"/>
+    </joint>
+    
+    <link name="front_rgbd_reference_frame">
+        <visual>
+                <geometry>
+                    <box size="0.03 0.13 0.04"/>
+                </geometry>
+        </visual>
+    </link>
+
+    <link name="gazebo_camera_rgb_optical_frame">
+    </link>
+
+    <joint name="base_link_to_rear_rgbd" type="fixed">
+        <origin rpy="0 0 ${rear_rgbd_yaw/180.0*PI}" xyz="${rear_rgbd_com_x} ${rear_rgbd_com_y} ${rear_rgbd_com_z}"/>
+        <parent link="base_link"/>
+        <child link="rear_rgbd_reference_frame"/>
+    </joint>
+
+    <!-- Gazebo RGBD orientation is different from robot! correction for Camera frame here. -->
+    <joint name="rear_rgbd_to gazebo" type="fixed">
+        <origin rpy="${-PI/2} 0 ${-PI/2}" xyz="0 0 0"/>
+        <parent link="rear_rgbd_reference_frame"/>
+        <child link="gazebo_camera_rgb_optical_frame_2"/>
+    </joint>
+    
+    <link name="rear_rgbd_reference_frame">
+            <visual>
+                <geometry>
+                    <box size="0.03 0.13 0.04"/>
+                </geometry>
+        </visual>
+    </link>
+
+    <link name="gazebo_camera_rgb_optical_frame_2">
+    </link>
+
+
+    <joint name="base_link_to_rear_left_rgbd" type="fixed">
+        <origin rpy="0 0 ${rear_left_rgbd_yaw/180.0*PI}" xyz="${rear_left_rgbd_com_x} ${rear_left_rgbd_com_y} ${rear_left_rgbd_com_z}"/>
+        <parent link="base_link"/>
+        <child link="rear_left_rgbd_reference_frame"/>
+    </joint>
+
+    <!-- Gazebo RGBD orientation is different from robot! correction for Camera frame here. -->
+    <joint name="rear_left_rgbd_to gazebo" type="fixed">
+        <origin rpy="${-PI/2} 0 ${-PI/2}" xyz="0 0 0"/>
+        <parent link="rear_left_rgbd_reference_frame"/>
+        <child link="gazebo_camera_rgb_optical_frame_3"/>
+    </joint>
+    
+    <link name="rear_left_rgbd_reference_frame">
+            <visual>
+                <geometry>
+                    <box size="0.03 0.13 0.04"/>
+                </geometry>
+        </visual>
+    </link>
+
+    <link name="gazebo_camera_rgb_optical_frame_3">
+    </link>
+
+
+    <joint name="base_link_to_rear_right_rgbd" type="fixed">
+        <origin rpy="0 0 ${rear_right_rgbd_yaw/180.0*PI}" xyz="${rear_right_rgbd_com_x} ${rear_right_rgbd_com_y} ${rear_right_rgbd_com_z}"/>
+        <parent link="base_link"/>
+        <child link="rear_right_rgbd_reference_frame"/>
+    </joint>
+
+    <!-- Gazebo RGBD orientation is different from robot! correction for Camera frame here. -->
+    <joint name="rear_right_rgbd_to gazebo" type="fixed">
+        <origin rpy="${-PI/2} 0 ${-PI/2}" xyz="0 0 0"/>
+        <parent link="rear_right_rgbd_reference_frame"/>
+        <child link="gazebo_camera_rgb_optical_frame_4"/>
+    </joint>
+    
+    <link name="rear_right_rgbd_reference_frame">
+            <visual>
+                <geometry>
+                    <box size="0.03 0.13 0.04"/>
+                </geometry>
+        </visual>
+    </link>
+
+    <link name="gazebo_camera_rgb_optical_frame_4">
+    </link>
+
+
+    <xacro:if value="$(arg rgbd_enabled)">
+        <xacro:rgbd link_name="front_rgbd_reference_frame" frame_name="gazebo_camera_rgb_optical_frame" camera_name="front_rgbd"/>
+        <xacro:rgbd link_name="rear_rgbd_reference_frame" frame_name="gazebo_camera_rgb_optical_frame_2" camera_name="rear_rgbd"/>
+        <xacro:rgbd link_name="rear_left_rgbd_reference_frame" frame_name="gazebo_camera_rgb_optical_frame_3" camera_name="rear_left_rgbd"/>
+        <xacro:rgbd link_name="rear_right_rgbd_reference_frame" frame_name="gazebo_camera_rgb_optical_frame_4" camera_name="rear_right_rgbd"/>
+    </xacro:if>
+
+    <!--End of SC Links -->
+
+    <!-- IP_Cameras -->
+ 
+    <joint name="base_link_to_front_ip_cmaera" type="fixed">
+        <origin rpy="0 0 0" xyz="${ip_cam_front_com_x} ${ip_cam_front_com_y} ${ip_cam_front_com_z}"/>
+        <parent link="base_link"/>
+        <child link="ip_cam_front"/>
+    </joint>
+    
+    <link name="ip_cam_front">
+        <visual>
+            <origin rpy="0 ${PI/2.0} 0" xyz="-0.07 0 0"/>
+            <geometry>
+                <cylinder length="0.05" radius="0.07"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="base_link_to_rear_ip_camera" type="fixed">
+        <origin rpy="0 0 ${PI}" xyz="${ip_cam_rear_com_x} ${ip_cam_rear_com_y} ${ip_cam_rear_com_z}"/>
+        <parent link="base_link"/>
+        <child link="ip_cam_rear"/>
+    </joint>
+    
+    <link name="ip_cam_rear">
+        <visual>
+            <origin rpy="0 ${PI/2.0} 0" xyz="-0.07 0 0"/>
+            <geometry>
+                <cylinder length="0.05" radius="0.07"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <xacro:if value="$(arg ip_cameras_enabled)">
+        <xacro:ip_camera link_name="ip_cam_front" frame_name="ip_cam_front" camera_name="ip_cam_front"/>
+        <xacro:ip_camera link_name="ip_cam_rear"  frame_name="ip_cam_rear"  camera_name="ip_cam_rear"/>
+    </xacro:if>
+
+    <!-- End of IP_Cameras -->
+</robot>
