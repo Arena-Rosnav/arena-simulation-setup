@@ -8,7 +8,6 @@ endif()
 
 
 find_package(ament_cmake REQUIRED)
-find_package(REQUIRED REQUIRED)
 find_package(catkin REQUIRED)
 set(INCLUDE_DIRS ${ament_cmake_INCLUDE_DIRS} ${REQUIRED_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS})
