@@ -1,40 +1,55 @@
-bodies: # List of named bodies
-  - name: base_footprint
-    pose: [0, 0, 0]
-    type: dynamic
-    color: [0.2, 0.8, 0.2, 1.0]
-    footprints:
-      - type: circle
-        radius: 0.208
-        center: [0.0, 0.0]
-        layers: ["all"]
+/**:
+  ros__parameters:
+    bodies:
+    - color:
+      - 0.2
+      - 0.8
+      - 0.2
+      - 1.0
+      footprints:
+      - center:
+        - 0.0
+        - 0.0
         collision: true
         density: 1
         friction: 0.1
+        layers:
+        - all
+        radius: 0.208
         restitution: 0
         sensor: false
-
-plugins:
-  - type: DiffDrive
-    name: diff_drive
-    body: base_footprint
-    odom_frame_id: odom
-    odom_pub: odom # topic odom is published on
-    twist_sub: cmd_vel
-    pub_rate: 10
-
-  - type: Laser
-    name: static_laser
-    frame: base_scan
-    topic: scan
-    body: base_footprint
-    broadcast_tf: true
-    origin: [0.0, 0.0, 0.0]
-    range: 3.5
-    angle: { min: 0, max: 6.28318977356, increment: 0.0175019223243 } # to calculate number of laser beams
-    noise_std_dev: 0.0
-    update_rate: 10
-
-  - type: ModelTfPublisher
-    name: tf_publisher
-    publish_tf_world: false
+        type: circle
+      name: base_footprint
+      pose:
+      - 0
+      - 0
+      - 0
+      type: dynamic
+    plugins:
+    - body: base_footprint
+      name: diff_drive
+      odom_frame_id: odom
+      odom_pub: odom
+      pub_rate: 10
+      twist_sub: cmd_vel
+      type: DiffDrive
+    - angle:
+        increment: 0.0175019223243
+        max: 6.28318977356
+        min: 0
+      body: base_footprint
+      broadcast_tf: true
+      frame: base_scan
+      name: static_laser
+      noise_std_dev: 0.0
+      origin:
+      - 0.0
+      - 0.0
+      - 0.0
+      range: 3.5
+      topic: scan
+      type: Laser
+      update_rate: 10
+    - name: tf_publisher
+      publish_tf_world: false
+      type: ModelTfPublisher

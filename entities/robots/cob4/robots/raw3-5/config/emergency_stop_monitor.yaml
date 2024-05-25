@@ -1,6 +1,6 @@
-enable_light: false
-
-enable_sound: false
-
-diagnostics_based: false
-motion_based: false
+/**:
+  ros__parameters:
+    diagnostics_based: false
+    enable_light: false
+    enable_sound: false
+    motion_based: false

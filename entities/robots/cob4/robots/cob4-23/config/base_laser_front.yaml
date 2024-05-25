@@ -1,1 +1,2 @@
-../../cob4/config/base_laser_front.yaml
+/**:
+  ros__parameters: ../../cob4/config/base_laser_front.yaml

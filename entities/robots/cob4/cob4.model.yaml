@@ -1,44 +1,55 @@
-bodies: # List of named bodies
-  - name: base_footprint
-    pose: [0, 0, 0]
-    type: dynamic
-    color: [0.2, 0.8, 0.2, 1.0]
-    footprints:
-      - type: circle
-        radius: 0.36
-        center: [0.0, 0.0]
-        layers: ["all"]
+/**:
+  ros__parameters:
+    bodies:
+    - color:
+      - 0.2
+      - 0.8
+      - 0.2
+      - 1.0
+      footprints:
+      - center:
+        - 0.0
+        - 0.0
         collision: true
         density: 1
         friction: 0.1
+        layers:
+        - all
+        radius: 0.36
         restitution: 0
         sensor: false
-
-plugins:
-  - type: DiffDrive
-    name: diff_drive
-    body: base_footprint
-    odom_frame_id: odom
-    odom_pub: odom # topic odom is published on
-    twist_sub: cmd_vel
-    pub_rate: 10
-
-  - type: Laser
-    name: static_laser
-    frame: base_link
-    topic: scan
-    body: base_footprint
-    broadcast_tf: true
-    origin: [0.0, 0.0, 0.0] # from: https://github.com/ignc-research/arena-rosnav-3D/blob/main/arena_simulation_setup/entities/robots/rto/urdf/rto.urdf.xacro
-    range: 29.5
-    angle: {
-        min: -3.141505479812622,
-        max: 3.141505479812622,
-        increment: 0.00872640411,
-      } #  720 samples (from: rostopic echo scan)
-    noise_std_dev: 0.0
-    update_rate: 10
-
-  - type: ModelTfPublisher
-    name: tf_publisher
-    publish_tf_world: false
+        type: circle
+      name: base_footprint
+      pose:
+      - 0
+      - 0
+      - 0
+      type: dynamic
+    plugins:
+    - body: base_footprint
+      name: diff_drive
+      odom_frame_id: odom
+      odom_pub: odom
+      pub_rate: 10
+      twist_sub: cmd_vel
+      type: DiffDrive
+    - angle:
+        increment: 0.00872640411
+        max: 3.141505479812622
+        min: -3.141505479812622
+      body: base_footprint
+      broadcast_tf: true
+      frame: base_link
+      name: static_laser
+      noise_std_dev: 0.0
+      origin:
+      - 0.0
+      - 0.0
+      - 0.0
+      range: 29.5
+      topic: scan
+      type: Laser
+      update_rate: 10
+    - name: tf_publisher
+      publish_tf_world: false
+      type: ModelTfPublisher

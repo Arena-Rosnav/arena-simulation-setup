@@ -1,1 +1,2 @@
-../../cob4/config/twist_mux_topics.yaml
+/**:
+  ros__parameters: ../../cob4/config/twist_mux_topics.yaml

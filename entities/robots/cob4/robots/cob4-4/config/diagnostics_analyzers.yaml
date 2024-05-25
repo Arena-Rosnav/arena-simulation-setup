@@ -1,38 +1,37 @@
-pub_rate: 1.0 # Optional
-base_path: '' # Optional, prepended to all diagnostic output
-analyzers:
-  computers:
-    type: diagnostic_aggregator/AnalyzerGroup
-    path: Computers
+/**:
+  ros__parameters:
     analyzers:
-      b1:
-        type: diagnostic_aggregator/DiscardAnalyzer
-        path: b1
-        contains: 'b1'
-
-  io:
-    type: diagnostic_aggregator/AnalyzerGroup
-    path: IO
-    analyzers:
-      joystick:
-        type: diagnostic_aggregator/DiscardAnalyzer
-        path: Joystick
-        contains: 'joy'
-
-  motors:
-    type: diagnostic_aggregator/AnalyzerGroup
-    path: Actuators
-    analyzers:
-      base:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Base
-        contains: 'base/'
-
-  sensors:
-    type: diagnostic_aggregator/AnalyzerGroup
-    path: Sensors
-    analyzers:
-      battery:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Battery Status
-        contains: 'bms'
+      computers:
+        analyzers:
+          b1:
+            contains: b1
+            path: b1
+            type: diagnostic_aggregator/DiscardAnalyzer
+        path: Computers
+        type: diagnostic_aggregator/AnalyzerGroup
+      io:
+        analyzers:
+          joystick:
+            contains: joy
+            path: Joystick
+            type: diagnostic_aggregator/DiscardAnalyzer
+        path: IO
+        type: diagnostic_aggregator/AnalyzerGroup
+      motors:
+        analyzers:
+          base:
+            contains: base/
+            path: Base
+            type: diagnostic_aggregator/GenericAnalyzer
+        path: Actuators
+        type: diagnostic_aggregator/AnalyzerGroup
+      sensors:
+        analyzers:
+          battery:
+            contains: bms
+            path: Battery Status
+            type: diagnostic_aggregator/GenericAnalyzer
+        path: Sensors
+        type: diagnostic_aggregator/AnalyzerGroup
+    base_path: ''
+    pub_rate: 1.0

@@ -1,7 +1,13 @@
-properties:
-  velocity_iterations: 10
-  position_iterations: 10
-layers:
-- name: static
-  map: map.yaml
-  color: [0, 1, 0, 1]
+/**:
+  ros__parameters:
+    layers:
+    - color:
+      - 0
+      - 1
+      - 0
+      - 1
+      map: map.yaml
+      name: static
+    properties:
+      position_iterations: 10
+      velocity_iterations: 10

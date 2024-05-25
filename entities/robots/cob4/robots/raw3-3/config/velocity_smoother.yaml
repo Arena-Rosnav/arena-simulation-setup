@@ -1,1 +1,2 @@
-../../raw3/config/velocity_smoother.yaml
+/**:
+  ros__parameters: ../../raw3/config/velocity_smoother.yaml

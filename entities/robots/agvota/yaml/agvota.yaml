@@ -1,52 +1,60 @@
-bodies: # List of named bodies
-  - name: base_link
-    pose: [0, 0, 0]
-    type: dynamic
-    color: [1.0, 0.64, 0.0, 1.0] # Orange hopefully
-    footprints:
-      - type: polygon
-        points:
-          [[0.513, 0.364], [0.513, -0.364], [-0.513, -0.364], [-0.513, 0.364]]
-          # radius: 0.629 from (0.513**2 + 0.364**2)**(1/2)
-        layers: ["all"]
-        collision: true
+/**:
+  ros__parameters:
+    bodies:
+    - color:
+      - 1.0
+      - 0.64
+      - 0.0
+      - 1.0
+      footprints:
+      - collision: true
         density: 1
         friction: 0.1
+        layers:
+        - all
+        points:
+        - - 0.513
+          - 0.364
+        - - 0.513
+          - -0.364
+        - - -0.513
+          - -0.364
+        - - -0.513
+          - 0.364
         restitution: 0
         sensor: false
-
-plugins:
-  - type: DiffDrive
-    name: diff_drive
-    body: base_link
-    odom_frame_id: odom
-    odom_pub: odom # topic odom is published on
-    twist_sub: cmd_vel
-    pub_rate: 10
-
-  - type: Laser
-    name: static_laser
-    frame: scan_link
-    topic: scan
-    body: base_link
-    broadcast_tf: true
-    origin: [0.0, 0.0, 0.0]
-
-    # Data from urdf files
-    range: 30.0
-    angle:
-      {
-        min: -1.5707963267948966,
-        max: 1.5707963267948966,
-        increment: 0.00436332312,
-      }
-
-    # noise_std_dev: 0.015
-    # arena
-    noise_std_dev: 0.0
-    update_rate: 10
-
-  - type: ModelTfPublisher
-    name: tf_publisher
-    publish_tf_world: false
-    # exclude: ["approx_footprint"]
+        type: polygon
+      name: base_link
+      pose:
+      - 0
+      - 0
+      - 0
+      type: dynamic
+    plugins:
+    - body: base_link
+      name: diff_drive
+      odom_frame_id: odom
+      odom_pub: odom
+      pub_rate: 10
+      twist_sub: cmd_vel
+      type: DiffDrive
+    - angle:
+        increment: 0.00436332312
+        max: 1.5707963267948966
+        min: -1.5707963267948966
+      body: base_link
+      broadcast_tf: true
+      frame: scan_link
+      name: static_laser
+      noise_std_dev: 0.0
+      origin:
+      - 0.0
+      - 0.0
+      - 0.0
+      range: 30.0
+      topic: scan
+      type: Laser
+      update_rate: 10
+    - name: tf_publisher
+      publish_tf_world: false
+      type: ModelTfPublisher

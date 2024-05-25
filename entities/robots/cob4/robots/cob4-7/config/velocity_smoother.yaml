@@ -1,1 +1,2 @@
-../../cob4/config/velocity_smoother.yaml
+/**:
+  ros__parameters: ../../cob4/config/velocity_smoother.yaml

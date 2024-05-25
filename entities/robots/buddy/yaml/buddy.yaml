@@ -1,42 +1,60 @@
-bodies: # List of named bodies
-  - name: base_link
-    pose: [0, 0, 0]
-    type: dynamic
-    color: [0.2, 0.8, 0.2, 1.0]
-    footprints:
-      - type: polygon
-        points: [[-0.55, -0.275], [-0.55, 0.275], [0.55, 0.275], [0.55, -0.275]]
-        layers: ["all"]
-        collision: true
+/**:
+  ros__parameters:
+    bodies:
+    - color:
+      - 0.2
+      - 0.8
+      - 0.2
+      - 1.0
+      footprints:
+      - collision: true
         density: 1
         friction: 0.1
+        layers:
+        - all
+        points:
+        - - -0.55
+          - -0.275
+        - - -0.55
+          - 0.275
+        - - 0.55
+          - 0.275
+        - - 0.55
+          - -0.275
         restitution: 0
         sensor: false
-
-plugins:
-  - type: DiffDrive
-    name: diff_drive
-    body: base_link
-    odom_frame_id: odom
-    odom_pub: odom # topic odom is published on
-    twist_sub: cmd_vel
-    pub_rate: 10
-
-  - type: Laser
-    name: helios_lidar
-    frame: helios_lidar
-    topic: helios_points
-    body: base_link
-    broadcast_tf: true
-    origin: [0.0, 0.0, 0.0]
-    range: 80
-    angle:
-      min: -3.14159265359
-      max: 3.14159265359
-      increment: 0.0034906585
-    noise_std_dev: 0.008
-    update_rate: 10
-
-  - type: ModelTfPublisher
-    name: tf_publisher
-    publish_tf_world: false
+        type: polygon
+      name: base_link
+      pose:
+      - 0
+      - 0
+      - 0
+      type: dynamic
+    plugins:
+    - body: base_link
+      name: diff_drive
+      odom_frame_id: odom
+      odom_pub: odom
+      pub_rate: 10
+      twist_sub: cmd_vel
+      type: DiffDrive
+    - angle:
+        increment: 0.0034906585
+        max: 3.14159265359
+        min: -3.14159265359
+      body: base_link
+      broadcast_tf: true
+      frame: helios_lidar
+      name: helios_lidar
+      noise_std_dev: 0.008
+      origin:
+      - 0.0
+      - 0.0
+      - 0.0
+      range: 80
+      topic: helios_points
+      type: Laser
+      update_rate: 10
+    - name: tf_publisher
+      publish_tf_world: false
+      type: ModelTfPublisher

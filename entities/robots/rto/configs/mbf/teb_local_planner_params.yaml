@@ -1,29 +1,19 @@
-TebLocalPlannerROS:
-
-  # params are from https://github.com/dietriro/rto_core/tree/noetic-devel/rto_navigation/config
-  # and https://www.robotshop.com/media/files/content/f/fto/pdf/festo-robotino-mobile-robotic-datasheet.pdf
-
-  # Trajectory
-  max_samples: 500
-  allow_init_with_backwards_motion: false
-  max_global_plan_lookahead_dist: 5.6
-  global_plan_viapoint_sep: -1
-  global_plan_prune_distance: 1
-  exact_arc_length: false
-  publish_feedback: false
-
-  # Robot
-
-  max_vel_x: 2.78
-  max_vel_x_backwards: 2.78
-  max_vel_y: 2.78
-  max_vel_theta: 1.0
-  acc_lim_x: 2.5
-  acc_lim_theta: 3.2
-  min_turning_radius: 0.0 # diff-drive robot (can turn on place!)
-
-  footprint_model:
-    type: point
-
-  # GoalTolerance
-
+/**:
+  ros__parameters:
+    TebLocalPlannerROS:
+      acc_lim_theta: 3.2
+      acc_lim_x: 2.5
+      allow_init_with_backwards_motion: false
+      exact_arc_length: false
+      footprint_model:
+        type: point
+      global_plan_prune_distance: 1
+      global_plan_viapoint_sep: -1
+      max_global_plan_lookahead_dist: 5.6
+      max_samples: 500
+      max_vel_theta: 1.0
+      max_vel_x: 2.78
+      max_vel_x_backwards: 2.78
+      max_vel_y: 2.78
+      min_turning_radius: 0.0
+      publish_feedback: false

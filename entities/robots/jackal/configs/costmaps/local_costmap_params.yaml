@@ -1,3 +1,7 @@
-plugins:
-  - { name: obstacles_layer, type: "costmap_2d::ObstacleLayer" }
-  - { name: inflation_layer, type: "costmap_2d::InflationLayer" }
+/**:
+  ros__parameters:
+    plugins:
+    - name: obstacles_layer
+      type: costmap_2d::ObstacleLayer
+    - name: inflation_layer
+      type: costmap_2d::InflationLayer

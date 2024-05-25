@@ -1,49 +1,60 @@
-bodies: # List of named bodies
-  - name: base_link
-    pose: [0, 0, 0]
-    type: dynamic
-    color: [0.5, 0.5, 0.5, 1.0]
-    footprints:
-      - type: polygon
-        points: [[-0.21, -0.165], [-0.21, 0.165], [0.21, 0.165], [0.21, -0.165]]
-        layers: ["all"]
-        collision: true
+/**:
+  ros__parameters:
+    bodies:
+    - color:
+      - 0.5
+      - 0.5
+      - 0.5
+      - 1.0
+      footprints:
+      - collision: true
         density: 1
         friction: 0.1
+        layers:
+        - all
+        points:
+        - - -0.21
+          - -0.165
+        - - -0.21
+          - 0.165
+        - - 0.21
+          - 0.165
+        - - 0.21
+          - -0.165
         restitution: 0
         sensor: false
-
-plugins:
-  - type: DiffDrive
-    name: diff_drive
-    body: base_link
-    odom_frame_id: odom
-    odom_pub: odom # topic odom is published on
-    twist_sub: cmd_vel
-    pub_rate: 10
-
-  - type: Laser
-    name: static_laser
-    frame: front_laser
-    topic: scan
-    body: base_link
-    broadcast_tf: true
-    origin: [0.0, 0.0, 0.0]
-    # range: 3
-    #arena
-    range: 30.0
-    # ARENA angle: {min: -3.12413936, max: 3.14159265359, increment: 0.01745}
-    # DRL4 : angle: {min: -1.5707963267948966, max: 4.694936014, increment:  0.017453292}
-    # RLCA: angle: {min: 0, max: 6.28318977356, increment:  0.0175019223243}
-    # Real Turtlebot3/Gazebo:
-    angle: { min: -2.35619, max: 2.35619, increment: 0.00654497222 }
-
-    # noise_std_dev: 0.015
-    # arena
-    noise_std_dev: 0.0
-    update_rate: 10
-
-  - type: ModelTfPublisher
-    name: tf_publisher
-    publish_tf_world: false
-    # exclude: ["approx_footprint"]
+        type: polygon
+      name: base_link
+      pose:
+      - 0
+      - 0
+      - 0
+      type: dynamic
+    plugins:
+    - body: base_link
+      name: diff_drive
+      odom_frame_id: odom
+      odom_pub: odom
+      pub_rate: 10
+      twist_sub: cmd_vel
+      type: DiffDrive
+    - angle:
+        increment: 0.00654497222
+        max: 2.35619
+        min: -2.35619
+      body: base_link
+      broadcast_tf: true
+      frame: front_laser
+      name: static_laser
+      noise_std_dev: 0.0
+      origin:
+      - 0.0
+      - 0.0
+      - 0.0
+      range: 30.0
+      topic: scan
+      type: Laser
+      update_rate: 10
+    - name: tf_publisher
+      publish_tf_world: false
+      type: ModelTfPublisher

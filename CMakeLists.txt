@@ -8,6 +8,7 @@ endif()
 
 
 find_package(ament_cmake REQUIRED)
+find_package(REQUIRED REQUIRED)
 find_package(catkin REQUIRED)
 set(INCLUDE_DIRS ${ament_cmake_INCLUDE_DIRS} ${REQUIRED_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS})
@@ -17,7 +18,8 @@ set(LIBRARY_DIRS ${ament_cmake_LIBRARIES} ${REQUIRED_LIBRARIES}
 set(LIBS ${ament_cmake_LIBRARIES} ${REQUIRED_LIBRARIES} ${catkin_LIBRARIES})
 
 ament_export_dependencies(ament_cmake)
+ament_export_dependencies(REQUIRED)
 ament_export_dependencies(catkin)
-include_directories(${INCLUDE_DIRS})
+ament_export_include_directories(${INCLUDE_DIRS})
 
 ament_package()

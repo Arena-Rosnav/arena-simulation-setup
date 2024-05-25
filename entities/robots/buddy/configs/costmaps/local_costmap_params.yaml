@@ -1,7 +1,11 @@
-width: 10.0
-height: 10.0
-
-plugins:
-  - { name: 2d_obstacles_layer, type: "costmap_2d::ObstacleLayer" }
-  - { name: 3d_obstacles_layer, type: "costmap_2d::VoxelLayer" }
-  - { name: inflation_layer, type: "costmap_2d::InflationLayer" }
+/**:
+  ros__parameters:
+    height: 10.0
+    plugins:
+    - name: 2d_obstacles_layer
+      type: costmap_2d::ObstacleLayer
+    - name: 3d_obstacles_layer
+      type: costmap_2d::VoxelLayer
+    - name: inflation_layer
+      type: costmap_2d::InflationLayer
+    width: 10.0

@@ -1,20 +1,22 @@
-robot_base_frame: $(arg frame)base_footprint
-
-# footprint: [[-0.21, -0.21], [-0.21, 0.21], [0.21, 0.21], [0.21, -0.21]]
-footprint: [[-0.285, 0.285], [-0.285, -0.285], [0.285, -0.285], [0.285, 0.285]]
-robot_radius: 0.755
-
-inscribed_radius: 0.755
-circumscribed_radius: 0.755
-
-observation_sources: scan
-scan:
-  {
-    sensor_frame: $(arg frame)base_laser_front_link,
-    data_type: LaserScan,
-    topic: $(arg namespace)/scan,
-    marking: true,
-    clearing: true,
-  }
-
-
+/**:
+  ros__parameters:
+    circumscribed_radius: 0.755
+    footprint:
+    - - -0.285
+      - 0.285
+    - - -0.285
+      - -0.285
+    - - 0.285
+      - -0.285
+    - - 0.285
+      - 0.285
+    inscribed_radius: 0.755
+    observation_sources: scan
+    robot_base_frame: $(arg frame)base_footprint
+    robot_radius: 0.755
+    scan:
+      clearing: true
+      data_type: LaserScan
+      marking: true
+      sensor_frame: $(arg frame)base_laser_front_link
+      topic: $(arg namespace)/scan

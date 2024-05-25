@@ -1,5 +1,7 @@
-video_device: "/dev/video0"
-image_width: 2048
-image_height: 1536
-pixel_format: yuyv
-framerate: 3.5  #at 2048x1536 3.6hz is maximum on hw
+/**:
+  ros__parameters:
+    framerate: 3.5
+    image_height: 1536
+    image_width: 2048
+    pixel_format: yuyv
+    video_device: /dev/video0

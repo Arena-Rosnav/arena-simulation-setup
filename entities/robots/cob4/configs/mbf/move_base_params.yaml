@@ -1,12 +1,10 @@
-robot_frame: $(arg frame)base_footprint
-
-shutdown_costmaps: false
-
-controller_frequency: 5.0
-controller_patience: 3.0
-
-planner_frequency: 1.0
-planner_patience: 5.0
-
-oscillation_timeout: 10.0
-oscillation_distance: 0.2
+/**:
+  ros__parameters:
+    controller_frequency: 5.0
+    controller_patience: 3.0
+    oscillation_distance: 0.2
+    oscillation_timeout: 10.0
+    planner_frequency: 1.0
+    planner_patience: 5.0
+    robot_frame: $(arg frame)base_footprint
+    shutdown_costmaps: false

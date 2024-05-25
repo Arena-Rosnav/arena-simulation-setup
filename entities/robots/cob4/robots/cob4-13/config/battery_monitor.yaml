@@ -1,1 +1,2 @@
-../../cob4/config/battery_monitor.yaml
+/**:
+  ros__parameters: ../../cob4/config/battery_monitor.yaml

@@ -1,2 +1,4 @@
-global_frame: map
-static_map: true
+/**:
+  ros__parameters:
+    global_frame: map
+    static_map: true

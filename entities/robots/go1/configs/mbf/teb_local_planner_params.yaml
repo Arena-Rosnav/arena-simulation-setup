@@ -1,17 +1,23 @@
-TebLocalPlannerROS:
-  odom_topic: odom
-  robot_base_frame: base
-
-  # Robot
-
-  max_vel_x: 0.8
-  max_vel_x_backwards: 0.8
-  max_vel_y: 0.8
-  max_vel_theta: 1.2
-  acc_lim_x: 1.25
-  acc_lim_y: 1.25
-  acc_lim_theta: 1.0
-
-  footprint_model:
-    type: polygon
-    vertices: [[-0.285, 0.18], [-0.285, -0.18], [0.285, -0.18], [0.285, 0.18]]
+/**:
+  ros__parameters:
+    TebLocalPlannerROS:
+      acc_lim_theta: 1.0
+      acc_lim_x: 1.25
+      acc_lim_y: 1.25
+      footprint_model:
+        type: polygon
+        vertices:
+        - - -0.285
+          - 0.18
+        - - -0.285
+          - -0.18
+        - - 0.285
+          - -0.18
+        - - 0.285
+          - 0.18
+      max_vel_theta: 1.2
+      max_vel_x: 0.8
+      max_vel_x_backwards: 0.8
+      max_vel_y: 0.8
+      odom_topic: odom
+      robot_base_frame: base

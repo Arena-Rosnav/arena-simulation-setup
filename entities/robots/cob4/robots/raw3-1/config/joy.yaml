@@ -1,1 +1,2 @@
-../../raw3/config/joy.yaml
+/**:
+  ros__parameters: ../../raw3/config/joy.yaml

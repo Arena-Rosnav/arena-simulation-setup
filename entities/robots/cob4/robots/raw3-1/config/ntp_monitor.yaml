@@ -1,1 +1,2 @@
-../../raw3/config/ntp_monitor.yaml
+/**:
+  ros__parameters: ../../raw3/config/ntp_monitor.yaml

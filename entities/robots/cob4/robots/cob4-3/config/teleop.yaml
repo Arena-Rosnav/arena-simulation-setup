@@ -1,39 +1,34 @@
-#cob4-3
-##########
-# common params
-run_factor: 2.0
-apply_ramp: false
-joy_num_buttons: 12
-joy_num_axes: 6
-joy_num_modes: 4
-mode_switch_button: 8
-
-enable_light: false
-light_action_name: /light_base/set_light
-enable_sound: false
-sound_action_name: /sound/say
-
-# axes
-axis_vx: 1
-axis_vy: 0
-axis_vz: 5
-axis_roll: 4
-axis_pitch: 3
-axis_yaw: 2
-
-# buttons
-deadman_button: 5
-safety_button: 4
-init_button: 9
-
-#mode1: Base
-run_button: 7
-
-components: {
-  base: {
-    twist_topic_name: '/base/twist_mux/command_teleop_joy',
-    twist_safety_topic_name: '/base/collision_velocity_filter/command',
-    twist_max_velocity: [0.3, 0.2, 0.3],
-    twist_max_acc: [0.5, 0.5, 0.7]
-  }
-}
+/**:
+  ros__parameters:
+    apply_ramp: false
+    axis_pitch: 3
+    axis_roll: 4
+    axis_vx: 1
+    axis_vy: 0
+    axis_vz: 5
+    axis_yaw: 2
+    components:
+      base:
+        twist_max_acc:
+        - 0.5
+        - 0.5
+        - 0.7
+        twist_max_velocity:
+        - 0.3
+        - 0.2
+        - 0.3
+        twist_safety_topic_name: /base/collision_velocity_filter/command
+        twist_topic_name: /base/twist_mux/command_teleop_joy
+    deadman_button: 5
+    enable_light: false
+    enable_sound: false
+    init_button: 9
+    joy_num_axes: 6
+    joy_num_buttons: 12
+    joy_num_modes: 4
+    light_action_name: /light_base/set_light
+    mode_switch_button: 8
+    run_button: 7
+    run_factor: 2.0
+    safety_button: 4
+    sound_action_name: /sound/say
