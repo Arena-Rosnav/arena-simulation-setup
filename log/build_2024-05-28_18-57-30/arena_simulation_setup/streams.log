@@ -1,0 +1,21 @@
+[0.022s] Invoking command in '/home/ahmo030/ros2-migration/arena/simulation-setup/build/arena_simulation_setup': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/ahmo030/ros2-migration/arena/simulation-setup/build/arena_simulation_setup -- -j16 -l16
+[0.051s] Invoked command in '/home/ahmo030/ros2-migration/arena/simulation-setup/build/arena_simulation_setup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/ahmo030/ros2-migration/arena/simulation-setup/build/arena_simulation_setup -- -j16 -l16
+[0.075s] Invoking command in '/home/ahmo030/ros2-migration/arena/simulation-setup/build/arena_simulation_setup': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/ahmo030/ros2-migration/arena/simulation-setup/build/arena_simulation_setup
+[0.086s] -- Install configuration: ""
+[0.086s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/ament_index/resource_index/package_run_dependencies/arena_simulation_setup
+[0.086s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/ament_index/resource_index/parent_prefix_path/arena_simulation_setup
+[0.086s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/arena_simulation_setup/environment/ament_prefix_path.sh
+[0.086s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/arena_simulation_setup/environment/ament_prefix_path.dsv
+[0.086s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/arena_simulation_setup/environment/path.sh
+[0.086s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/arena_simulation_setup/environment/path.dsv
+[0.086s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/arena_simulation_setup/local_setup.bash
+[0.086s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/arena_simulation_setup/local_setup.sh
+[0.086s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/arena_simulation_setup/local_setup.zsh
+[0.086s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/arena_simulation_setup/local_setup.dsv
+[0.086s] -- Installing: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/arena_simulation_setup/package.dsv
+[0.087s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/ament_index/resource_index/packages/arena_simulation_setup
+[0.087s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/arena_simulation_setup/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.087s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/arena_simulation_setup/cmake/arena_simulation_setupConfig.cmake
+[0.087s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/arena_simulation_setup/cmake/arena_simulation_setupConfig-version.cmake
+[0.087s] -- Up-to-date: /home/ahmo030/ros2-migration/arena/simulation-setup/install/arena_simulation_setup/share/arena_simulation_setup/package.xml
+[0.087s] Invoked command in '/home/ahmo030/ros2-migration/arena/simulation-setup/build/arena_simulation_setup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/ahmo030/ros2-migration/arena/simulation-setup/build/arena_simulation_setup
