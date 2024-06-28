@@ -1,2 +1,7 @@
-rate: 100 #Hz
-source_list: [/base/joint_states, /arm/joint_states, /torso/joint_states]
+/**:
+  ros__parameters:
+    rate: 100
+    source_list:
+    - /base/joint_states
+    - /arm/joint_states
+    - /torso/joint_states

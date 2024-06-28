@@ -1,5 +1,7 @@
-video_device: "/dev/video0"
-image_width: 1280
-image_height: 960
-pixel_format: yuyv
-framerate: 10
+/**:
+  ros__parameters:
+    framerate: 10
+    image_height: 960
+    image_width: 1280
+    pixel_format: yuyv
+    video_device: /dev/video0

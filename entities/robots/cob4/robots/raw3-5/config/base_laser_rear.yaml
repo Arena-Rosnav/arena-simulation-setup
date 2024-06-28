@@ -1,7 +1,11 @@
-host: 141.3.80.115
-angle_resolution: 0.25 #deg
-scan_frequency: 25 #hz
-inverted: true
-frame_id: base_laser_rear_link
-scan_intervals: [[-2.0, 2.0]] #[rad] these intervals are included to the scan
-set_config: false
+/**:
+  ros__parameters:
+    angle_resolution: 0.25
+    frame_id: base_laser_rear_link
+    host: 141.3.80.115
+    inverted: true
+    scan_frequency: 25
+    scan_intervals:
+    - - -2.0
+      - 2.0
+    set_config: false

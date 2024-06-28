@@ -1,62 +1,60 @@
-MpcLocalPlannerROS:
-
-  # params are from https://github.com/dietriro/rto_core/tree/noetic-devel/rto_navigation/config
-  # and https://www.robotshop.com/media/files/content/f/fto/pdf/festo-robotino-mobile-robotic-datasheet.pdf
-
-  # TODO must change parameters for better performance in simulation!
-    # speed is significantly lower than with the teb
-    # sometimes cannot react to pedestrians
-
-  ## Robot settings
-  robot:
-    type: unicycle
-    unicycle:
-      max_vel_x: 2.78
-      max_vel_x_backwards: 2.78
-      max_vel_theta: 1.0
-      acc_lim_x: 2.5 # deactive bounds with zero
-      dec_lim_x: 0.2 # deactive bounds with zero
-      acc_lim_theta: 3.2 # deactivate bounds with zero
-
-  ## Footprint model for collision avoidance
-  footprint_model:
-    type: point
-    is_footprint_dynamic: false
-
-  ## Collision avoidance
-  collision_avoidance:
-    min_obstacle_dist: 0.225 # Note, this parameter must be chosen w.r.t. the footprint_model
-    enable_dynamic_obstacles: false
-    force_inclusion_dist: 0.5
-    cutoff_dist: 2.5
-    include_costmap_obstacles: true
-    costmap_obstacles_behind_robot_dist: 1.5
-
-  ## Planning grid
-  grid:
-    type: fd_grid
-    xf_fixed: [true, true, true]
-  planning:
-    objective:
-      type: minimum_time   # minimum_time requires grid/variable_grid/enable=True and grid/xf_fixed set properly
-      quadratic_form:
-        state_weights: [2.0, 2.0, 2.0]
-        control_weights: [1.0, 1.0]
-      minimum_time_via_points:
-        position_weight: 10.5
-        orientation_weight: 0.0
-        via_points_ordered: false
-    terminal_cost:
-      type: none   # can be "none"
-      quadratic:
-        final_state_weights: [2.0, 2.0, 2.0]
-    terminal_constraint:
-      type: none   # can be "none"
-  controller:
-    outer_ocp_iterations: 5
-    max_global_plan_lookahead_dist: 5.6
-    global_plan_viapoint_sep: 5.5
-  solver:
-    type: ipopt
-    lsq_lm:
-      iterations: 10
+/**:
+  ros__parameters:
+    MpcLocalPlannerROS:
+      collision_avoidance:
+        costmap_obstacles_behind_robot_dist: 1.5
+        cutoff_dist: 2.5
+        enable_dynamic_obstacles: false
+        force_inclusion_dist: 0.5
+        include_costmap_obstacles: true
+        min_obstacle_dist: 0.225
+      controller:
+        global_plan_viapoint_sep: 5.5
+        max_global_plan_lookahead_dist: 5.6
+        outer_ocp_iterations: 5
+      footprint_model:
+        is_footprint_dynamic: false
+        type: point
+      grid:
+        type: fd_grid
+        xf_fixed:
+        - true
+        - true
+        - true
+      planning:
+        objective:
+          minimum_time_via_points:
+            orientation_weight: 0.0
+            position_weight: 10.5
+            via_points_ordered: false
+          quadratic_form:
+            control_weights:
+            - 1.0
+            - 1.0
+            state_weights:
+            - 2.0
+            - 2.0
+            - 2.0
+          type: minimum_time
+        terminal_constraint:
+          type: none
+        terminal_cost:
+          quadratic:
+            final_state_weights:
+            - 2.0
+            - 2.0
+            - 2.0
+          type: none
+      robot:
+        type: unicycle
+        unicycle:
+          acc_lim_theta: 3.2
+          acc_lim_x: 2.5
+          dec_lim_x: 0.2
+          max_vel_theta: 1.0
+          max_vel_x: 2.78
+          max_vel_x_backwards: 2.78
+      solver:
+        lsq_lm:
+          iterations: 10
+        type: ipopt

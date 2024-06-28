@@ -1,19 +1,13 @@
-robot_base_frame: $(arg frame)base_link
-
-#footprint: [[x0, y0], [x1, y1], ... [xn, yn]]
-robot_radius: 0.225
-
-inscribed_radius: 0.225
-circumscribed_radius: 0.225
-
-observation_sources: scan
-scan:
-  {
-    sensor_frame: $(arg frame)hokuyo_link,
-    data_type: LaserScan,
-    topic: $(arg namespace)/scan,
-    marking: true,
-    clearing: true,
-  }
-
-
+/**:
+  ros__parameters:
+    circumscribed_radius: 0.225
+    inscribed_radius: 0.225
+    observation_sources: scan
+    robot_base_frame: $(arg frame)base_link
+    robot_radius: 0.225
+    scan:
+      clearing: true
+      data_type: LaserScan
+      marking: true
+      sensor_frame: $(arg frame)hokuyo_link
+      topic: $(arg namespace)/scan

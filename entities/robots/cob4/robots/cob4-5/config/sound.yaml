@@ -1,1 +1,2 @@
-../../cob4/config/sound.yaml
+/**:
+  ros__parameters: ../../cob4/config/sound.yaml

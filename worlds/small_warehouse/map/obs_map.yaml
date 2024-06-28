@@ -1,6 +1,11 @@
-image: obs.pgm
-resolution: 0.100000
-origin: [-11.000000, -11.000000, 0.000000]
-negate: 0
-occupied_thresh: 0.65
-free_thresh: 0.196
+/**:
+  ros__parameters:
+    free_thresh: 0.196
+    image: obs.pgm
+    negate: 0
+    occupied_thresh: 0.65
+    origin:
+    - -11.0
+    - -11.0
+    - 0.0
+    resolution: 0.1

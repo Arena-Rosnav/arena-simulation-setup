@@ -1,41 +1,49 @@
-robot_model: ridgeback
-robot_radius: 0.625
-robot_base_frame: base_link
-robot_sensor_frame: front_laser
-is_holonomic: True
-actions:
-  discrete:
-    - name: move_forward
-      linear: 1.1
-      angular: 0.0
-    - name: move_backward
-      linear: -0.15
-      angular: 0.0
-    - name: turn_left
-      linear: 0.15
-      angular: 0.35
-    - name: turn_right
-      linear: 0.15
-      angular: -0.35
-    - name: turn_strong_left
-      linear: 0.0
-      angular: 0.75
-    - name: turn_strong_right
-      linear: 0.0
-      angular: -0.75
-    - name: stop
-      linear: 0.0
-      angular: 0.0
-  continuous:
-    linear_range:
-      x: [-1.1, 1.1] # Maximum translational velocity in m/s
-      y: [-0.5, 0.5]
-    angular_range: [-2.0, 2.0] # Maximum rotational velocity in rad/s
-laser:
-  angle:
-    min: -2.35619
-    max: 2.35619
-    increment: 0.00654497222
-  num_beams: 720
-  range: 10.0
-  update_rate: 10
+/**:
+  ros__parameters:
+    actions:
+      continuous:
+        angular_range:
+        - -2.0
+        - 2.0
+        linear_range:
+          x:
+          - -1.1
+          - 1.1
+          y:
+          - -0.5
+          - 0.5
+      discrete:
+      - angular: 0.0
+        linear: 1.1
+        name: move_forward
+      - angular: 0.0
+        linear: -0.15
+        name: move_backward
+      - angular: 0.35
+        linear: 0.15
+        name: turn_left
+      - angular: -0.35
+        linear: 0.15
+        name: turn_right
+      - angular: 0.75
+        linear: 0.0
+        name: turn_strong_left
+      - angular: -0.75
+        linear: 0.0
+        name: turn_strong_right
+      - angular: 0.0
+        linear: 0.0
+        name: stop
+    is_holonomic: true
+    laser:
+      angle:
+        increment: 0.00654497222
+        max: 2.35619
+        min: -2.35619
+      num_beams: 720
+      range: 10.0
+      update_rate: 10
+    robot_base_frame: base_link
+    robot_model: ridgeback
+    robot_radius: 0.625
+    robot_sensor_frame: front_laser

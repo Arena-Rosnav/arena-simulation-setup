@@ -1,23 +1,15 @@
-DwaLocalPlannerROS:
-  # Robot Configuration Parameters
-  max_vel_x: 0.4
-  min_vel_x: -0.2
-
-  max_vel_y: 0.0
-  min_vel_y: 0.0
-
-  # The velocity when robot is moving in a straight line
-  max_vel_trans: 0.22
-  min_vel_trans: 0.11
-
-  max_vel_theta: 2.75
-  min_vel_theta: 1.37
-
-  acc_lim_x: 2.5
-  acc_lim_y: 0.0
-  acc_lim_theta: 3.2
-
-  # Goal Tolerance Parametes
-  controller_frequency: 10.0
-
-  # Trajectory Scoring Parameters
+/**:
+  ros__parameters:
+    DwaLocalPlannerROS:
+      acc_lim_theta: 3.2
+      acc_lim_x: 2.5
+      acc_lim_y: 0.0
+      controller_frequency: 10.0
+      max_vel_theta: 2.75
+      max_vel_trans: 0.22
+      max_vel_x: 0.4
+      max_vel_y: 0.0
+      min_vel_theta: 1.37
+      min_vel_trans: 0.11
+      min_vel_x: -0.2
+      min_vel_y: 0.0

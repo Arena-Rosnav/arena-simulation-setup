@@ -1,68 +1,61 @@
-pub_rate: 1.0 # Optional
-base_path: '' # Optional, prepended to all diagnostic output
-analyzers:
-  computers:
-    type: diagnostic_aggregator/AnalyzerGroup
-    path: Computers
+/**:
+  ros__parameters:
     analyzers:
-      b1:
+      computers:
+        analyzers:
+          b1:
+            contains:
+            - b1 CPU Info
+            - b1 CPU Usage
+            - b1 HD Usage
+            - b1 Memory Usage
+            path: b1
+            type: diagnostic_aggregator/GenericAnalyzer
+        path: Computers
+        type: diagnostic_aggregator/AnalyzerGroup
+      io:
+        analyzers:
+          joystick:
+            contains: joy
+            path: Joystick
+            type: diagnostic_aggregator/GenericAnalyzer
+          light:
+            contains: light
+            path: Light
+            type: diagnostic_aggregator/GenericAnalyzer
+        path: IO
+        type: diagnostic_aggregator/AnalyzerGroup
+      motors:
+        analyzers:
+          base:
+            contains: base/
+            path: Base
+            type: diagnostic_aggregator/GenericAnalyzer
+        path: Actuators
+        type: diagnostic_aggregator/AnalyzerGroup
+      safety:
+        contains: safety
+        path: Safety
         type: diagnostic_aggregator/GenericAnalyzer
-        path: b1
-        contains: ['b1 CPU Info', 'b1 CPU Usage', 'b1 HD Usage', 'b1 Memory Usage']
-#  network:
-#    type: diagnostic_aggregator/AnalyzerGroup
-#    path: Network
-#    analyzers:
-#      wifi:
-#        type: diagnostic_aggregator/GenericAnalyzer
-#        path: wifi
-#        num_items: 1
-#        expected: ['Wifi Status (ddwrt)']
-
-  io:
-    type: diagnostic_aggregator/AnalyzerGroup
-    path: IO
-    analyzers:
-      joystick:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Joystick
-        contains: 'joy'
-      light:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Light
-        contains: 'light'
-
-  sensors:
-    type: diagnostic_aggregator/AnalyzerGroup
-    path: Sensors
-    analyzers:
-      laser_top:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Scan Front
-        contains: 'laser_front'
-      laser_rear:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Scan Right
-        contains: 'laser_right'
-      laser_front:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Scan Left
-        contains: 'laser_left'
-      battery:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Battery Status
-        contains: 'bms'
-
-  motors:
-    type: diagnostic_aggregator/AnalyzerGroup
-    path: Actuators
-    analyzers:
-      base:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Base
-        contains: 'base/'
-
-  safety:
-    type: diagnostic_aggregator/GenericAnalyzer
-    path: Safety
-    contains: 'safety'
+      sensors:
+        analyzers:
+          battery:
+            contains: bms
+            path: Battery Status
+            type: diagnostic_aggregator/GenericAnalyzer
+          laser_front:
+            contains: laser_left
+            path: Scan Left
+            type: diagnostic_aggregator/GenericAnalyzer
+          laser_rear:
+            contains: laser_right
+            path: Scan Right
+            type: diagnostic_aggregator/GenericAnalyzer
+          laser_top:
+            contains: laser_front
+            path: Scan Front
+            type: diagnostic_aggregator/GenericAnalyzer
+        path: Sensors
+        type: diagnostic_aggregator/AnalyzerGroup
+    base_path: ''
+    pub_rate: 1.0

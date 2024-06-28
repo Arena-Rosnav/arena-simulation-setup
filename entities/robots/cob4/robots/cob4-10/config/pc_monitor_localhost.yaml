@@ -1,1 +1,2 @@
-../../cob4/config/pc_monitor_localhost.yaml
+/**:
+  ros__parameters: ../../cob4/config/pc_monitor_localhost.yaml

@@ -1,2 +1,11 @@
-rate: 100 #Hz
-source_list: [/base/joint_states, /arm_left/joint_states, /arm_right/joint_states, /gripper_left/joint_states, /gripper_right/joint_states, /sensorring/joint_states, /head/joint_states]
+/**:
+  ros__parameters:
+    rate: 100
+    source_list:
+    - /base/joint_states
+    - /arm_left/joint_states
+    - /arm_right/joint_states
+    - /gripper_left/joint_states
+    - /gripper_right/joint_states
+    - /sensorring/joint_states
+    - /head/joint_states

@@ -1,10 +1,24 @@
-bodies:
-  - name: base
-    color: [0.8, 0.2, 0, 1.0]
-
-    footprints:
-      - type: polygon
-        points: [[-1.1, 0.35], [1.1, 0.35], [1.1, -0.35], [-1.1, -0.35]]
+/**:
+  ros__parameters:
+    bodies:
+    - color:
+      - 0.8
+      - 0.2
+      - 0
+      - 1.0
+      footprints:
+      - collision: false
         density: 1
-        layers: ["static"]
-        collision: false
+        layers:
+        - static
+        points:
+        - - -1.1
+          - 0.35
+        - - 1.1
+          - 0.35
+        - - 1.1
+          - -0.35
+        - - -1.1
+          - -0.35
+        type: polygon
+      name: base

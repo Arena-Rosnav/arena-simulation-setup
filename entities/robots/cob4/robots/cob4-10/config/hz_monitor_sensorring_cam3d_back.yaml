@@ -1,4 +1,7 @@
-diagnostics_name: sensorring_cam3d_back
-topics: [/sensorring_cam3d_back/rgb/camera_info]
-hz: 30 
-hzerror: 5
+/**:
+  ros__parameters:
+    diagnostics_name: sensorring_cam3d_back
+    hz: 30
+    hzerror: 5
+    topics:
+    - /sensorring_cam3d_back/rgb/camera_info

@@ -1,17 +1,11 @@
-# params are from https://github.com/dietriro/rto_core/tree/noetic-devel/rto_navigation/config
-# and https://www.robotshop.com/media/files/content/f/fto/pdf/festo-robotino-mobile-robotic-datasheet.pdf
-
-robot_base_frame: $(arg frame)base_footprint
-
-#footprint: [[x0, y0], [x1, y1], ... [xn, yn]]
-robot_radius: 0.225
-
-observation_sources: scan
-scan:
-  {
-    sensor_frame: $(arg frame)laser_link,
-    data_type: LaserScan,
-    topic: $(arg namespace)/scan,
-    marking: true,
-    clearing: true,
-  }
+/**:
+  ros__parameters:
+    observation_sources: scan
+    robot_base_frame: $(arg frame)base_footprint
+    robot_radius: 0.225
+    scan:
+      clearing: true
+      data_type: LaserScan
+      marking: true
+      sensor_frame: $(arg frame)laser_link
+      topic: $(arg namespace)/scan

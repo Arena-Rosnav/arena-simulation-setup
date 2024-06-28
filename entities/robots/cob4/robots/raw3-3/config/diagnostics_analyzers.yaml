@@ -1,49 +1,49 @@
-pub_rate: 1.0 # Optional
-base_path: '' # Optional, prepended to all diagnostic output
-analyzers:
-  computers:
-    type: diagnostic_aggregator/AnalyzerGroup
-    path: Computers
+/**:
+  ros__parameters:
     analyzers:
-      pc1:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: pc1
-        contains: 'pc1'
-      pc2:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: pc2
-        contains: 'pc2'
-
-  sensors:
-    type: diagnostic_aggregator/AnalyzerGroup
-    path: Sensors
-    analyzers:
-      joystick:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Joystick
-        contains: 'joy'
-      laser_rear:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Scan Rear
-        contains: 'laser_rear'
-      laser_front:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Scan Front
-        contains: 'laser_front'
-
-  motors:
-    type: diagnostic_aggregator/AnalyzerGroup
-    path: Actuators
-    analyzers:
-      base:
+      computers:
+        analyzers:
+          pc1:
+            contains: pc1
+            path: pc1
+            type: diagnostic_aggregator/GenericAnalyzer
+          pc2:
+            contains: pc2
+            path: pc2
+            type: diagnostic_aggregator/GenericAnalyzer
+        path: Computers
         type: diagnostic_aggregator/AnalyzerGroup
-        path: Base
+      motors:
         analyzers:
           base:
-            type: diagnostic_aggregator/GenericAnalyzer
+            analyzers:
+              base:
+                contains: base/
+                path: Base
+                type: diagnostic_aggregator/GenericAnalyzer
+              base_twist_mux:
+                contains: twist_mux
+                path: twist_mux
+                type: diagnostic_aggregator/GenericAnalyzer
             path: Base
-            contains: 'base/'
-          base_twist_mux:
+            type: diagnostic_aggregator/AnalyzerGroup
+        path: Actuators
+        type: diagnostic_aggregator/AnalyzerGroup
+      sensors:
+        analyzers:
+          joystick:
+            contains: joy
+            path: Joystick
             type: diagnostic_aggregator/GenericAnalyzer
-            path: twist_mux
-            contains: 'twist_mux'
+          laser_front:
+            contains: laser_front
+            path: Scan Front
+            type: diagnostic_aggregator/GenericAnalyzer
+          laser_rear:
+            contains: laser_rear
+            path: Scan Rear
+            type: diagnostic_aggregator/GenericAnalyzer
+        path: Sensors
+        type: diagnostic_aggregator/AnalyzerGroup
+    base_path: ''
+    pub_rate: 1.0

@@ -1,3 +1,5 @@
-inters:
-  - name: SidewaysInter
-    type: sideways_inter/SidewaysInter
+/**:
+  ros__parameters:
+    inters:
+    - name: SidewaysInter
+      type: sideways_inter/SidewaysInter

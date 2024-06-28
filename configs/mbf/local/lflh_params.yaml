@@ -1,15 +1,13 @@
-planners:
-  - name: NavfnROS
-    type: navfn/NavfnROS
-
-controllers:
-  - name: TrajectoryPlannerROS
-    type: base_local_planner/TrajectoryPlannerROS
-
-
-TrajectoryPlannerROS:
-  odom_topic: odom
-  max_vel_x: $(arg speed)
-
-controller_frequency: 5.0
-planner_frequency: 0.0
+/**:
+  ros__parameters:
+    TrajectoryPlannerROS:
+      max_vel_x: $(arg speed)
+      odom_topic: odom
+    controller_frequency: 5.0
+    controllers:
+    - name: TrajectoryPlannerROS
+      type: base_local_planner/TrajectoryPlannerROS
+    planner_frequency: 0.0
+    planners:
+    - name: NavfnROS
+      type: navfn/NavfnROS

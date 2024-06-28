@@ -1,6 +1,5 @@
-# node from which initial footprint is read
-footprint_source: /local_costmap_node/costmap
-
-#
-robot_base_frame: base_link
-epsilon: 0.01
+/**:
+  ros__parameters:
+    epsilon: 0.01
+    footprint_source: /local_costmap_node/costmap
+    robot_base_frame: base_link
