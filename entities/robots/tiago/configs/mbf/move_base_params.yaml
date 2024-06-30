@@ -1,1 +1,0 @@
-robot_frame: $(arg frame)base_footprint
