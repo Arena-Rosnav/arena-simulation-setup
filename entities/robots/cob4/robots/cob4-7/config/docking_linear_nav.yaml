@@ -1,1 +1,2 @@
-../../cob4/config/docking_linear_nav.yaml
+/**:
+  ros__parameters: ../../cob4/config/docking_linear_nav.yaml

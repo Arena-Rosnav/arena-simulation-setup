@@ -1,32 +1,38 @@
-MpcLocalPlannerROS:
-  robot:
-    type: unicycle
-    unicycle:
-      max_vel_x: 2.0
-      max_vel_x_backwards: 0.5
-      max_vel_theta: 1.57
-      acc_lim_x: 10.0 # deactive bounds with zero
-      dec_lim_x: 10.0 # deactive bounds with zero
-      acc_lim_theta: 20.0 # deactivate bounds with zero
-
-  ## Footprint model for collision avoidance
-  footprint_model:
-    type: polygon
-    vertices: [[-0.21, -0.165], [-0.21, 0.165], [0.21, 0.165], [0.21, -0.165]]
-
-  ## Planning grid
-  grid:
-    type: fd_grid
-    variable_grid:
-      enable: false # We want a fixed grid
-  planning:
-    objective:
-      type: quadratic_form   # minimum_time requires grid/variable_grid/enable=True and grid/xf_fixed set properly
-    terminal_cost:
-      type: quadratic   # can be "none"
-    terminal_constraint:
-      type: none   # can be "none"
-  solver:
-    type: ipopt
-    lsq_lm:
-      iterations: 10
+/**:
+  ros__parameters:
+    MpcLocalPlannerROS:
+      footprint_model:
+        type: polygon
+        vertices:
+        - - -0.21
+          - -0.165
+        - - -0.21
+          - 0.165
+        - - 0.21
+          - 0.165
+        - - 0.21
+          - -0.165
+      grid:
+        type: fd_grid
+        variable_grid:
+          enable: false
+      planning:
+        objective:
+          type: quadratic_form
+        terminal_constraint:
+          type: none
+        terminal_cost:
+          type: quadratic
+      robot:
+        type: unicycle
+        unicycle:
+          acc_lim_theta: 20.0
+          acc_lim_x: 10.0
+          dec_lim_x: 10.0
+          max_vel_theta: 1.57
+          max_vel_x: 2.0
+          max_vel_x_backwards: 0.5
+      solver:
+        lsq_lm:
+          iterations: 10
+        type: ipopt

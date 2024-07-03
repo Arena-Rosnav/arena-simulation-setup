@@ -1,33 +1,39 @@
-# Please note that this is a basic parameter file and this config has not yet been configured with this specific robot in mind.
-
-HATebLocalPlannerROS:
-
-  # Robot
-  holonomic_robot: true
-  type: 0 #(0: Robot, 1: Human)
-  max_vel_y: 0.7
-  acc_lim_y: 0.3
-  max_vel_x: 2.0
-  min_vel_x: 0.02
-  max_vel_x_backwards: 0.4
-  max_vel_theta: 1.2
-  min_vel_theta: 0.1
-  acc_lim_x: 0.3
-  acc_lim_theta: 0.4
-  min_turning_radius: 0.0
-  footprint_model: # types: "point", "circular", "two_circles", "line", "polygon"
-    type: "circular"
-    radius: 0.34 # for type "circular"
-    line_start: [-0.3, 0.0] # for type "line"
-    line_end: [0.3, 0.0] # for type "line"
-    front_offset: 0.2 # for type "two_circles"
-    front_radius: 0.2 # for type "two_circles"
-    rear_offset: 0.2 # for type "two_circles"
-    rear_radius: 0.2 # for type "two_circles"
-    vertices: [
-        [-0.325, -0.325],
-        [-0.325, 0.325],
-        [0.325, 0.325],
-        [0.46, 0.0],
-        [0.325, -0.325],
-      ] # for type "polygon"
+/**:
+  ros__parameters:
+    HATebLocalPlannerROS:
+      acc_lim_theta: 0.4
+      acc_lim_x: 0.3
+      acc_lim_y: 0.3
+      footprint_model:
+        front_offset: 0.2
+        front_radius: 0.2
+        line_end:
+        - 0.3
+        - 0.0
+        line_start:
+        - -0.3
+        - 0.0
+        radius: 0.34
+        rear_offset: 0.2
+        rear_radius: 0.2
+        type: circular
+        vertices:
+        - - -0.325
+          - -0.325
+        - - -0.325
+          - 0.325
+        - - 0.325
+          - 0.325
+        - - 0.46
+          - 0.0
+        - - 0.325
+          - -0.325
+      holonomic_robot: true
+      max_vel_theta: 1.2
+      max_vel_x: 2.0
+      max_vel_x_backwards: 0.4
+      max_vel_y: 0.7
+      min_turning_radius: 0.0
+      min_vel_theta: 0.1
+      min_vel_x: 0.02
+      type: 0

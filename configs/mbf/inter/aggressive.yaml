@@ -1,3 +1,5 @@
-inters:
-  - name: AggressiveInter
-    type: aggressive_inter/AggressiveInter
+/**:
+  ros__parameters:
+    inters:
+    - name: AggressiveInter
+      type: aggressive_inter/AggressiveInter

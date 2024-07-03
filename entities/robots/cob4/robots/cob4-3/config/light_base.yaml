@@ -1,1 +1,2 @@
-../../cob4/config/light_base.yaml
+/**:
+  ros__parameters: ../../cob4/config/light_base.yaml

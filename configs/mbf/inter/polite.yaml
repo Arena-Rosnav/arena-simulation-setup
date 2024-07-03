@@ -1,3 +1,5 @@
-inters:
-  - name: PoliteInter
-    type: polite_inter/PoliteInter
+/**:
+  ros__parameters:
+    inters:
+    - name: PoliteInter
+      type: polite_inter/PoliteInter

@@ -1,1 +1,2 @@
-../../cob4/config/collision_velocity_filter_params.yaml
+/**:
+  ros__parameters: ../../cob4/config/collision_velocity_filter_params.yaml

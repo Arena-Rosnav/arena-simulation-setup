@@ -1,41 +1,49 @@
-robot_model: rto
-robot_radius: 0.225
-robot_base_frame: base_link
-robot_sensor_frame: hokuyo_link
-is_holonomic: True
-actions:
-  discrete:
-    - name: move_forward
-      linear: 2.78
-      angular: 0.0
-    - name: move_backward
-      linear: -0.15
-      angular: 0.0
-    - name: turn_left
-      linear: 0.15
-      angular: 0.35
-    - name: turn_right
-      linear: 0.15
-      angular: -0.35
-    - name: turn_strong_left
-      linear: 0.0
-      angular: 0.75
-    - name: turn_strong_right
-      linear: 0.0
-      angular: -0.75
-    - name: stop
-      linear: 0.0
-      angular: 0.0
-  continuous:
-    linear_range:
-      x: [-2.78, 2.78] # Maximum translational velocity in m/s
-      y: [-2.78, 2.78]
-    angular_range: [-1.0, 1.0] # Maximum rotational velocity in rad/s
-laser:
-  angle:
-    min: -2.39983
-    max: 2.39983
-    increment: 0.0087
-  update_rate: 10
-  range: 50.0
-  num_beams: 552
+/**:
+  ros__parameters:
+    actions:
+      continuous:
+        angular_range:
+        - -1.0
+        - 1.0
+        linear_range:
+          x:
+          - -2.78
+          - 2.78
+          y:
+          - -2.78
+          - 2.78
+      discrete:
+      - angular: 0.0
+        linear: 2.78
+        name: move_forward
+      - angular: 0.0
+        linear: -0.15
+        name: move_backward
+      - angular: 0.35
+        linear: 0.15
+        name: turn_left
+      - angular: -0.35
+        linear: 0.15
+        name: turn_right
+      - angular: 0.75
+        linear: 0.0
+        name: turn_strong_left
+      - angular: -0.75
+        linear: 0.0
+        name: turn_strong_right
+      - angular: 0.0
+        linear: 0.0
+        name: stop
+    is_holonomic: true
+    laser:
+      angle:
+        increment: 0.0087
+        max: 2.39983
+        min: -2.39983
+      num_beams: 552
+      range: 50.0
+      update_rate: 10
+    robot_base_frame: base_link
+    robot_model: rto
+    robot_radius: 0.225
+    robot_sensor_frame: hokuyo_link

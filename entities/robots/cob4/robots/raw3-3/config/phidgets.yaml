@@ -1,34 +1,35 @@
-frequency: 30                       #nodes update frequency in hz
-update_mode: polling                #switch between poll and event driven processing [polling, event]
-
-boards:
-  ifk_general:
-    serial_num: 272849
-    ratiometric: true
-    sensors:
-      voltage:
-        type: analog
-        index: 0
-      current:
-        type: analog
-        index: 1
-      em_stop_laser_rear:
-        type: digital_in
-        index: 6
-      em_stop_laser_front:
-        type: digital_in
-        index: 7
-      example1:
-        type: analog
-        index: 4
-        change_trigger: 10          #the sensors change trigger value (only event driven mode)
-        data_rate: 20               #ports data rate
-      run:
-        type: digital_out
-        index: 0
-      backward:
-        type: digital_out
-        index: 1
-      forward:
-        type: digital_out
-        index: 2
+/**:
+  ros__parameters:
+    boards:
+      ifk_general:
+        ratiometric: true
+        sensors:
+          backward:
+            index: 1
+            type: digital_out
+          current:
+            index: 1
+            type: analog
+          em_stop_laser_front:
+            index: 7
+            type: digital_in
+          em_stop_laser_rear:
+            index: 6
+            type: digital_in
+          example1:
+            change_trigger: 10
+            data_rate: 20
+            index: 4
+            type: analog
+          forward:
+            index: 2
+            type: digital_out
+          run:
+            index: 0
+            type: digital_out
+          voltage:
+            index: 0
+            type: analog
+        serial_num: 272849
+    frequency: 30
+    update_mode: polling

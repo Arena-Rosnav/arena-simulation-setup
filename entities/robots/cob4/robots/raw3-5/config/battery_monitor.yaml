@@ -1,7 +1,7 @@
-threshold_warning: 20 # % of battery level
-threshold_error: 10 # % of battery level
-threshold_critical: 5 # % of battery level
-
-enable_light: false
-
-enable_sound: false
+/**:
+  ros__parameters:
+    enable_light: false
+    enable_sound: false
+    threshold_critical: 5
+    threshold_error: 10
+    threshold_warning: 20

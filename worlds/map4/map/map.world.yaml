@@ -1,12 +1,13 @@
-properties: 
- 
-  velocity_iterations: 10
-
-  position_iterations: 10
-layers:  # Support for arbitrary number of layers
-  - name: "static"
-    map: "map.yaml"  # leading / denotes absolute file path, otherwise relative
-    color: [0, 1, 0, 1]  # List of floats [r,g,b,a] to color debug boundary
-    
- 
-    
+/**:
+  ros__parameters:
+    layers:
+    - color:
+      - 0
+      - 1
+      - 0
+      - 1
+      map: map.yaml
+      name: static
+    properties:
+      position_iterations: 10
+      velocity_iterations: 10

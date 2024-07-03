@@ -1,1 +1,2 @@
-../../cob4/config/torso_self_collision.yaml
+/**:
+  ros__parameters: ../../cob4/config/torso_self_collision.yaml

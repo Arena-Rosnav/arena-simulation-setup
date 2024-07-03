@@ -1,1 +1,2 @@
-../../cob4/config/gripper_right_controller.yaml
+/**:
+  ros__parameters: ../../cob4/config/gripper_right_controller.yaml

@@ -1,10 +1,16 @@
-devicestring: /dev/ttyLED
-devicedriver: stageprofi
-baudrate: 38400
-num_leds: 72
-led_offset: 5
-invert_output: false
-pubmarker: true
-marker_frame: /torso_center_link # marker will be publised at [0.5,0,0] with respect to marker_frame
-startup_color: [0.0, 1.0, 0.5, 0.4] #rgba value
-startup_mode: Breath #possible values: None, Static, Breath, BreathColor, Flash, FadeColor
+/**:
+  ros__parameters:
+    baudrate: 38400
+    devicedriver: stageprofi
+    devicestring: /dev/ttyLED
+    invert_output: false
+    led_offset: 5
+    marker_frame: /torso_center_link
+    num_leds: 72
+    pubmarker: true
+    startup_color:
+    - 0.0
+    - 1.0
+    - 0.5
+    - 0.4
+    startup_mode: Breath

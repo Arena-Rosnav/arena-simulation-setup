@@ -1,1 +1,2 @@
-../../cob4/config/arm_right_self_collision.yaml
+/**:
+  ros__parameters: ../../cob4/config/arm_right_self_collision.yaml

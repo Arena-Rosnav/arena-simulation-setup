@@ -1,1 +1,2 @@
-../../cob4/config/sensorring_driver.yaml
+/**:
+  ros__parameters: ../../cob4/config/sensorring_driver.yaml

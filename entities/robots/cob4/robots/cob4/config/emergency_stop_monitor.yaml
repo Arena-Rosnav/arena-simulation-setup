@@ -1,9 +1,11 @@
-enable_light: true
-light_components: ['light_base']
-color_ok: cyan
-
-enable_sound: true
-sound_components: ['sound']
-
-diagnostics_based: true
-motion_based: true
+/**:
+  ros__parameters:
+    color_ok: cyan
+    diagnostics_based: true
+    enable_light: true
+    enable_sound: true
+    light_components:
+    - light_base
+    motion_based: true
+    sound_components:
+    - sound

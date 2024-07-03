@@ -1,27 +1,21 @@
-TebLocalPlannerROS:
-  odom_topic: odom
-
-  max_samples: 500
-  allow_init_with_backwards_motion: false
-  global_plan_viapoint_sep: -1
-  global_plan_prune_distance: 1
-  exact_arc_length: false
-  publish_feedback: false
-
-  # Robot
-
-  max_vel_x: 1.1
-  max_vel_x_backwards: 1.1
-  max_vel_y: 1.1
-  max_vel_theta: 2.0
-  acc_lim_x: 2.5
-  acc_lim_y: 2.5
-  acc_lim_theta: 1.0
-
-  footprint_model:
-    type: point
-
-  # GoalTolerance
-
-  min_obstacle_dist: 0.7 # This value must also include our robot radius, since footprint_model is set to "point".
-  dynamic_obstacle_inflation_dist: 0.7
+/**:
+  ros__parameters:
+    TebLocalPlannerROS:
+      acc_lim_theta: 1.0
+      acc_lim_x: 2.5
+      acc_lim_y: 2.5
+      allow_init_with_backwards_motion: false
+      dynamic_obstacle_inflation_dist: 0.7
+      exact_arc_length: false
+      footprint_model:
+        type: point
+      global_plan_prune_distance: 1
+      global_plan_viapoint_sep: -1
+      max_samples: 500
+      max_vel_theta: 2.0
+      max_vel_x: 1.1
+      max_vel_x_backwards: 1.1
+      max_vel_y: 1.1
+      min_obstacle_dist: 0.7
+      odom_topic: odom
+      publish_feedback: false

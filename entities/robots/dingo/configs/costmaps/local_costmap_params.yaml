@@ -1,9 +1,10 @@
-publish_frequency: 5.0
-update_frequency: 5.0
-transform_tolerance: 0.25
-
-static_map: true # maybe not
-rolling_window: true
-width: 5.0
-height: 5.0
-resolution: 0.05
+/**:
+  ros__parameters:
+    height: 5.0
+    publish_frequency: 5.0
+    resolution: 0.05
+    rolling_window: true
+    static_map: true
+    transform_tolerance: 0.25
+    update_frequency: 5.0
+    width: 5.0

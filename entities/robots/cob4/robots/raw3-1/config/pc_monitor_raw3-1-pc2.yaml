@@ -1,4 +1,6 @@
-check_core_temps: False
-check_ipmi_tool: False
-enforce_clock_speed: False
-num_cores: 8
+/**:
+  ros__parameters:
+    check_core_temps: false
+    check_ipmi_tool: false
+    enforce_clock_speed: false
+    num_cores: 8

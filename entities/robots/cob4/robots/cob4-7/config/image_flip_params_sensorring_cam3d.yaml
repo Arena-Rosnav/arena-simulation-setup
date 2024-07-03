@@ -1,1 +1,2 @@
-../../cob4/config/image_flip_params_sensorring_cam3d.yaml
+/**:
+  ros__parameters: ../../cob4/config/image_flip_params_sensorring_cam3d.yaml

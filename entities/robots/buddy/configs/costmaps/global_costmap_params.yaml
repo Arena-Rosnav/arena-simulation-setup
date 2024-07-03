@@ -1,6 +1,13 @@
-plugins:
-    - {name: static_map_layer,    type: "costmap_2d::StaticLayer"}
-    - {name: 2d_obstacles_layer,  type: "costmap_2d::ObstacleLayer"}
-    - {name: 3d_obstacles_layer,  type: "costmap_2d::VoxelLayer"}
-    - {name: inflation_layer,     type: "costmap_2d::InflationLayer"}
-    - {name: semantic_layer,     type: "costmap_2d::SemanticLayer"}
+/**:
+  ros__parameters:
+    plugins:
+    - name: static_map_layer
+      type: costmap_2d::StaticLayer
+    - name: 2d_obstacles_layer
+      type: costmap_2d::ObstacleLayer
+    - name: 3d_obstacles_layer
+      type: costmap_2d::VoxelLayer
+    - name: inflation_layer
+      type: costmap_2d::InflationLayer
+    - name: semantic_layer
+      type: costmap_2d::SemanticLayer
