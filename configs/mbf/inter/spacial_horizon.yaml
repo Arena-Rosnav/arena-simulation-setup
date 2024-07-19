@@ -1,0 +1,3 @@
+inters:
+  - name: SpacialHorizonInter
+    type: spacial_horizon_inter/SpacialHorizonInter
