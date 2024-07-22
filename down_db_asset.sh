@@ -14,3 +14,11 @@ unzip './arena_models/*.zip' -d './arena_models'
 rm ./arena_models/*.zip
 
 echo "Download completed!"
+
+# Extracting Asset bundles
+echo "Replacing Asset bundles in ../arena-unity/Assets/StreamingAssets/StandaloneLinux64"
+rm --recursive --force ../arena-unity/Assets/StreamingAssets/StandaloneLinux64/
+tar -xzf ./arena_models/StandaloneLinux64.tar.gz -C ../arena-unity/Assets/StreamingAssets/
+rm ./arena_models/StandaloneLinux64.tar.gz
+
+echo "Done!"
