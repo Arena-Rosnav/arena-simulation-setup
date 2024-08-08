@@ -1,0 +1,36 @@
+pedestrians:
+  - name: visitor
+    type: human/adult
+    model: actor1
+    waypoints in: [public]
+    number of waypoints: [2,3]
+    amount: 5
+  - name: janitor
+    type: human/adult
+    model: actor1
+    waypoints in: [public, staff]
+    number of waypoints: [3,5]
+    amount: 1
+  - name: nurse
+    type: human/adult
+    model: actor1
+    waypoints in: [public, staff, patient]
+    number of waypoints: [5,8]
+    amount: 2
+  - name: doctor
+    type: human/adult
+    model: actor1
+    waypoints in: [public, staff, patient]
+    number of waypoints: [4,7]
+    amount: 2
+  - name: patient
+    type: human/adult
+    model: actor1
+    waypoints in: [patient]
+    number of waypoints: [2,3]
+    amount: 5
+robots:
+  - name: cleaning robot
+    waypoints in: [public, staff]
+  - name: service robot
+    waypoints in: [staff, patient]

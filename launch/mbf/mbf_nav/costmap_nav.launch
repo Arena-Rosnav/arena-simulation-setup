@@ -12,11 +12,14 @@
 
     <arg name="agent_name" default="$(arg model)" if="$(eval arg('local_planner') == 'rosnav')" />
 
+    <arg name="SIMULATOR" default=""/>
+
     <include file="$(find arena_simulation_setup)/launch/mbf/planners/local/mbf_$(arg local_planner).launch">
         <arg name="model" value="$(arg model)" />
         <arg name="speed" value="$(arg speed)" />
         <arg name="train_mode" value="$(arg train_mode)" if="$(eval arg('local_planner') == 'rosnav')" />
         <arg name="agent_name" value="$(arg agent_name)" if="$(eval arg('local_planner') == 'rosnav')" />
+        <arg name="SIMULATOR" value="$(arg SIMULATOR)" if="$(eval arg('local_planner') == 'rosnav')" />
         <arg name="namespace" value="$(arg namespace)" />
         <arg name="frame" value="$(arg frame)" if="$(eval arg('local_planner') != 'rosnav')" /> 
         <arg name="local_planner" value="$(arg local_planner)" if="$(eval arg('local_planner') == 'rosnav')" />
@@ -105,7 +108,7 @@
         </node>
     </group>
 
-    <node name="move_base_legacy_relay" pkg="mbf_costmap_nav" type="move_base_legacy_relay.py">
+    <node name="move_base_legacy_relay" pkg="mbf_costmap_nav" type="move_base_legacy_relay.py" output="screen">
 
         <remap from="~base_global_planner" to="move_base_flex/base_global_planner" />
         <remap from="~base_local_planner" to="move_base_flex/base_local_planner" />

@@ -7,8 +7,10 @@
   <arg name="train_mode" default="false"/>
   <arg name="agent_name" default="rule_05"/>
   <arg name="local_planner" default="rosnav"/>
+  <arg name="SIMULATOR" default="flatland" />
 
   <param name="agent_name" value="$(arg agent_name)" />
+  <param name="train_mode" value="$(arg train_mode)" />
 
   <!-- DRL action frequency -->
   <!-- <rosparam command="load" file="$(find arena_bringup)/params/drl.yaml" /> -->
@@ -17,13 +19,14 @@
 
   <!-- <rosparam file="$(find arena_bringup)/launch/plan_fsm_param.yaml" command="load" /> -->
   <group if="$(eval arg('train_mode') == false)">
+    <param name="simulator" value="$(arg SIMULATOR)" />
     <node 
       name="rosnav_node" 
       pkg="rosnav" 
       type="rosnav_node.py" 
       output="screen" 
     />
-    <!-- <node name="rosnav_action_node" pkg="testing" type="drl_agent_node.py" output="screen"/> -->
+    <node name="rosnav_action_node" pkg="testing" type="drl_agent_node.py" output="screen"/>
   </group>
 
   <env name="ROSCONSOLE_CONFIG_FILE" value="$(find arena_simulation_setup)/configs/rosconsole.conf"/>
@@ -35,15 +38,16 @@
     <remap from="/clock" to="$(arg namespace)/clock" />
   </node> -->
 
-  <group ns="move_base_flex" if="$(eval arg('local_planner') == 'drl_switch' or arg('train_mode') == false)">
+  <group ns="move_base_flex">
     <rosparam file="$(find arena_simulation_setup)/configs/mbf/local/rosnav_local_planner_params.yaml"
       command="load" subst_value="True" />
     <rosparam
       file="$(find arena_simulation_setup)/entities/robots/$(arg model)/configs/mbf/rosnav_local_planner_params.yaml"
       command="load" subst_value="True" />
 
-    <param name="base_local_planner" value="RosnavLocalPlanner" />
-
+    <group if="$(eval arg('local_planner') == 'drl_switch' or arg('train_mode') == false)">
+      <param name="base_local_planner" value="RosnavLocalPlanner" />
+    </group>
   </group>
 
 </launch>
