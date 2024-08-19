@@ -19,8 +19,16 @@ rm ./arena_models/*.zip
 echo "Download completed!"
 
 # Extracting Asset bundles
-echo "Replacing Asset bundles in ../arena_models/arena-unity/Assets/StreamingAssets/StandaloneLinux64"
-tar -xzf ./arena_models/StandaloneLinux64.tar.gz -C ./arena_models
-rm ./arena_models/StandaloneLinux64.tar.gz
+echo "../arena-unity/Assets/StreamingAssets/StandaloneLinux64 needs to be present before downloading the unity assetbundles"
+read -p "Do you want to download the unity asset bundles? (yes/no): " answer
+if [[ "$answer" =~ ^[Yy]$ ]]; then
+  echo "Downloading file..."
+  rm --recursive --force ../arena-unity/Assets/StreamingAssets/StandaloneLinux64/
+  tar -xzf ./arena_models/StandaloneLinux64.tar.gz -C ../arena-unity/Assets/StreamingAssets/
+  rm ./arena_models/StandaloneLinux64.tar.gz
+  echo "Done!"
+else
+  rm ./arena_models/StandaloneLinux64.tar.gz
+  echo "Download cancelled."
+fi
 
-echo "Done!"
