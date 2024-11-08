@@ -3,7 +3,7 @@ planners:
     type: navfn/NavfnROS
 
 shutdown_costmaps: false
-planner_frequency: 5.0
+planner_frequency: 0.1
 planner_patience: 5.0
 inter_frequency: 5.0
 inter_patience: 5.0
