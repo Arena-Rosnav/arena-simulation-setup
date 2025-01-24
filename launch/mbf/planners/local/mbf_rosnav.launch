@@ -18,10 +18,11 @@
   <group if="$(eval arg('train_mode') == false)">
     <param name="simulator" value="$(arg SIMULATOR)" />
     <node 
-      name="rosnav_node" 
-      pkg="rosnav" 
-      type="rosnav_node.py" 
-      output="screen" 
+      name="action_server" 
+      pkg="rosnav_rl" 
+      type="action_server.py" 
+      output="screen"
+      args="--agent_name $(arg agent_name) --namespace $(arg namespace)"
     />
     <node name="rosnav_action_node" pkg="testing" type="drl_agent_node.py" output="screen"/>
   </group>
@@ -49,6 +50,7 @@
     <rosparam
       file="$(find arena_simulation_setup)/entities/robots/$(arg model)/configs/mbf/teb_local_planner_params.yaml"
       command="load" subst_value="True" />
+    
 
     <param name="base_local_planner" value="TebLocalPlannerROS" />
 
