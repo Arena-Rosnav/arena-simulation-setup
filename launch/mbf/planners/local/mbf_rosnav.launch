@@ -17,13 +17,10 @@
   <!-- <rosparam file="$(find arena_bringup)/launch/plan_fsm_param.yaml" command="load" /> -->
   <group if="$(eval arg('train_mode') == false)">
     <param name="simulator" value="$(arg SIMULATOR)" />
-    <node 
-      name="action_server" 
-      pkg="rosnav_rl" 
-      type="action_server.py" 
-      output="screen"
-      args="--agent_name $(arg agent_name) --namespace $(arg namespace)"
-    />
+    <include file="$(find rosnav_rl)/launch/action_server.launch">
+        <arg name="namespace" value="$(arg namespace)" />
+        <arg name="agent_name" value="$(arg agent_name)" />
+    </include>
     <node name="rosnav_action_node" pkg="testing" type="drl_agent_node.py" output="screen"/>
   </group>
 
